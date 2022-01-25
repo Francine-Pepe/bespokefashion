@@ -29,7 +29,7 @@
   border-radius: 7px;
   font-size: 1.1rem;
   margin-bottom: 2rem;
-  font-family: Montserrat;
+  font-family: "Montserrat";
 }
 
 .LP-icon {
@@ -41,9 +41,8 @@
     color: #ecb19f;
     background-color: rgb(248, 248, 248);
     padding: 4rem 2rem;
-    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-      "Lucida Sans", Arial, sans-serif;
-    font-weight: 300;
+    font-family: "Poiret One", "Trebuchet MS", "Lucida Sans Unicode",
+      "Lucida Grande", "Lucida Sans", Arial, sans-serif;
     margin-left: auto;
     margin-right: auto;
     border-radius: 16px;
@@ -51,11 +50,49 @@
   }
   .LP-btn {
     background-color: #e7bd44;
-    border: none;
+    border: dashed 3px #cca532;
     color: #fff;
     padding: 1rem 2rem;
     border-radius: 7px;
     font-size: 1rem;
     margin-bottom: 2rem;
+    font-family: "Montserrat";
+  }
+}
+@media (max-width: 500px) {
+  .LP-logo {
+    height: 158px;
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .LP-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .LP-text {
+    color: #ecb19f;
+    background-color: rgb(248, 248, 248);
+    padding: 2rem 3rem;
+    font-family: "Poiret One", "Trebuchet MS", "Lucida Sans Unicode",
+      "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+    font-size: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 16px;
+    box-shadow: 10px -16px rgb(231, 230, 230);
+  }
+  .LP-btn {
+    background-color: #e7bd44;
+    border: dashed 3px #cca532;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 7px;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    font-family: "Montserrat";
+    margin-left: auto;
+    margin-right: auto;
   }
 }

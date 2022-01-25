@@ -17,7 +17,7 @@ export default function LandingPage() {
           <br />
           fabric, color or print of your choice. Come meet us!
         </h2>
-        <button variant="contained" className="LP-btn">
+        <button className="LP-btn">
           START DESIGNING
           <Icon icon="mdi:lead-pencil" className="LP-icon" />
         </button>
