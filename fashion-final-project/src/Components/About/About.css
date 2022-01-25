@@ -1,0 +1,21 @@
+.aboutContainer {
+  border: dashed 3px #281e1c8e;
+  padding: 20px;
+  background-color: #fcf4f1;
+  width: 75%;
+}
+
+.aboutTitle {
+  font-family: "Style Script", cursive;
+  letter-spacing: 2px;
+}
+
+.aboutText {
+  font-family: "Poiret One", "Trebuchet MS", "Lucida Sans Unicode",
+    "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  padding: 10px;
+}
+
+.aboutIcon {
+  margin-right: 10px;
+}
