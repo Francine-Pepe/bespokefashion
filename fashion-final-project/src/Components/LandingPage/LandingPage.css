@@ -1,0 +1,61 @@
+.LandingPage {
+  text-align: center;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+}
+
+.LP-logo {
+  padding: none;
+}
+
+.LP-text {
+  color: #ecb19f;
+  background-color: rgb(248, 248, 248);
+  padding: 6rem 2rem;
+  font-family: "Poiret One", "Trebuchet MS", "Lucida Sans Unicode",
+    "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 16px;
+  box-shadow: 10px -16px rgb(231, 230, 230);
+}
+
+.LP-btn {
+  background-color: #e7bd44;
+  border: dashed 3px #cca532;
+  color: #fff;
+  padding: 1.5rem 3rem;
+  border-radius: 7px;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  font-family: Montserrat;
+}
+
+.LP-icon {
+  padding-left: 1rem;
+}
+
+@media (max-width: 767px) {
+  .LP-text {
+    color: #ecb19f;
+    background-color: rgb(248, 248, 248);
+    padding: 4rem 2rem;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+    font-weight: 300;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 16px;
+    box-shadow: 10px -16px rgb(231, 230, 230);
+  }
+  .LP-btn {
+    background-color: #e7bd44;
+    border: none;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 7px;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+}
