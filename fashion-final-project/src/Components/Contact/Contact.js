@@ -27,7 +27,7 @@ function Contact() {
         <div>
             <Container fluid className="contactContainer mt-5">
                 <Row classname="justify-content-space-around ">
-                    <Col sm className='contactText text-center'>
+                    <Col md className='contactText text-center'>
                         <h1>Contact Us</h1><br/>
                         <h4>
                         We are here to answer your questions about Bespoke Fashion.<br/><br/>
@@ -37,7 +37,7 @@ function Contact() {
                         We will get back to you as soon as possible.<br/><br/>
                         </h4>
                     </Col>
-                    <Col sm className='contactForm '>
+                    <Col md className='contactForm '>
                         <Form onSubmit={sendEmail}>
                             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                                 <Form.Label><h4>Name: </h4></Form.Label>
