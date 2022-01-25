@@ -1,0 +1,28 @@
+.contactContainer {
+  background-color: #fcf4f1;
+  width: 75%;
+  font-family: "Poiret One", "Trebuchet MS", "Lucida Sans Unicode",
+    "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+.contactText {
+  border: dashed 3px #281e1c8e;
+  padding: 20px;
+  border-right: 0;
+}
+.contactForm {
+  border: dashed 3px #281e1c8e;
+  padding: 20px;
+}
+@media only screen and (max-width: 767px) {
+  .contactText {
+    border: dashed 3px #281e1c8e;
+    border-bottom: 0;
+  }
+}
+.contactBtn {
+  background-color: #e7bd44;
+  border: dashed 3px #cca532;
+  color: #fff;
+  height: 35px;
+  width: 90px;
+}
