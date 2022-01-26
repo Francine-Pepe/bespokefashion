@@ -1,0 +1,49 @@
+/* RETURN POLICY */
+
+.RP-header {
+  background-color: #ec5e54;
+}
+
+.RP-title {
+  width: 100%;
+  text-align: center;
+  font-family: "Style Script";
+  color: #f0dcd7;
+}
+.RP-text > h2 {
+  width: 100%;
+  text-align: center;
+  font-family: "Style Script";
+  color: #ec5e54;
+}
+.RP-text > h5 {
+  width: 100%;
+  text-align: center;
+  font-family: "Montserrat";
+  color: #ec5e54;
+}
+.RP-text > p,
+.RP-text > ul > li {
+  font-family: "Montserrat";
+}
+.RP-logo {
+  padding-bottom: 2rem;
+  text-align: center;
+}
+.RP-header > .btn-close {
+  color: #fff;
+}
+.footer-btn > h2 {
+  color: #f0dcd7;
+  padding: 0 5rem;
+  cursor: pointer;
+  transform: scale(var(--scale, 1));
+  transition: 0.3s ease-in-out;
+}
+
+.footer-btn > h2:hover {
+  text-decoration: none;
+  outline: none;
+  color: #2c6a67 !important;
+  --scale: 1.3;
+}

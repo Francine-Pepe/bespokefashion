@@ -2,6 +2,7 @@ import React from "react"
 import "./Footer.css"
 import Logo from "../Images/threads_Logo.png"
 import { Icon } from "@iconify/react"
+import ReturnPolicy from "../ReturnPolicy/ReturnPolicy"
 
 export default function Footer() {
   return (
@@ -12,9 +13,7 @@ export default function Footer() {
         <a herf="#">
           <h2>Reviews</h2>
         </a>
-        <a herf="#">
-          <h2>Return Policy</h2>
-        </a>
+        <ReturnPolicy />
       </div>
       <div className="SM-container">
         <a href="https://www.instagram.com/">
