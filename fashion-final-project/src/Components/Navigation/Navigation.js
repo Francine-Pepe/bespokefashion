@@ -1,7 +1,7 @@
 import React from "react"
 import "./Navigation.css"
 import { Navbar, Nav } from "react-bootstrap"
-import Logo from "../Images/BP_Logo.png"
+import Logo from "../Images/BF_Logo.png"
 import "bootstrap/dist/css/bootstrap.min.css"
 
 export default function Navigation() {
