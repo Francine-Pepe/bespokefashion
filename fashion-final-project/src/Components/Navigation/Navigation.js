@@ -2,6 +2,7 @@ import React from "react"
 import "./Navigation.css"
 import { Navbar, Nav } from "react-bootstrap"
 import Logo from "../Images/BF_Logo.png"
+import {NavLink} from 'react-router-dom';
 import "bootstrap/dist/css/bootstrap.min.css"
 
 export default function Navigation() {
@@ -14,23 +15,23 @@ export default function Navigation() {
         />
         <Navbar.Collapse id="basic-navbar-nav" className="nav-collapse">
           <Nav className="me-auto L-nav">
-            <Nav.Link href="#your-design" className="nav-btn">
+            <NavLink to="" className="nav-btn">
               Make your design
-            </Nav.Link>
-            <Nav.Link href="#our-design" className="nav-btn">
+            </NavLink>
+            <NavLink to="" className="nav-btn">
               Our designs
-            </Nav.Link>
+            </NavLink>
           </Nav>
-          <Navbar.Brand href="#home" className="nav-img">
+          <Navbar.Brand to="" className="nav-img">
             <img src={Logo} alt="Bespoke Fashion Logo" className="nav-logo" />
           </Navbar.Brand>
           <Nav className="me-auto R-nav">
-            <Nav.Link href="#about" className="nav-btn">
+            <NavLink to="about" className="nav-btn">
               About us
-            </Nav.Link>
-            <Nav.Link href="#contact" className="nav-btn">
+            </NavLink>
+            <NavLink to="contact" className="nav-btn">
               Contact
-            </Nav.Link>
+            </NavLink>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

@@ -2,6 +2,7 @@ import React from "react"
 import "./LandingPage.css"
 import Logo from "../Images/BF_Logo.png"
 import { Icon } from "@iconify/react"
+import {NavLink} from 'react-router-dom';
 
 export default function LandingPage() {
   return (
@@ -17,10 +18,12 @@ export default function LandingPage() {
           <br />
           fabric, color or print of your choice. Come meet us!
         </h2>
-        <button className="LP-btn">
-          START DESIGNING
-          <Icon icon="mdi:lead-pencil" className="LP-icon" />
-        </button>
+        <NavLink to="/app/pickup">
+          <button className="LP-btn">
+            START DESIGNING
+            <Icon icon="mdi:lead-pencil" className="LP-icon" />
+          </button>
+        </NavLink>
       </div>
     </section>
   )

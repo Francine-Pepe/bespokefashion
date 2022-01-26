@@ -35,12 +35,12 @@ body {
 }
 
 .our_design_box {
-  background-image: url("./Images/sketch_01_small.jpg");
+  background-image: url("../Images/sketch_01_small.jpg");
   background-position: center;
 }
 
 .your_design_box {
-  background-image: url("./Images/sketch_02_small.jpg");
+  background-image: url("../Images/sketch_02_small.jpg");
   background-position: top;
 }
 
@@ -76,7 +76,7 @@ hr {
 }
 
 .center_detail_scissor {
-  background-image: url("./Images/scissors.png");
+  background-image: url("../Images/scissors.png");
   width: 100px;
   height: 120px;
   position: absolute;
@@ -86,7 +86,7 @@ hr {
 }
 
 .outside_container_left {
-  background-image: url("./Images/sewing_pillow_bg.png");
+  background-image: url("../Images/sewing_pillow_bg.png");
   background-repeat: no-repeat;
   width: 150px;
   height: 150px;
@@ -97,7 +97,7 @@ hr {
 }
 
 .outside_container_right {
-  background-image: url("./Images/needle_buttons_bg.png");
+  background-image: url("../Images/needle_buttons_bg.png");
   background-repeat: no-repeat;
   width: 150px;
   height: 150px;
