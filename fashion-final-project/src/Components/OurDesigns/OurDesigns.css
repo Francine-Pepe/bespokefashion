@@ -238,7 +238,7 @@ body {
 /* Below medium */
 @media (max-width: 767px) {
     .our_designs_container {
-        width: 65%;
+        width: 80%;
         height: auto;
         display: flex;
         flex-direction: column;
@@ -253,7 +253,7 @@ body {
         .skirts_box,
         .dresses_box,
         .blouses_box {
-            width: 45%;
+            width: 80%;
             height: auto;
             display: flex;
             flex-direction: column;
@@ -263,7 +263,7 @@ body {
             border-radius: 5px;
          }
          .design_button {
-            width: 45%;
+            width: 80%;
             height: 5vh;
             display: flex;
             align-items: center;
