@@ -282,6 +282,12 @@ body {
             width: 100%;
             height: auto;
         }
+        .our_design_catalogue {
+            display: flex;
+            justify-content: center;
+            margin: 5%;
+            
+        }
         /* .jumpsuits_box {
         
         } */

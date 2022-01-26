@@ -5,7 +5,7 @@ import Footer from './Components/Footer/Footer'
 import OurDesigns from "./Components/OurDesigns/OurDesigns";
 
 // import LandingPage from "./Components/LandingPage/LandingPage";
-import PickUpDesign from './Components/PickUpDesign';
+// import PickUpDesign from './Components/PickUpDesign/PickUpDesign';
 // import ReturnButton from "./Components/ReturnButton/ReturnButton";
 
 // import LandingPage from "./Components/LandingPage/LandingPage"
@@ -23,7 +23,7 @@ function App() {
       {/* <LandingPage /> */}
 
       {/* Take away this part bellow when the router is ready */}
-      <PickUpDesign />
+      {/* <PickUpDesign /> */}
       {/* <LandingPage /> */}
       {/* <Contact /> */}
       {/* <About /> */}
