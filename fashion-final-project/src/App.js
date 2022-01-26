@@ -2,7 +2,7 @@ import "./App.css"
 //import LandingPage from "./Components/LandingPage/LandingPage"
 //import Contact from "./Components/Contact/Contact"
 //import About from "./Components/About/About"
-import Navigation from "./Components/Navigation/Navigation"
+//import Navigation from "./Components/Navigation/Navigation"
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
       {/* <LandingPage /> */}
       {/* <Contact /> */}
       {/* <About /> */}
-      <Navigation />
+      {/* <Navigation /> */}
     </div>
   )
 }

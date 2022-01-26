@@ -1,6 +1,6 @@
 import React from "react"
 import "./LandingPage.css"
-import Logo from "../Images/BP_Logo.png"
+import Logo from "../Images/BF_Logo.png"
 import { Icon } from "@iconify/react"
 
 export default function LandingPage() {
