@@ -8,6 +8,7 @@
   justify-content: space-between;
   margin-left: 0;
   margin-left: 0;
+  margin-top: 5%;
 }
 .footer > .threads-logo {
   height: 95%;
@@ -31,7 +32,7 @@
 .footer-btn > a:hover {
   text-decoration: none;
   outline: none;
-  color: #2c6a67;
+  color: #2c6a67 !important;
   --scale: 1.3;
 }
 
