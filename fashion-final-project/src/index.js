@@ -5,6 +5,7 @@ import About from './Components/About/About'
 import Contact from './Components/Contact/Contact'
 import PickUpDesign from './Components/PickUpDesign/PickUpDesign'
 import LandingPage from './Components/LandingPage/LandingPage'
+import OurDesigns from './Components/OurDesigns/OurDesigns'
 import App from "./App"
 
 ReactDOM.render(
@@ -17,6 +18,8 @@ ReactDOM.render(
               <Route path="about" element={ <About /> } />
               <Route path="contact" element={ <Contact /> } />
               <Route path="pickup" element={ <PickUpDesign /> } />
+              <Route path="ourdesigns" element={ <OurDesigns /> } />
+              
             </Route>
         </Route>
       </Routes>
