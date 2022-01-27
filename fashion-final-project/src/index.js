@@ -17,9 +17,9 @@ ReactDOM.render(
             <Route path="app" element={ <App /> }>
               <Route path="about" element={ <About /> } />
               <Route path="contact" element={ <Contact /> } />
-              <Route path="pickup" element={ <PickUpDesign /> } />
+              <Route path="pickup" element={ <PickUpDesign /> }/>
               <Route path="ourdesigns" element={ <OurDesigns /> } />
-              
+
             </Route>
         </Route>
       </Routes>

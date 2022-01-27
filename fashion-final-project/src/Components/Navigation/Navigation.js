@@ -22,9 +22,10 @@ export default function Navigation() {
               Our designs
             </NavLink>
           </Nav>
-          <Navbar.Brand to="" className="nav-img">
-            <img src={Logo} alt="Bespoke Fashion Logo" className="nav-logo" />
-          </Navbar.Brand>
+          
+            <Navbar.Brand  className="nav-img">
+              <img src={Logo} alt="Bespoke Fashion Logo" className="nav-logo" />
+            </Navbar.Brand>
           <Nav className="me-auto R-nav">
             <NavLink to="about" className="nav-btn">
               About us

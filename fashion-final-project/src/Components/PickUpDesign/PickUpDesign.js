@@ -11,14 +11,14 @@ export default function PickUpDesign() {
       <div className="main_design_box">
         <div className="center_detail_scissor"></div>
         <div className="left_container">
-          <NavLink to="/" className="pick_up_design_button" style={{textDecoration: 'none'}}>Our Designs</NavLink>
+          <NavLink to="ourdesigns" className="pick_up_design_button" style={{textDecoration: 'none'}}>Our Designs</NavLink>
           <div className="our_design_box">
             <img src={Sketch1} alt="sketch1" />
           </div>
         </div>
         <hr />
         <div className="right_container">
-          <NavLink to="/" className="pick_up_design_button" style={{textDecoration: 'none'}}>Make your Design</NavLink>
+          <NavLink to="makeyourdesign" className="pick_up_design_button" style={{textDecoration: 'none'}}>Make your Design</NavLink>
           <div className="your_design_box">
           <img src={Sketch2} alt="sketch2" />
           </div>

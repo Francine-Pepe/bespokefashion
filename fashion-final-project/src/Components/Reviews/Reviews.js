@@ -27,7 +27,7 @@ function Reviews() {
           </Modal.Title>
         </Modal.Header>
         <Modal.Body className="Rev-body">
-          <CommentBox />
+          <CommentBox/>
         </Modal.Body>
       </Modal>
     </>
