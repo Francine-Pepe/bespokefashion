@@ -3,6 +3,7 @@ import "./Footer.css"
 import Logo from "../Images/threads_Logo.png"
 import { Icon } from "@iconify/react"
 import ReturnPolicy from "../ReturnPolicy/ReturnPolicy"
+import Reviews from "../Reviews/Reviews"
 
 export default function Footer() {
   return (
@@ -10,9 +11,7 @@ export default function Footer() {
       <img src={Logo} alt="Icon Logo" className="threads-logo" />
 
       <div className="footer-btn">
-        <a herf="#">
-          <h2>Reviews</h2>
-        </a>
+        <Reviews />
         <ReturnPolicy />
       </div>
       <div className="SM-container">
