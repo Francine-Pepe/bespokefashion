@@ -1,20 +1,22 @@
-// import * as React from "react";
-// import Button from "@mui/material/Button";
-// import KeyboardReturnIcon from "@mui/icons-material/KeyboardReturn";
-// import Stack from "@mui/material/Stack";
-// import "./ReturnButton.css";
-// import { NavLink } from "react-router-dom";
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import { Icon } from '@iconify/react';
+import './ReturnButton.css'
 
-// export default function ReturnButton() {
-//   return (
-//     <div className="return_button">
-//       <NavLink to="/">
-//         <Stack direction="row" spacing={2}>
-//           <Button variant="outlined" startIcon={<KeyboardReturnIcon />}>
-//             Return
-//           </Button>
-//         </Stack>
-//       </NavLink>
-//     </div>
-//   );
-// }
+function ReturnButton() {
+    
+    const navigate = useNavigate();
+
+    return (
+    <div className="returnPosition">
+         <button className="returnBtn" onClick={() => navigate(-1)}><Icon icon="ic:sharp-keyboard-return" color="#2c6a67" inline={true} width="50" height="100"/></button>
+    </div>
+    )
+}
+
+export default ReturnButton;
+
+
+
+
+

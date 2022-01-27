@@ -3,19 +3,28 @@
   padding: 20px;
   background-color: #fcf4f1;
   width: 75%;
+  height: 550px;
 }
 
 .aboutTitle {
   font-family: "Style Script", cursive;
   letter-spacing: 2px;
+  margin-top: 10px;
 }
 
 .aboutText {
   font-family: "Poiret One", "Trebuchet MS", "Lucida Sans Unicode",
     "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   padding: 10px;
+  margin-top: 10px;
 }
 
 .aboutIcon {
   margin-right: 10px;
+}
+
+@media only screen and (max-width: 997px) {
+  .aboutContainer {
+    height: auto;
+  }
 }
