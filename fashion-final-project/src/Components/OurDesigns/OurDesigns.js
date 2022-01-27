@@ -5,6 +5,8 @@ import Pants from './../Images/pants.png';
 import Skirts from './../Images/skirts.png';
 import Dresses from './../Images/dresses.png';
 import Blouses from './../Images/blouses.png';
+import {NavLink} from 'react-router-dom';
+
 
 export default function OurDesigns() {
     return (
@@ -19,31 +21,31 @@ export default function OurDesigns() {
                 <img src={Jumpsuits} alt="jumpsuit" />
               </div>
               
-            <button className="design_button">Jumpsuits</button>
+            <NavLink to="/" className="design_button" style={{textDecoration: 'none'}}>Jumpsuits</NavLink>
           </div> 
           <div className="clothes_types_container">
             <div className="pants_box">
               <img src={Pants} alt="Pants" />
             </div>
-            <button className="design_button">Pants</button>
+            <NavLink to="/" className="design_button" style={{textDecoration: 'none'}}>Pants</NavLink>
           </div>
           <div className="clothes_types_container">
             <div className="skirts_box">
               <img src={Skirts} alt="Skirts" />
             </div>
-            <button className="design_button">Skirts</button>
+            <NavLink to="/" className="design_button" style={{textDecoration: 'none'}}>Skirts</NavLink>
           </div>
           <div className="clothes_types_container">
             <div className="dresses_box">
               <img src={Dresses} alt="Dresses" />
             </div>
-            <button className="design_button">Dresses</button>
+            <NavLink to="/" className="design_button" style={{textDecoration: 'none'}}>Dresses</NavLink>
           </div>
           <div className="clothes_types_container">
             <div className="blouses_box">
               <img src={Blouses} alt="Blouses" />
             </div>
-            <button className="design_button">Blouses</button>
+            <NavLink to="/" className="design_button" style={{textDecoration: 'none'}}>Blouses</NavLink>
           </div>
           
         </div>

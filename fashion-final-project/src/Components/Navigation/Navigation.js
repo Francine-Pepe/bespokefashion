@@ -15,10 +15,10 @@ export default function Navigation() {
         />
         <Navbar.Collapse id="basic-navbar-nav" className="nav-collapse">
           <Nav className="me-auto L-nav">
-            <NavLink to="" className="nav-btn">
+            <NavLink to="makeyourdesign" className="nav-btn">
               Make your design
             </NavLink>
-            <NavLink to="" className="nav-btn">
+            <NavLink to="ourdesigns" className="nav-btn">
               Our designs
             </NavLink>
           </Nav>
