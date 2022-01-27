@@ -21,7 +21,7 @@
   color: #f0dcd7;
   align-items: center;
 }
-.footer-btn > a {
+.footer-btn > h2 {
   color: #f0dcd7;
   padding: 0 5rem;
   cursor: pointer;
@@ -29,7 +29,7 @@
   transition: 0.3s ease-in-out;
 }
 
-.footer-btn > a:hover {
+.footer-btn > h2:hover {
   text-decoration: none;
   outline: none;
   color: #2c6a67 !important;
