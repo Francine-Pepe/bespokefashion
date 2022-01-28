@@ -3,7 +3,7 @@ import "./App.css";
 import Navigation from './Components/Navigation/Navigation'
 import Footer from './Components/Footer/Footer'
 // import OurDesigns from "./Components/OurDesigns/OurDesigns";
-import ReturnButton from "./Components/ReturnButton/ReturnButton";
+// import ReturnButton from "./Components/ReturnButton/ReturnButton";
 
 // import LandingPage from "./Components/LandingPage/LandingPage";
 // import PickUpDesign from './Components/PickUpDesign/PickUpDesign';
@@ -13,6 +13,7 @@ import ReturnButton from "./Components/ReturnButton/ReturnButton";
 // import Contact from "./Components/Contact/Contact"
 // import About from "./Components/About/About"
 // import Navigation from "./Components/Navigation/Navigation"
+// import ControlledCarousel from './Components/ControlledCarousel/ControlledCarousel'
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
       {/* <ReturnButton /> */}
       {/* <ReturnButton /> */}
       {/* <OurDesigns /> */}
+      {/* <ControlledCarousel /> */}
     </div>
   )
 }
