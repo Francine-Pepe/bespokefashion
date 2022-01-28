@@ -1,22 +1,31 @@
 .contactContainer {
   background-color: #fcf4f1;
   width: 75%;
+  height: 550px;
   font-family: "Poiret One", "Trebuchet MS", "Lucida Sans Unicode",
     "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 .contactText {
   border: dashed 3px #281e1c8e;
-  padding: 20px;
+  padding-top: 50px;
   border-right: 0;
+  height: 550px;
 }
 .contactForm {
   border: dashed 3px #281e1c8e;
-  padding: 20px;
+  padding-left: 30px;
+  padding-top: 50px;
+  padding-right: 20px;
+  height: 550px;
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1000px) {
   .contactText {
     border: dashed 3px #281e1c8e;
     border-bottom: 0;
+    height: auto;
+  }
+  .contactContainer {
+    height: auto;
   }
 }
 .contactBtn {

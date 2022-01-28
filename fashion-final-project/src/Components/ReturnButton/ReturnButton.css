@@ -1,15 +1,9 @@
-/* .return_button Button {
-    display: flex;
-    justify-content: flex-start; */
-    /* margin-left: 350px; */
-    /* gap: 10px;
-    border: none;
-    font-family: "Perpetua Titling MT Light", sans-serif;
-    color: black;
-}
-
-.return_button Button:hover {
-  color: rgb(139, 139, 175);
+.returnBtn {
+  background-color: transparent;
   border: none;
-  
-}   */
+}
+.returnPosition {
+  position: absolute;
+  top: 200px;
+  left: 150px;
+}

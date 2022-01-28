@@ -15,21 +15,23 @@ export default function Navigation() {
         />
         <Navbar.Collapse id="basic-navbar-nav" className="nav-collapse">
           <Nav className="me-auto L-nav">
-            <NavLink to="makeyourdesign" className="nav-btn">
+            <NavLink to="/app/makeyourdesign" className="nav-btn">
               Make your design
             </NavLink>
-            <NavLink to="ourdesigns" className="nav-btn">
+            <NavLink to="/app/ourdesigns" className="nav-btn">
               Our designs
             </NavLink>
           </Nav>
-          <Navbar.Brand to="" className="nav-img">
-            <img src={Logo} alt="Bespoke Fashion Logo" className="nav-logo" />
-          </Navbar.Brand>
+          <NavLink to="/app/pickup">
+            <Navbar.Brand to="/app/pickup" className="nav-img">
+              <img src={Logo} alt="Bespoke Fashion Logo" className="nav-logo" />
+            </Navbar.Brand>
+            </NavLink>
           <Nav className="me-auto R-nav">
-            <NavLink to="about" className="nav-btn">
+            <NavLink to="/app/about" className="nav-btn">
               About us
             </NavLink>
-            <NavLink to="contact" className="nav-btn">
+            <NavLink to="/app/contact" className="nav-btn">
               Contact
             </NavLink>
           </Nav>
