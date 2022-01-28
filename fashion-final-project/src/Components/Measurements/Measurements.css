@@ -19,15 +19,20 @@
   border: dashed 3px #281e1c8e;
   /* height: 550px; */
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 .howToPic,
 .howToVideo {
   width: 90%;
   height: 80%;
   background-color: white;
+  border-radius: 5px;
 }
 .attBtn {
-  margin: 20px;
+  
   background-color: #e7bd44;
   /* border: dashed 3px #cca532; */
   border: none;
@@ -35,8 +40,14 @@
   border-radius: 7px;
   font-size: 1.1rem;
   font-family: "Montserrat";
-  float: right;
+  /* float: right; */
   height: 40px;
-  padding-left: 15px;
-  padding-right: 15px;
+  width: 30%;
+  justify-content: center;
+  align-items: center;
+  /* padding-left: 15px; */
+  /* padding-right: 15px; */
+  display: flex;
+  align-self: flex-end;
+  margin-right: 28px;
 }
