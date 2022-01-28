@@ -1,0 +1,42 @@
+.measurementContainer {
+  background-color: #fcf4f1;
+  width: 75%;
+  height: auto;
+}
+.measurementContainer h3 {
+  font-family: "Style Script", cursive;
+  letter-spacing: 1px;
+  margin-top: 5px;
+  text-align: center;
+}
+.measurementForm {
+  border: dashed 3px #281e1c8e;
+  /* height: 550px; */
+  padding: 20px;
+  border-right: 0;
+}
+.measurementHowTo {
+  border: dashed 3px #281e1c8e;
+  /* height: 550px; */
+  padding: 20px;
+}
+.howToPic,
+.howToVideo {
+  width: 90%;
+  height: 80%;
+  background-color: white;
+}
+.attBtn {
+  margin: 20px;
+  background-color: #e7bd44;
+  /* border: dashed 3px #cca532; */
+  border: none;
+  color: #fff;
+  border-radius: 7px;
+  font-size: 1.1rem;
+  font-family: "Montserrat";
+  float: right;
+  height: 40px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
