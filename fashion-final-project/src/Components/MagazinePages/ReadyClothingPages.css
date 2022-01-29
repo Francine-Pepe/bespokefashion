@@ -5,21 +5,24 @@
 }
 .OD-category {
   margin-top: 2%;
-  width: 25%;
+  width: 20%;
   display: flex;
   align-items: start;
   justify-content: end;
 }
 
 .OD-category > h4 {
+  margin-top: 6%;
   font-family: "Style Script";
   font-size: 1.5rem;
+  color: #2c6a67;
 }
 .OD-magazine {
-  width: 50%;
+  width: 60%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 .magazineBox {
   text-align: center;
@@ -27,7 +30,7 @@
 }
 .OD-img {
   padding-top: 5%;
-  width: 25%;
+  width: 20%;
   display: flex;
   align-items: end;
   justify-content: start;

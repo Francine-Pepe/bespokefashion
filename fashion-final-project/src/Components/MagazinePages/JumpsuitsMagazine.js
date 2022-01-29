@@ -29,14 +29,14 @@ export default function Magazine() {
     <HTMLFlipBook
       showCover={false}
       autoSize={false}
-      width={420}
-      height={520}
+      width={400}
+      height={500}
       style={{ margin: "0 auto" }}
     >
       {data
         .filter((datai) => datai.cName.includes(cat))
         .map(({ name, url, price, cName }) => (
-          <Paper elevation={3} className="demoPage1">
+          <Paper elevation={5} className="demoPage1">
             {/*<h3 className="pageHeader">{name}</h3> */}
             <img src={url} alt="our design cloths" className="pageImage" />
             <div className="pagePrice">price: {price} €</div>
