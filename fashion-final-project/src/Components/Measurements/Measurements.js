@@ -1,5 +1,5 @@
 import React from 'react';
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
@@ -11,8 +11,8 @@ import Form from 'react-bootstrap/Form'
 function Measurements() {
     const [showPic, setShowPic] = useState(true);
     const [showVideo, setShowVideo] = useState(false);
-    const [btnName, setBtnName] = useState('Show Video')
-
+    const [btnName, setBtnName] = useState('Show Video');
+    
     const handleShowAtt = ()=>{
         if (showPic) {
             setShowVideo(true);
@@ -26,114 +26,122 @@ function Measurements() {
         }
     }
 
+    const DRESS_FORM = [
+        { title : 'Shoulder'},
+        { title : 'Sleeve Length'},
+        { title : 'Arm hole'},
+        { title : 'Sleeve-biceps'},
+        { title : 'Bust'},
+        { title : 'Wrist'},
+        { title : 'Length (From Neck)'},
+        { title : 'Length (From Shoulder)'},
+        { title : 'Waist'},
+        { title : 'Hip'},
+    ]
+
+    const BLOUSES_FORM = [
+            { title : 'Shoulder'},
+            { title : 'Sleeve Length'},
+            { title : 'Arm hole'},
+            { title : 'Sleeve-biceps'},
+            { title : 'Bust'},
+            { title : 'Wrist'},
+            { title : 'Length (From Neck)'},  
+    ]
+
+    const SKIRTS_FORM = [
+        { title : 'Waist'},
+        { title : 'Hip'},
+        { title : 'Length'},
+    ]
+
+    const PANTS_FORM = [
+        { title : 'Waist'},
+        { title : 'Hip'},
+        { title : 'Thigh (Thickest Part)'},
+        { title : 'Waist to Crotch Length'},
+        { title : 'Leg opening'},
+        { title : 'Length'},
+    ]
+
+    const JUMPSUITS_FORM = [
+        { title : 'Shoulder'},
+        { title : 'Sleeve Length'},
+        { title : 'Arm hole'},
+        { title : 'Sleeve-biceps'},
+        { title : 'Bust'},
+        { title : 'Wrist'},
+        { title : 'Length (From Shoulder)'},
+        { title : 'Waist'},
+        { title : 'Hip'},
+        { title : 'Thigh (Thickest Part)'},
+        { title : 'Waist to Crotch Length'},
+        { title : 'Leg opening'}  
+    ]
+
+    const [displayForm, setDisplayForm] = useState([]);
+    const s ='dresses';
+    console.log(s);
+    useEffect(() => {
+        if (s === 'dresses' || s === '61f15f126b484350049ac7e7')
+        { setDisplayForm (DRESS_FORM); }
+        else if (s === 'blouses' || s === '61f15f126b484350049ac7e9')
+        { setDisplayForm (BLOUSES_FORM); }
+        else if (s === 'skirts' || s === '61f15f126b484350049ac7ec')
+        { setDisplayForm (SKIRTS_FORM); }
+        else if (s === 'pants' || s === 'shorts' || s === '61f15f126b484350049ac7ed' || s === '61f15f126b484350049ac7eb')
+        { setDisplayForm (PANTS_FORM); }
+        else
+        { setDisplayForm (JUMPSUITS_FORM); }
+        console.log(displayForm);
+    }, []);
+    
+    const [val, setVal] = useState ({});
+
+    const handleAddFormChange = (e) => {
+        e.preventDefault();
+        const fieldName = e.target.getAttribute("name");
+        const fieldValue = e.target.value;
+        console.log(fieldName, fieldValue);
+        const newFormData = { ...val };
+        newFormData[fieldName] = fieldValue;
+        setVal(newFormData);
+        console.log('val',val);
+    }
+
+    const handleAddFormSubmit = (e) => {
+        e.preventDefault();
+        console.log('form submited');
+     
+    }
+
     return (
         <Container className="measurementContainer">
-            <Row>
-                <Col className="measurementForm">
-                <h3>Enter your measurements</h3>
-                    <Form>
-                        <Form.Group as={Row} className="mb-3" controlId="formHorizontalEmail">
-                            <Form.Label column  className="w-45">Shoulder</Form.Label>
-                            <Col >
-                            <Form.Control type="text" className="w-40" />
-                            </Col>
-                            <Col >cms</Col>
-                        </Form.Group>
-                        <Form.Group as={Row} className="mb-3" controlId="formHorizontalPassword">
-                            <Form.Label column  className="w-50">Sleeve length</Form.Label>
-                            <Col >
-                            <Form.Control type="text" className="w-40" />
-                            </Col>
-                            <Col >cms</Col>
-                        </Form.Group>
-                        <Form.Group as={Row} className="mb-3" controlId="formHorizontalEmail">
-                            <Form.Label column  className="w-45">Arm hole</Form.Label>
-                            <Col >
-                            <Form.Control type="text" className="w-40" />
-                            </Col>
-                            <Col >cms</Col>
-                        </Form.Group>
-                        <Form.Group as={Row} className="mb-3" controlId="formHorizontalPassword">
-                            <Form.Label column  className="w-50">Sleeve length</Form.Label>
-                            <Col >
-                            <Form.Control type="text" className="w-40" />
-                            </Col>
-                            <Col >cms</Col>
-                        </Form.Group>
-                        <Form.Group as={Row} className="mb-3" controlId="formHorizontalEmail">
-                            <Form.Label column  className="w-45">Bust</Form.Label>
-                            <Col >
-                            <Form.Control type="text" className="w-40" />
-                            </Col>
-                            <Col >cms</Col>
-                        </Form.Group>
-                        <Form.Group as={Row} className="mb-3" controlId="formHorizontalPassword">
-                            <Form.Label column  className="w-50">Sleeve-Biceps</Form.Label>
-                            <Col >
-                            <Form.Control type="text" className="w-40" />
-                            </Col>
-                            <Col >cms</Col>
-                        </Form.Group>
-                        <Form.Group as={Row} className="mb-3" controlId="formHorizontalEmail">
-                            <Form.Label column  className="w-45">Cuff</Form.Label>
-                            <Col >
-                            <Form.Control type="text" className="w-40" />
-                            </Col>
-                            <Col >cms</Col>
-                        </Form.Group>
-                        <Form.Group as={Row} className="mb-3" controlId="formHorizontalPassword">
-                            <Form.Label column  className="w-50">Length (From Neck)</Form.Label>
-                            <Col >
-                            <Form.Control type="text" className="w-40" />
-                            </Col>
-                            <Col >cms</Col>
-                        </Form.Group>
-                        <Form.Group as={Row} className="mb-3" controlId="formHorizontalPassword">
-                            <Form.Label column  className="w-50">Waist</Form.Label>
-                            <Col >
-                            <Form.Control type="text" className="w-40" />
-                            </Col>
-                            <Col >cms</Col>
-                        </Form.Group>
-                        <Form.Group as={Row} className="mb-3" controlId="formHorizontalEmail">
-                            <Form.Label column  className="w-45">Hip</Form.Label>
-                            <Col >
-                            <Form.Control type="text" className="w-40" />
-                            </Col>
-                            <Col >cms</Col>
-                        </Form.Group>
-                        <Form.Group as={Row} className="mb-3" controlId="formHorizontalPassword">
-                            <Form.Label column  className="w-50">Thight (Thickest Part)</Form.Label>
-                            <Col >
-                            <Form.Control type="text" className="w-40" />
-                            </Col>
-                            <Col >cms</Col>
-                        </Form.Group>
-                        <Form.Group as={Row} className="mb-3" controlId="formHorizontalEmail">
-                            <Form.Label column  className="w-45">Crotch Length</Form.Label>
-                            <Col >
-                            <Form.Control type="text" className="w-40" />
-                            </Col>
-                            <Col >cms</Col>
-                        </Form.Group>
-                        <Form.Group as={Row} className="mb-3" controlId="formHorizontalPassword">
-                            <Form.Label column  className="w-50">Leg opening</Form.Label>
-                            <Col >
-                            <Form.Control type="text" className="w-40" />
-                            </Col>
-                            <Col >cms</Col>
-                        </Form.Group>
+            <Row className="measurementRow">
+                <Col md className="measurementForm">
+                    <h3 className="mb-4">Enter your measurements</h3>
+                    <Form onSubmit={handleAddFormSubmit}>  
+                        {displayForm.map( (labelTitle) => ( 
+                            <Form.Group as={Row} className="mb-3" >
+                                <Form.Label column  className="w-45">{labelTitle.title}</Form.Label>
+                                <Col >
+                                <Form.Control type="text" className="w-40" name={labelTitle.title} required onChange={handleAddFormChange} />
+                                </Col>
+                                <Col >cms</Col>
+                            </Form.Group>
+                        ))}
+                        <button className="attBtn" type="submit">Next Step</button>
                     </Form>
                 </Col>
-                <Col className="measurementHowTo ">
+                <Col md className="measurementHowTo ">
                     <h3>How to take measurements </h3>
-
                     <div className="howToPic" style =  {{ display: showPic ? "block" : "none" }}> How to measure Picture</div>
                     <div className="howToVideo" style =  {{ display: showVideo ? "block" : "none" }}> How to measure Video</div>
                     <button className="attBtn" onClick={handleShowAtt}>{btnName}</button>
                 </Col>
             </Row>
-        </Container>)
+        </Container>
+    )
 }
 
 export default Measurements;
