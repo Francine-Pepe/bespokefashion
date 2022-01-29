@@ -1,7 +1,10 @@
 .measurementContainer {
-  background-color: #fcf4f1;
   width: 75%;
   height: auto;
+  border: dashed 3px #281e1c8e;
+}
+.measurementRow {
+  background-color: #fcf4f1;
 }
 .measurementContainer h3 {
   font-family: "Style Script", cursive;
@@ -10,7 +13,6 @@
   text-align: center;
 }
 .measurementForm {
-  border: dashed 3px #281e1c8e;
   /* height: 550px; */
   padding: 20px;
   border-right: 0;
@@ -23,31 +25,44 @@
   flex-direction: column;
   align-items: center;
   gap: 20px;
+  border-right: 0;
+  border-bottom: 0;
+  border-top: 0;
 }
+
 .howToPic,
 .howToVideo {
   width: 90%;
-  height: 80%;
+  /* height: 90%; */
+  height: 500px;
   background-color: white;
   border-radius: 5px;
 }
 .attBtn {
-  
   background-color: #e7bd44;
-  /* border: dashed 3px #cca532; */
   border: none;
   color: #fff;
   border-radius: 7px;
   font-size: 1.1rem;
   font-family: "Montserrat";
-  /* float: right; */
   height: 40px;
   width: 30%;
   justify-content: center;
   align-items: center;
-  /* padding-left: 15px; */
-  /* padding-right: 15px; */
   display: flex;
   align-self: flex-end;
   margin-right: 28px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .measurementHowTo {
+    border: dashed 3px #281e1c8e;
+    border-right: 0;
+    border-bottom: 0;
+    border-left: 0;
+  }
+  .attBtn {
+    height: 40px;
+    width: 40%;
+  }
 }
