@@ -1,37 +1,171 @@
-.OD-section {
+.MP-section {
   width: 100vw;
-  height: 100%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+}
+
+.MP-header {
   display: flex;
 }
-.OD-category {
-  margin-top: 2%;
+.MP-header > .returnPosition {
+  position: static;
+  margin-left: 5%;
+  width: 5%;
+}
+
+.MP-title {
+  font-family: "Style Script";
+  color: #2c6a67;
+  display: flex;
+  align-items: center;
+}
+.MP-main {
+  display: flex;
+}
+.MP-category {
   width: 20%;
   display: flex;
   align-items: start;
   justify-content: end;
 }
 
-.OD-category > h4 {
-  margin-top: 6%;
+.MP-category > h3 {
+  margin-top: 7%;
   font-family: "Style Script";
-  font-size: 1.5rem;
   color: #2c6a67;
 }
-.OD-magazine {
+.MP-magazine {
   width: 60%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   margin-left: auto;
   margin-right: auto;
 }
-.magazineBox {
+.MP-box {
   text-align: center;
   width: 100%;
 }
-.OD-img {
-  padding-top: 5%;
+.MP-img {
   width: 20%;
   display: flex;
   align-items: end;
   justify-content: start;
+}
+
+@media (max-width: 1301px) {
+  .MP-title {
+    margin-left: 2rem;
+    font-family: "Style Script";
+    color: #2c6a67;
+    display: flex;
+    align-items: center;
+  }
+  .MP-category {
+    width: 15%;
+    display: flex;
+    align-items: start;
+    justify-content: end;
+  }
+  .MP-lines {
+    width: 4rem;
+  }
+  .MP-category > h3 {
+    margin-top: 7%;
+    font-family: "Style Script";
+    font-size: 1.5rem;
+    color: #2c6a67;
+  }
+  .MP-magazine {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .MP-img {
+    width: 15%;
+    display: flex;
+    align-items: end;
+    justify-content: start;
+  }
+  .MP-models {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1085px) {
+  .MP-category {
+    width: 20%;
+    display: flex;
+    align-items: start;
+    justify-content: end;
+  }
+  .MP-magazine {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .MP-img {
+    width: 20%;
+    display: flex;
+    align-items: end;
+    justify-content: start;
+  }
+  .MP-models {
+    width: 90%;
+  }
+}
+
+@media (max-width: 870px) {
+  .MP-title {
+    margin-left: 3rem;
+    font-family: "Style Script";
+    color: #2c6a67;
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media (max-width: 659px) {
+  .MP-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .MP-category > h3 {
+    margin-top: 1%;
+    margin-bottom: 2rem;
+    font-family: "Style Script";
+    color: #2c6a67;
+  }
+  .MP-category {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .MP-magazine {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .MP-img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .MP-models {
+    width: 20%;
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+  }
 }

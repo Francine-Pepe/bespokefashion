@@ -3,23 +3,31 @@ import "./ReadyClothingPages.css"
 import breadcrumps from "../Images/breadcrumps.png"
 import models from "../Images/models.png"
 import JumpsuitMagazine from "./JumpsuitsMagazine"
+import ReturnButton from "../ReturnButton/ReturnButton"
 
 export default function OurDesign() {
   const cat = "jumpsuits"
 
   return (
-    <section className="OD-section">
-      <div className=" OD-category">
-        <img src={breadcrumps} alt="lines" className=" OD-lines" />
-        <h4>{cat}</h4>
+    <section className="MP-section">
+      <div className="MP-header">
+        <ReturnButton className="MP-btn" />
+        <h1 className="MP-title">Our Design Catalogue</h1>
       </div>
-      <div className="OD-magazine">
-        <div className="magazineBox">
-          <JumpsuitMagazine />
+      <div className="MP-main">
+        <div className=" MP-category">
+          <img src={breadcrumps} alt="lines" className=" MP-lines" />
+          <h3>{cat}</h3>
         </div>
-      </div>
-      <div className="OD-img">
-        <img src={models} alt="models" className="OD-models" />
+
+        <div className="MP-magazine">
+          <div className="MP-box">
+            <JumpsuitMagazine />
+          </div>
+        </div>
+        <div className="MP-img">
+          <img src={models} alt="models" className="MP-models" />
+        </div>
       </div>
     </section>
   )

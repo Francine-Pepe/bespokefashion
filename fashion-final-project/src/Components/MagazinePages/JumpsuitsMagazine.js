@@ -29,9 +29,10 @@ export default function Magazine() {
     <HTMLFlipBook
       showCover={false}
       autoSize={false}
-      width={400}
-      height={500}
+      width={380}
+      height={480}
       style={{ margin: "0 auto" }}
+      className="MP-flipBook"
     >
       {data
         .filter((datai) => datai.cName.includes(cat))

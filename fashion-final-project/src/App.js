@@ -11,6 +11,7 @@ function App() {
       <Navigation />
       {/*<Outlet />*/}
       {/* <Measurements /> */}
+
       <JumpsuitsPage />
       <Footer />
     </div>
