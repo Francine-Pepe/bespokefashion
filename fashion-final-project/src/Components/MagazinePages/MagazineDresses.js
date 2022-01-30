@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react"
-import "./JumpsuitsMagazine.css"
+import "./Magazine.css"
 import HTMLFlipBook from "react-pageflip"
 import animation from "../Images/loading.gif"
 import Paper from "@mui/material/Paper"
@@ -7,7 +7,7 @@ import Paper from "@mui/material/Paper"
 export default function Magazine() {
   const [data, setData] = useState([])
   const [isLoading, setIsLoading] = useState(true)
-  const cat = "jumpsuits"
+  const cat = "dresses"
 
   useEffect(() => {
     console.log("The Component is Ready!")

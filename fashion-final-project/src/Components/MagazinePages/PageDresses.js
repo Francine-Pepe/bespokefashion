@@ -2,11 +2,11 @@ import React from "react"
 import "./ReadyClothingPages.css"
 import breadcrumps from "../Images/breadcrumps.png"
 import models from "../Images/models.png"
-import JumpsuitMagazine from "./JumpsuitsMagazine"
+import Magazine from "./MagazineDresses"
 import ReturnButton from "../ReturnButton/ReturnButton"
 
 export default function OurDesign() {
-  const cat = "jumpsuits"
+  const cat = "dresses"
 
   return (
     <section className="MP-section">
@@ -22,7 +22,7 @@ export default function OurDesign() {
 
         <div className="MP-magazine">
           <div className="MP-box">
-            <JumpsuitMagazine />
+            <Magazine />
           </div>
         </div>
         <div className="MP-img">
