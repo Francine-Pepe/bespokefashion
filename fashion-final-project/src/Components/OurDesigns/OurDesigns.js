@@ -26,37 +26,37 @@ export default function OurDesigns() {
                 <img src={Jumpsuits} alt="jumpsuit" />
               </div>
               
-            <NavLink to="/" className="design_button" style={{textDecoration: 'none'}}>Jumpsuits</NavLink>
+            <NavLink to="/app/magazine/jumpsuits" className="design_button" style={{textDecoration: 'none'}}>Jumpsuits</NavLink>
           </div> 
           <div className="clothes_types_container">
             <div className="pants_box">
               <img src={Pants} alt="Pants" />
             </div>
-            <NavLink to="/" className="design_button" style={{textDecoration: 'none'}}>Pants</NavLink>
+            <NavLink to="/app/magazine/pants" className="design_button" style={{textDecoration: 'none'}}>Pants</NavLink>
           </div>
           <div className="clothes_types_container">
             <div className="skirts_box">
               <img src={Skirts} alt="Skirts" />
             </div>
-            <NavLink to="/" className="design_button" style={{textDecoration: 'none'}}>Skirts</NavLink>
+            <NavLink to="/app/magazine/skirts" className="design_button" style={{textDecoration: 'none'}}>Skirts</NavLink>
           </div>
           <div className="clothes_types_container">
             <div className="dresses_box">
               <img src={Dresses} alt="Dresses" />
             </div>
-            <NavLink to="/" className="design_button" style={{textDecoration: 'none'}}>Dresses</NavLink>
+            <NavLink to="/app/magazine/dresses" className="design_button" style={{textDecoration: 'none'}}>Dresses</NavLink>
           </div>
           <div className="clothes_types_container">
             <div className="blouses_box">
               <img src={Blouses} alt="Blouses" />
             </div>
-            <NavLink to="/" className="design_button" style={{textDecoration: 'none'}}>Blouses</NavLink>
+            <NavLink to="/app/magazine/blouses" className="design_button" style={{textDecoration: 'none'}}>Blouses</NavLink>
           </div>
           <div className="clothes_types_container">
             <div className="short_box">
               <img src={Shorts} alt="Shorts" />
             </div>
-            <NavLink to="/" className="design_button" style={{textDecoration: 'none'}}>Shorts</NavLink>
+            <NavLink to="/app/magazine/shorts" className="design_button" style={{textDecoration: 'none'}}>Shorts</NavLink>
           </div>
           
         </div>

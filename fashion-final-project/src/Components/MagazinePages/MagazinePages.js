@@ -7,10 +7,10 @@ import HTMLFlipBook from "react-pageflip"
 import animation from "../Images/loading.gif"
 import Paper from "@mui/material/Paper"
 
-export default function OurDesign() {
+export default function MagazinePages({cat}) {
   const [data, setData] = useState([])
   const [isLoading, setIsLoading] = useState(true)
-  const cat = "skirts"
+  // const cat = "skirts"
 
   useEffect(() => {
     console.log("The Component is Ready!")

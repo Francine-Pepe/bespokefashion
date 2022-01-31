@@ -6,10 +6,14 @@ import Footer from "./Components/Footer/Footer"
 // import OurDesigns from "./Components/OurDesigns/OurDesigns"
 //import Measurements from "./Components/Measurements/Measurements"
 
+
 // import MagazinePages from "./Components/MagazinePages/PageJumpsuits"
 
 
 // import MagazinePages from "./Components/MagazinePages/MagazinePages"
+
+import MagazinePages from "./Components/MagazinePages/MagazinePages"
+
 
 
 function App() {
@@ -20,8 +24,10 @@ function App() {
       {/* <Measurements /> */}
 
       {/* <MagazinePages /> */}
+
       {/* <YourDesign /> */}
       {/* <OurDesigns /> */}
+
       
       <Footer />
     </div>
