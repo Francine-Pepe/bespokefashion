@@ -7,6 +7,7 @@ import PickUpDesign from './Components/PickUpDesign/PickUpDesign'
 import LandingPage from './Components/LandingPage/LandingPage'
 import OurDesigns from './Components/OurDesigns/OurDesigns'
 import Measurements from './Components/Measurements/Measurements'
+import MagazinePages from './Components/MagazinePages/MagazinePages'
 import App from "./App"
 
 ReactDOM.render(
@@ -21,7 +22,14 @@ ReactDOM.render(
               <Route path="pickup" element={ <PickUpDesign /> }/>
               <Route path="ourdesigns" element={ <OurDesigns /> } />
               <Route path="measurement" element={ <Measurements /> } />
-              
+              <Route path="magazine/jumpsuits" element={ <MagazinePages cat='jumpsuits'/> } />
+              <Route path="magazine/pants" element={ <MagazinePages cat='pants'/> } />
+              <Route path="magazine/skirts" element={ <MagazinePages cat='skirts'/> } />
+              <Route path="magazine/dresses" element={ <MagazinePages cat='dresses'/> } />
+              <Route path="magazine/blouses" element={ <MagazinePages cat='blouses'/> } />
+              <Route path="magazine/shorts" element={ <MagazinePages cat='shorts'/> } />
+
+
 
             </Route>
         </Route>
