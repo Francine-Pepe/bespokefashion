@@ -6,8 +6,10 @@ import Contact from './Components/Contact/Contact'
 import PickUpDesign from './Components/PickUpDesign/PickUpDesign'
 import LandingPage from './Components/LandingPage/LandingPage'
 import OurDesigns from './Components/OurDesigns/OurDesigns'
+import YourDesigns from './Components/YourDesign/YourDesign'
 import Measurements from './Components/Measurements/Measurements'
 import MagazinePages from './Components/MagazinePages/MagazinePages'
+import OutfitDetails from './Components/OutfitDetails/OutfitDetails'
 import App from "./App"
 import YourDesign from "./Components/YourDesign/YourDesign";
 
@@ -22,7 +24,7 @@ ReactDOM.render(
               <Route path="contact" element={ <Contact /> } />
               <Route path="pickup" element={ <PickUpDesign /> }/>
               <Route path="ourdesigns" element={ <OurDesigns /> } />
-              <Route path="yourdesign" element={ <YourDesign /> } />
+              <Route path="yourdesigns" element={ <YourDesign /> } />
               <Route path="measurement" element={ <Measurements /> } />
               <Route path="magazine/jumpsuits" element={ <MagazinePages cat='jumpsuits'/> } />
               <Route path="magazine/pants" element={ <MagazinePages cat='pants'/> } />
@@ -30,7 +32,7 @@ ReactDOM.render(
               <Route path="magazine/dresses" element={ <MagazinePages cat='dresses'/> } />
               <Route path="magazine/blouses" element={ <MagazinePages cat='blouses'/> } />
               <Route path="magazine/shorts" element={ <MagazinePages cat='shorts'/> } />
-
+              <Route path="outfitDetails" element={ <OutfitDetails /> } />
 
 
             </Route>
