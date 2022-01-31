@@ -28,7 +28,8 @@ body {
 .pants_box,
 .skirts_box,
 .dresses_box,
-.blouses_box {
+.blouses_box,
+.short_box {
     width: 95%;
     height: 55vh;
     display: flex;
@@ -43,7 +44,8 @@ body {
 .skirts_box:hover,
 .dresses_box:hover,
 .blouses_box:hover,
-.design_button:hover {
+.design_button:hover,
+.short_box:hover {
     -moz-box-shadow: 0 0 15px #707070;
     -webkit-box-shadow: 0 0 15px #707070;
     box-shadow: 0 0 10px #707070;
@@ -78,7 +80,8 @@ body {
 .pants_box img,
 .skirts_box img, 
 .dresses_box img, 
-.blouses_box img {
+.blouses_box img,
+.short_box img {
     width: 100%;
     height: auto;
 }
@@ -102,7 +105,8 @@ body {
         .pants_box,
         .skirts_box,
         .dresses_box,
-        .blouses_box {
+        .blouses_box, 
+        .short_box {
             width: 95%;
             height: auto;
             display: flex;
@@ -151,7 +155,8 @@ body {
     .pants_box,
     .skirts_box,
     .dresses_box,
-    .blouses_box {
+    .blouses_box,
+    .short_box {
         width: 95%;
         height: auto;
         display: flex;
@@ -201,7 +206,8 @@ body {
     .pants_box,
     .skirts_box,
     .dresses_box,
-    .blouses_box {
+    .blouses_box,
+    .short_box {
         width: 95%;
         height: auto;
         display: flex;
@@ -252,7 +258,8 @@ body {
         .pants_box,
         .skirts_box,
         .dresses_box,
-        .blouses_box {
+        .blouses_box,
+        .short_box {
             width: 80%;
             height: auto;
             display: flex;
