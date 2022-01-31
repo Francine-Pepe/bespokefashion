@@ -15,7 +15,7 @@ export default function Navigation() {
         />
         <Navbar.Collapse id="basic-navbar-nav" className="nav-collapse">
           <Nav className="me-auto L-nav">
-            <NavLink to="/app/makeyourdesign" className="nav-btn">
+            <NavLink to="/app/yourdesigns" className="nav-btn">
               Make your design
             </NavLink>
             <NavLink to="/app/ourdesigns" className="nav-btn">
