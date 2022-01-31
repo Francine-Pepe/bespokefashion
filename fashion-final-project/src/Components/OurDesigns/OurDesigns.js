@@ -5,6 +5,8 @@ import Pants from './../Images/pants.png';
 import Skirts from './../Images/skirts.png';
 import Dresses from './../Images/dresses.png';
 import Blouses from './../Images/blouses.png';
+import Shorts from './../Images/shorts.png';
+
 import {NavLink} from 'react-router-dom';
 
 
@@ -46,6 +48,12 @@ export default function OurDesigns() {
               <img src={Blouses} alt="Blouses" />
             </div>
             <NavLink to="/" className="design_button" style={{textDecoration: 'none'}}>Blouses</NavLink>
+          </div>
+          <div className="clothes_types_container">
+            <div className="short_box">
+              <img src={Shorts} alt="Shorts" />
+            </div>
+            <NavLink to="/" className="design_button" style={{textDecoration: 'none'}}>Shorts</NavLink>
           </div>
           
         </div>

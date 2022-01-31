@@ -4,6 +4,7 @@ import Navigation from "./Components/Navigation/Navigation"
 import Footer from "./Components/Footer/Footer"
 //import Measurements from "./Components/Measurements/Measurements"
 import MagazinePages from "./Components/MagazinePages/PageJumpsuits"
+import OurDesigns from "./Components/OurDesigns/OurDesigns"
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       {/* <Measurements /> */}
 
       <MagazinePages />
+      <OurDesigns />
       <Footer />
     </div>
   )
