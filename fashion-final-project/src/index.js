@@ -9,6 +9,7 @@ import OurDesigns from './Components/OurDesigns/OurDesigns'
 import Measurements from './Components/Measurements/Measurements'
 import MagazinePages from './Components/MagazinePages/MagazinePages'
 import App from "./App"
+import YourDesign from "./Components/YourDesign/YourDesign";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -21,6 +22,7 @@ ReactDOM.render(
               <Route path="contact" element={ <Contact /> } />
               <Route path="pickup" element={ <PickUpDesign /> }/>
               <Route path="ourdesigns" element={ <OurDesigns /> } />
+              <Route path="yourdesign" element={ <YourDesign /> } />
               <Route path="measurement" element={ <Measurements /> } />
               <Route path="magazine/jumpsuits" element={ <MagazinePages cat='jumpsuits'/> } />
               <Route path="magazine/pants" element={ <MagazinePages cat='pants'/> } />
