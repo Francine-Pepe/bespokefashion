@@ -1,6 +1,9 @@
 .navbar {
   width: 100vw;
 }
+.ColNav-HomeLink {
+  display: none;
+}
 
 .nav-collapse {
   width: 100vw;
@@ -33,6 +36,9 @@
   text-decoration: none;
   font-family: "Style Script";
   font-size: 2.5rem;
+}
+.nav-btn:hover {
+  color: #e7bd44 !important;
 }
 .nav-img {
   margin-left: 3rem;
@@ -76,6 +82,9 @@
   .nav-img {
     display: none;
   }
+  .Nav-homeLink {
+    display: none;
+  }
   .nav-logo {
     display: none;
   }
@@ -105,5 +114,18 @@
   }
   .navbar {
     justify-content: center !important;
+  }
+  .ColNav-HomeLink {
+    display: flex;
+    justify-content: center;
+    font-family: "Style Script";
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: #fff;
+    background-color: #2c6a67;
+    cursor: pointer;
+  }
+  .ColNav-HomeLink:hover {
+    color: #e7bd44;
   }
 }
