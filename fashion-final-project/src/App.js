@@ -13,7 +13,6 @@ import Footer from "./Components/Footer/Footer"
 // import MakeYourDesignPatterns from "./Components/MakeYourDesignPatterns/MakeYorDesignPatterns"
 import OutfitDetails from "./Components/OutfitDetails/OutfitDetails"
 
-
 function App() {
   return (
     <div className="App">
@@ -29,7 +28,6 @@ function App() {
       {/* <MakeYourDesignPatterns /> */}
       {/* <CarouselComponent /> */}
       {/*<MakeYourDesignClothes /> */}
-      
 
       <Outlet />
       {/* <OutfitDetails />  */}
