@@ -18,7 +18,7 @@
 .our_design_img,
 .your_design_img {
   border-radius: 5px;
-  width: 55%;
+  width: 50%;
 }
 
 .left_container,
@@ -32,7 +32,7 @@
 }
 
 .pick_up_design_button {
-  width: 55%;
+  width: 50%;
   height: 5vh;
   display: flex;
   align-items: center;
@@ -111,11 +111,11 @@
 @media (max-width: 1300px) {
   .our_design_img,
   .your_design_img {
-    width: 65%;
+    width: 55%;
     border-radius: 5px;
   }
   .pick_up_design_button {
-    width: 65%;
+    width: 55%;
     height: 5vh;
     display: flex;
     font-size: 15px;
@@ -143,11 +143,11 @@
 @media (max-width: 1000px) {
   .our_design_img,
   .your_design_img {
-    width: 70%;
+    width: 65%;
     border-radius: 5px;
   }
   .pick_up_design_button {
-    width: 70%;
+    width: 65%;
     height: 5vh;
     display: flex;
     font-size: 15px;
