@@ -114,6 +114,7 @@
   }
   .navbar {
     justify-content: center !important;
+    width: 100%;
   }
   .ColNav-HomeLink {
     display: flex;
