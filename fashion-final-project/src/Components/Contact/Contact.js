@@ -38,7 +38,7 @@ function Contact() {
                         </h4>
                     </Col>
                     <Col md className='contactForm '>
-                        <Form onSubmit={sendEmail}>
+                        <Form onSubmit={sendEmail} >
                             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                                 <Form.Label><h4>Name: </h4></Form.Label>
                                 <Form.Control type="name" name="name"/>

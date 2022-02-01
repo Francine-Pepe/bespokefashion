@@ -7,7 +7,7 @@ export default function CarouselComponent() {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const carousel = useRef(null);
-  const cat = "top";
+  // const cat = "top";
 
   // useEffect(() => {
   //   fetch("https://bespoke-fashion.herokuapp.com/outfitParts")
@@ -49,11 +49,12 @@ export default function CarouselComponent() {
   //   "===",
   //   data.filter((data) => data.part === cat)
   // );
+
   return (
     <div className="container">
       <div className="carousel" ref={carousel}>
         {data
-          .filter((data) => data.part === cat)
+          .filter((data) => data.part === 'top')
           .map((item) => {
             const { id, name, url, price } = item;
             return (

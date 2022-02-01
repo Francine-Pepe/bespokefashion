@@ -3,6 +3,8 @@ import './MakeYourDesignPatterns.css';
 import Manequin from './../Images/manequim_transparent_-Recovered.png'
 import ColorsCarousel from '../ColorsCarousel/ColorsCarousel';
 import PrintsCarousel from '../PrintsCarousel/PrintsCarousel.js';
+import { NavLink } from "react-router-dom"
+
 
 export default function MakeYourDesignPatterns() {
     return (
@@ -28,7 +30,9 @@ export default function MakeYourDesignPatterns() {
 
 
         </div>
-        
+        <NavLink to="/app/measurement" >
+              NEXT
+            </NavLink>
         </>
 
     );

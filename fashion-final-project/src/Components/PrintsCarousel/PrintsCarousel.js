@@ -1,13 +1,17 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef, useContext } from "react";
 // import CarouselComponent from "../CarouselComponent/CarouselComponent";
 import { Button } from "react-bootstrap";
 import "./PrintsCarousel.css";
 import { Icon } from "@iconify/react";
+import { OrderContext } from "../../orderContext";
+
 
 
 export default function PrintsCarousel() {
   const [data, setData] = useState([]);
   const carousel = useRef(null);
+  const { order, setFabric } = useContext(OrderContext);
+
 
   useEffect(() => {
     fetch("https://bespoke-fashion.herokuapp.com/patterns")
@@ -27,6 +31,8 @@ export default function PrintsCarousel() {
 
   if (!data || !data.length) return null;
 
+  console.log(order)
+  
   return (
     <div className="container">
        <div className="carousel" ref={carousel}>
@@ -37,7 +43,7 @@ export default function PrintsCarousel() {
               <div className="prints_image">
                 <img src={url} alt={name} style={{ width: 170, height: 150 }} />
               </div>
-              <Button className="select_button" style={{ outline: 'none' }}>Select</Button>
+              <Button className="select_button" style={{ outline: 'none' }} onClick={() => setFabric({ id: id, price, url})}>Select</Button>
               <div className="info">
                 <span className="price">€{price}</span>
               </div> 
@@ -63,6 +69,7 @@ export default function PrintsCarousel() {
           />
         </Button>
       </div> 
+     
     </div>
   );
 }
