@@ -6,20 +6,19 @@ import ReturnButton from "../ReturnButton/ReturnButton"
 import HTMLFlipBook from "react-pageflip"
 import animation from "../Images/loading.gif"
 import Paper from "@mui/material/Paper"
-import { OrderContext } from "../../orderContext";
+import { OrderContext } from "../../orderContext"
 
 import { NavLink } from "react-router-dom"
 
-
-export default function MagazinePages({cat}) {
+export default function MagazinePages({ cat }) {
   const [data, setData] = useState([])
   const [isLoading, setIsLoading] = useState(true)
-  const { order, setSimpleVals, setOutfit } = useContext(OrderContext);
+  const { order, setSimpleVals, setOutfit } = useContext(OrderContext)
 
   // const cat = "skirts"
 
   useEffect(() => {
-    setSimpleVals('cat', cat);
+    setSimpleVals("cat", cat)
 
     fetch("https://bespoke-fashion.herokuapp.com/designs")
       .then((response) => response.json())
@@ -32,7 +31,6 @@ export default function MagazinePages({cat}) {
       })
   }, [])
 
- 
   console.log(order)
 
   return (
@@ -40,13 +38,15 @@ export default function MagazinePages({cat}) {
       <div className="MP-header">
         <ReturnButton className="MP-btn" />
         <h1 className="MP-title">Our Design Catalogue</h1>
+        <h4 className="MP-info1">click the page to flip</h4>
+        <h4 className="MP-info2">click the page to flip</h4>
       </div>
       <div className="MP-main">
         <div className=" MP-category">
           <img src={breadcrumps} alt="lines" className=" MP-lines" />
           <h3>{cat}</h3>
         </div>
-
+        <h4 className="MP-info3">click the page to flip</h4>
         <div className="MP-magazine">
           <div className="MP-box">
             {isLoading ? (
@@ -76,7 +76,11 @@ export default function MagazinePages({cat}) {
                         className="pageImage"
                       />
                       <div className="pagePrice">price: {price} €</div>
-                      <button onClick={() => setOutfit({ id: _id, price, url})} id="#selectPrize" className="selectPrize-btn">
+                      <button
+                        onClick={() => setOutfit({ id: _id, price, url })}
+                        id="#selectPrize"
+                        className="selectPrize-btn"
+                      >
                         select
                       </button>
                     </Paper>
@@ -89,9 +93,7 @@ export default function MagazinePages({cat}) {
           <img src={models} alt="models" className="MP-models" />
         </div>
       </div>
-      <NavLink to="/app/fabrics" >
-              NEXT
-            </NavLink>
+      <NavLink to="/app/fabrics">NEXT</NavLink>
     </section>
   )
 }

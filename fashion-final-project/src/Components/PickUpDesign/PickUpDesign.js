@@ -3,14 +3,15 @@ import "./PickUpDesign.css"
 import Sketch1 from "./../Images/sketch_01_small.jpg"
 import Sketch2 from "./../Images/sketch_02_small.jpg"
 import { NavLink } from "react-router-dom"
-//import ReturnButton from "../ReturnButton/ReturnButton"
+import needle from "./../Images/needle_buttons_bg.png"
+import sewingPillow from "./../Images/sewing_pillow_bg.png"
+
 export default function PickUpDesign() {
   return (
     <>
-      {/* <div className="outside_container_right"></div> */}
-      {/* <ReturnButton /> */}
       <div className="main_design_box">
         <div className="center_detail_scissor"></div>
+        <img src={sewingPillow} alt="sewing pillow" className="sewingPillow" />
         <div className="left_container">
           <NavLink
             to="/app/ourdesigns"
@@ -19,24 +20,19 @@ export default function PickUpDesign() {
           >
             Our Designs
           </NavLink>
-          <div className="our_design_box">
-            <img src={Sketch1} alt="sketch1" />
-          </div>
+          <img src={Sketch1} alt="sketch1" className="our_design_img" />
         </div>
-        <hr />
         <div className="right_container">
           <NavLink
-            to="/app/yourdesigns"
+            to="/app/yourdesign"
             className="pick_up_design_button"
             style={{ textDecoration: "none" }}
           >
             Make your Design
           </NavLink>
-          <div className="your_design_box">
-            <img src={Sketch2} alt="sketch2" />
-          </div>
+          <img src={Sketch2} alt="sketch2" className="our_design_img" />
         </div>
-        <div className="outside_container_left"></div>
+        <img src={needle} alt="needle and buttons" className="needle" />
       </div>
     </>
   )
