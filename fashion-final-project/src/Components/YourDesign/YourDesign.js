@@ -3,6 +3,7 @@ import './YourDesign.css';
 import Jumpsuits from './../Images/jumpsuitYourDesign.png';
 import Dresses from './../Images/dressYourDesign.png';
 import {NavLink} from 'react-router-dom';
+
 // import ReturnButton from './../ReturnButton/ReturnButton';
 
 export default function YourDesign() {
@@ -20,13 +21,13 @@ export default function YourDesign() {
                 <img src={Jumpsuits} alt="jumpsuit" />
               </div>
               
-            <NavLink to="/" className="design_button_your_design" style={{textDecoration: 'none'}}>Jumpsuits</NavLink>
+            <NavLink to="/app/designClothes/jumpsuits" className="design_button_your_design" style={{textDecoration: 'none'}}>Jumpsuits</NavLink>
           </div> 
           <div className="clothes_types_container_your_design">
             <div className="dresses_box_your_design">
               <img src={Dresses} alt="Dresses" />
             </div>
-            <NavLink to="/" className="design_button_your_design" style={{textDecoration: 'none'}}>Dresses</NavLink>
+            <NavLink to="/app/designClothes/dresses" className="design_button_your_design" style={{textDecoration: 'none'}}>Dresses</NavLink>
           </div>
           
           
