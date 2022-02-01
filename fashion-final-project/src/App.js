@@ -1,4 +1,4 @@
-// import { Outlet } from "react-router-dom"
+import { Outlet } from "react-router-dom"
 import "./App.css"
 import Navigation from "./Components/Navigation/Navigation"
 import Footer from "./Components/Footer/Footer"
@@ -11,14 +11,14 @@ import Footer from "./Components/Footer/Footer"
 // import MagazinePages from "./Components/MagazinePages/MagazinePages"
 // import CarouselComponent from "./Components/CarouselComponent/CarouselComponentBottom"
 // import MakeYourDesignPatterns from "./Components/MakeYourDesignPatterns/MakeYorDesignPatterns"
-import OutfitDetails from "./Components/OutfitDetails/OutfitDetails"
+//import OutfitDetails from "./Components/OutfitDetails/OutfitDetails"
 
 function App() {
   return (
     <div className="App">
       <Navigation />
 
-      {/* <Outlet /> */}
+      <Outlet />
       {/* <Measurements /> */}
 
       {/* <MagazinePages /> */}
@@ -28,8 +28,8 @@ function App() {
       {/* <MakeYourDesignPatterns /> */}
       {/* <CarouselComponent /> */}
       {/*<MakeYourDesignClothes /> */}
+      {/* <Outlet /> */}
 
-      <Outlet />
       {/* <OutfitDetails />  */}
 
       <Footer />

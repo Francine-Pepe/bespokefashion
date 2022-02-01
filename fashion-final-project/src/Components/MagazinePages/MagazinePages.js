@@ -6,8 +6,9 @@ import ReturnButton from "../ReturnButton/ReturnButton"
 import HTMLFlipBook from "react-pageflip"
 import animation from "../Images/loading.gif"
 import Paper from "@mui/material/Paper"
+import { Icon } from "@iconify/react"
 
-export default function MagazinePages({cat}) {
+export default function MagazinePages({ cat }) {
   const [data, setData] = useState([])
   const [isLoading, setIsLoading] = useState(true)
   // const cat = "skirts"
@@ -31,13 +32,15 @@ export default function MagazinePages({cat}) {
       <div className="MP-header">
         <ReturnButton className="MP-btn" />
         <h1 className="MP-title">Our Design Catalogue</h1>
+        <h4 className="MP-info1">click the page to flip</h4>
+        <h4 className="MP-info2">click the page to flip</h4>
       </div>
       <div className="MP-main">
         <div className=" MP-category">
           <img src={breadcrumps} alt="lines" className=" MP-lines" />
           <h3>{cat}</h3>
         </div>
-
+        <h4 className="MP-info3">click the page to flip</h4>
         <div className="MP-magazine">
           <div className="MP-box">
             {isLoading ? (
