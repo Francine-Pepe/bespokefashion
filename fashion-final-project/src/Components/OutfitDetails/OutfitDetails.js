@@ -5,15 +5,26 @@ import Col from 'react-bootstrap/Col'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Form from 'react-bootstrap/Form'
 import './OutfitDetails.css'
-import { useState } from "react"
+import { useState, useContext} from "react"
 import Modal from "react-bootstrap/Modal"
 import {NavLink} from 'react-router-dom';
+import { OrderContext } from "../../orderContext";
+
 
 function OutfitDetails() {
     const [modalShow, setModalShow] = useState(false)
-    function handleSubmit(e) {
+  const { order, setSimpleVals, setOutfit } = useContext(OrderContext);
+
+    function handleInstruction(e) {
         e.preventDefault();
+        setSimpleVals('instructions', e.target.value);
     }
+
+    function handleSubmit (e) {
+        e.preventDefault();
+        console.log('order :',order);
+    }
+
   return (
     <Container fluid className='ofdContainer  mt-5'>
         <Row className="ofdTitle text-center mb-3">
@@ -23,7 +34,7 @@ function OutfitDetails() {
             <Form onSubmit={handleSubmit}>
                 <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
                     <Form.Label><h4>Message: </h4></Form.Label>
-                    <Form.Control as="textarea" rows={8} name="message"/>
+                    <Form.Control as="textarea" rows={8} onChange={(e) => handleInstruction(e)} name="message"/>
                 </Form.Group>
                 <button className="ofdBtn"  type="submit">
                     <h5  onClick={() => setModalShow(true)}>Add to cart</h5>
@@ -50,14 +61,16 @@ function OutfitDetails() {
                 </Row>
                 <Row>
                     <Col>
-                            <NavLink className="ofdBtn" to="/app/pickup">
-                                <h5 onClick={() =>setModalShow(false)}>Shop More</h5>
-                            </NavLink>
+                        <NavLink className="ofdBtn" to="/app/pickup">
+                            <h5 onClick={() =>setModalShow(false)}>Shop More</h5>
+                        </NavLink>
                     </Col>
                     <Col>
-                        <button className="ofdBtn"  type="submit">
-                            <h5  >Checkout</h5>
-                        </button>
+                        <NavLink to="/app/checkout" style={{textDecoration: 'none'}}>
+                            <button className="ofdBtn"  type="submit">
+                                <h5>Checkout</h5>
+                            </button>
+                        </NavLink>
                     </Col>
                 </Row>
             </Modal.Body>

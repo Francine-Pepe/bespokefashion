@@ -1,10 +1,11 @@
 .measurementContainer {
   width: 75%;
   height: auto;
-  border: dashed 3px #281e1c8e;
+  align-self: center;
 }
 .measurementRow {
   background-color: #fcf4f1;
+  border: dashed 3px #281e1c8e;
 }
 .measurementContainer h3 {
   font-family: "Style Script", cursive;

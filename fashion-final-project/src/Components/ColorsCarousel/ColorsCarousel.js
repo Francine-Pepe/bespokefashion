@@ -1,7 +1,8 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef, useContext} from "react";
 import { Button } from "react-bootstrap";
 import "./ColorsCarousel.css";
 import { Icon } from "@iconify/react";
+import { OrderContext } from "../../orderContext";
 // import Jumpsuit1 from "./Images/jumpsuit_01_top.png";
 // import Jumpsuit3 from "./Images/jumpsuit_02_top.png";
 // import Jumpsuit4 from "./Images/jumpsuit_05_top.png";
@@ -9,6 +10,7 @@ import { Icon } from "@iconify/react";
 export default function ColorsCarousel() {
   const [data, setData] = useState([]);
   const carousel = useRef(null);
+  const { order, setFabric } = useContext(OrderContext);
 
   useEffect(() => {
     fetch("https://bespoke-fashion.herokuapp.com/colors")
@@ -27,7 +29,7 @@ export default function ColorsCarousel() {
   };
 
   if (!data || !data.length) return null;
-
+  console.log(order)
   return (
     <div className="container">
       <div className="carousel" ref={carousel}>
@@ -38,7 +40,7 @@ export default function ColorsCarousel() {
               <div className="colors_image">
                 <img src={url} alt={name} style={{ width: 200, height: 150 }} />
               </div>
-              <Button className="select_button">Select</Button>
+              <Button className="select_button" onClick={() => setFabric({ id: id, price, url})}>Select</Button>
               <div className="info">
                 <span className="price">€{price}</span>
               </div> 

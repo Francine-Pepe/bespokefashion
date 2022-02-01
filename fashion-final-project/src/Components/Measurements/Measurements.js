@@ -1,17 +1,19 @@
 import React from 'react';
-import {useState, useEffect} from 'react';
+import {useState, useEffect, useContext } from 'react';
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Measurements.css'
 import Form from 'react-bootstrap/Form'
-
+import { OrderContext } from "../../orderContext";
+import { NavLink } from "react-router-dom"
 
 function Measurements() {
     const [showPic, setShowPic] = useState(true);
     const [showVideo, setShowVideo] = useState(false);
     const [btnName, setBtnName] = useState('Show Video');
+    const { order, setMeasurements } = useContext(OrderContext);
     
     const handleShowAtt = ()=>{
         if (showPic) {
@@ -80,8 +82,8 @@ function Measurements() {
     ]
 
     const [displayForm, setDisplayForm] = useState([]);
-    const s ='dresses';
-    console.log(s);
+    const s = order.cat;
+
     useEffect(() => {
         if (s === 'dresses' || s === '61f15f126b484350049ac7e7')
         { setDisplayForm (DRESS_FORM); }
@@ -93,7 +95,7 @@ function Measurements() {
         { setDisplayForm (PANTS_FORM); }
         else
         { setDisplayForm (JUMPSUITS_FORM); }
-        console.log(displayForm);
+        
     }, []);
     
     const [val, setVal] = useState ({});
@@ -102,17 +104,18 @@ function Measurements() {
         e.preventDefault();
         const fieldName = e.target.getAttribute("name");
         const fieldValue = e.target.value;
-        console.log(fieldName, fieldValue);
+        // console.log(fieldName, fieldValue);
         const newFormData = { ...val };
         newFormData[fieldName] = fieldValue;
         setVal(newFormData);
-        console.log('val',val);
+        setMeasurements({ type: fieldName , value: fieldValue })
+
     }
 
     const handleAddFormSubmit = (e) => {
         e.preventDefault();
         console.log('form submited');
-     
+        console.log('order :',order);
     }
 
     return (
@@ -120,7 +123,7 @@ function Measurements() {
             <Row className="measurementRow">
                 <Col md className="measurementForm">
                     <h3 className="mb-4">Enter your measurements</h3>
-                    <Form onSubmit={handleAddFormSubmit}>  
+                    <Form onSubmit={handleAddFormSubmit} >  
                         {displayForm.map( (labelTitle) => ( 
                             <Form.Group as={Row} className="mb-3" >
                                 <Form.Label column  className="w-45">{labelTitle.title}</Form.Label>
@@ -130,7 +133,9 @@ function Measurements() {
                                 <Col >cms</Col>
                             </Form.Group>
                         ))}
-                        <button className="attBtn" type="submit">Next Step</button>
+                        <NavLink to="/app/outfitDetails" style={{textDecoration: 'none'}}>
+                            <button className="attBtn" type="submit">Next Step</button>
+                        </NavLink>
                     </Form>
                 </Col>
                 <Col md className="measurementHowTo ">

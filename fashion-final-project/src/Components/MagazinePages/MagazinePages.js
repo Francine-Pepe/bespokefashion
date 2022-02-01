@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useState, useContext } from "react"
 import "./Magazine.css"
 import breadcrumps from "../Images/breadcrumps.png"
 import models from "../Images/models.png"
@@ -6,14 +6,20 @@ import ReturnButton from "../ReturnButton/ReturnButton"
 import HTMLFlipBook from "react-pageflip"
 import animation from "../Images/loading.gif"
 import Paper from "@mui/material/Paper"
+import { OrderContext } from "../../orderContext";
+
+import { NavLink } from "react-router-dom"
+
 
 export default function MagazinePages({cat}) {
   const [data, setData] = useState([])
   const [isLoading, setIsLoading] = useState(true)
+  const { order, setSimpleVals, setOutfit } = useContext(OrderContext);
+
   // const cat = "skirts"
 
   useEffect(() => {
-    console.log("The Component is Ready!")
+    setSimpleVals('cat', cat);
 
     fetch("https://bespoke-fashion.herokuapp.com/designs")
       .then((response) => response.json())
@@ -25,6 +31,9 @@ export default function MagazinePages({cat}) {
         console.error("Error:", error)
       })
   }, [])
+
+ 
+  console.log(order)
 
   return (
     <section className="MP-section">
@@ -58,7 +67,7 @@ export default function MagazinePages({cat}) {
               >
                 {data
                   .filter((datai) => datai.cName.includes(cat))
-                  .map(({ name, url, price, cName }) => (
+                  .map(({ _id, name, url, price, cName }) => (
                     <Paper elevation={5} className="demoPage1">
                       {/*<h3 className="pageHeader">{name}</h3> */}
                       <img
@@ -67,7 +76,7 @@ export default function MagazinePages({cat}) {
                         className="pageImage"
                       />
                       <div className="pagePrice">price: {price} €</div>
-                      <button id="#selectPrize" className="selectPrize-btn">
+                      <button onClick={() => setOutfit({ id: _id, price, url})} id="#selectPrize" className="selectPrize-btn">
                         select
                       </button>
                     </Paper>
@@ -80,6 +89,9 @@ export default function MagazinePages({cat}) {
           <img src={models} alt="models" className="MP-models" />
         </div>
       </div>
+      <NavLink to="/app/fabrics" >
+              NEXT
+            </NavLink>
     </section>
   )
 }
