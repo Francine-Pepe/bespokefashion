@@ -2,17 +2,14 @@ import React, { useEffect, useState, useRef, useContext} from "react";
 import { Button } from "react-bootstrap";
 import "./CarouselComponentBottom.css";
 import { Icon } from "@iconify/react";
-// import { OrderContext } from "../../orderContext";
+import { OrderContext } from "../../orderContext";
 
 
 export default function CarouselComponent({cat}) {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const carousel = useRef(null);
-
-  // const { order, setBottom } = useContext(OrderContext);
-
-  // const cat = "bottom";
+  const { order, setBottom } = useContext(OrderContext);
 
   // useEffect(() => {
   //   fetch("https://bespoke-fashion.herokuapp.com/outfitParts")
@@ -76,9 +73,7 @@ export default function CarouselComponent({cat}) {
                 <div className="image">
                   <img src={url} alt={name} />
                 </div>
-                <Button className="select_button" >Select</Button>
-                {/* <Button className="select_button" onClick={() => setBottom =({id: id,price,url }) }>Select</Button> */}
-
+                  <Button className="select_button" onClick={() => setBottom({ id: id, price, url})} >Select</Button>
                 <div className="info">
                   <span className="price">{price}€</span>
                 </div>
@@ -106,4 +101,5 @@ export default function CarouselComponent({cat}) {
       </div>
     </div>
   );
+
 }

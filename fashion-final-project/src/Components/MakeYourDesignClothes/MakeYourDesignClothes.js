@@ -1,16 +1,19 @@
-import React, {useContext} from 'react';
+import React, {useContext, useEffect} from 'react';
 import './MakeYourDesignClothes.css';
 import Manequin from './../Images/manequim_transparent_-Recovered.png'
 import CarouselComponentBottom from '../CarouselComponent/CarouselComponentBottom';
 import CarouselComponentTop from '../CarouselComponent/CarouselComponentTop';
-// import { OrderContext } from "../../orderContext";
+import { OrderContext } from "../../orderContext";
 
 
 export default function MakeYourDesignClothes({cat}) {
 
-    // const { order, setSimpleVals} = useContext(OrderContext);
-    // setSimpleVals('cat', cat);
-    // console.log(order);
+    const { order, setSimpleVals} = useContext(OrderContext);
+    
+    useEffect(() => {
+        setSimpleVals('cat', cat);
+    },[]);
+    console.log(order);
 
     return (
         <>
