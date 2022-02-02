@@ -265,4 +265,18 @@
 }
 .selectPrize-btn:hover {
   cursor: pointer;
+  color: #2c6a67;
+}
+
+.MP-tooltip {
+}
+
+.MP-tooltip > .tooltip-inner {
+  font-family: "Montserrat";
+  background-color: #2c6a67;
+  color: #fff;
+}
+
+.MP-tooltip > .tooltip-arrow {
+  display: none;
 }
