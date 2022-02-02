@@ -113,11 +113,12 @@
     border-bottom-right-radius: 0;
   }
   .R-nav {
-    height: 8rem;
+    height: 12rem;
     box-shadow: none;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     padding-bottom: 0.5rem;
+    justify-content: space-around;
   }
   .nav-toggle > .navbar-toggler-icon {
     background-image: url(../Images/BF-icon.png) !important;
