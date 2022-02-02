@@ -69,18 +69,6 @@ const OrderContextProvider = ({ children }) => {
       })
     }
   
-
-    const setObj = (key, options) => {
-      setOrder({
-        ...order,
-        [key]: {
-          ...order[key],
-          ...options
-        }
-      })
-    }
-
-    
   // setFabric({{'id': joijoijio, price: 100} url : scs)
   const setFabric = (options) => {
     setOrder({
@@ -112,7 +100,9 @@ const OrderContextProvider = ({ children }) => {
         setSimpleVals,
         setOutfit,
         setFabric,
-        setMeasurements
+        setMeasurements,
+        setTop,
+        setBottom
       }}
     >
       {children}

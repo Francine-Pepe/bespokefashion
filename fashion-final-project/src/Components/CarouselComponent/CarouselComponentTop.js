@@ -1,13 +1,16 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef, useContext } from "react";
 import { Button } from "react-bootstrap";
 import "./CarouselComponentTop.css";
 import { Icon } from "@iconify/react";
+import { OrderContext } from "../../orderContext";
+
 
 export default function CarouselComponent() {
+
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const carousel = useRef(null);
-  // const cat = "top";
+  const { order, setTop } = useContext(OrderContext);
 
   // useEffect(() => {
   //   fetch("https://bespoke-fashion.herokuapp.com/outfitParts")
@@ -50,6 +53,7 @@ export default function CarouselComponent() {
   //   data.filter((data) => data.part === cat)
   // );
 
+
   return (
     <div className="container">
       <div className="carousel" ref={carousel}>
@@ -62,7 +66,7 @@ export default function CarouselComponent() {
                 <div className="image">
                   <img src={url} alt={name} />
                 </div>
-                <Button className="select_button">Select</Button>
+                <Button className="select_button" onClick={() => setTop({ id: id, price, url})}>Select</Button>
                 <div className="info">
                   <span className="price">{price}€</span>
                 </div>
@@ -90,4 +94,6 @@ export default function CarouselComponent() {
       </div>
     </div>
   );
+
 }
+
