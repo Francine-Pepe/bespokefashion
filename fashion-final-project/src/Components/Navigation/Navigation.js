@@ -4,7 +4,7 @@ import { Navbar, Nav } from "react-bootstrap"
 import Logo from "../Images/BF_Logo.png"
 import { NavLink } from "react-router-dom"
 import "bootstrap/dist/css/bootstrap.min.css"
-import ReturnButton from "../ReturnButton/ReturnButton"
+import { Icon } from "@iconify/react"
 
 export default function Navigation() {
   return (
@@ -38,9 +38,17 @@ export default function Navigation() {
             <NavLink to="/app/pickup" className="ColNav-HomeLink">
               Home
             </NavLink>
+            <button id="#nav-shoppingCart" className="nav-shoppingBtn">
+              <Icon icon="mdi:cart-outline" className="nav-shoppingIcon" />
+            </button>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
     </section>
   )
 }
+
+/*
+onClick={()=>} 
+
+*/
