@@ -31,7 +31,7 @@ export default function PrintsCarousel() {
 
   if (!data || !data.length) return null;
 
-  console.log(order)
+  console.log('fabric Prints Carousel',order)
   
   return (
     <div className="container">

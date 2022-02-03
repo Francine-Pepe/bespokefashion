@@ -7,7 +7,6 @@ import HTMLFlipBook from "react-pageflip"
 import animation from "../Images/loading.gif"
 import Paper from "@mui/material/Paper"
 import { OrderContext } from "../../orderContext"
-
 import { NavLink } from "react-router-dom"
 
 export default function MagazinePages({ cat }) {
@@ -77,7 +76,7 @@ export default function MagazinePages({ cat }) {
                       />
                       <div className="pagePrice">price: {price} €</div>
                       <button
-                        onClick={() => setOutfit({ id: _id, price, url })}
+                        onClick={() => setOutfit({ id: _id, price, url })} 
                         id="#selectPrize"
                         className="selectPrize-btn"
                       >

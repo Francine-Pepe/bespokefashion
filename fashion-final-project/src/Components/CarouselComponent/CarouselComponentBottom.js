@@ -27,11 +27,15 @@ export default function CarouselComponent({cat}) {
           console.log(cat);
           setData(data.filter((datai => (datai.part.includes('bottom') && datai.category.includes('61f15f126b484350049ac7ec') ))));
           setIsLoading(false)
+          console.log(data);
+
         }
         else
         { 
           setData(data.filter((datai => (datai.part.includes('bottom') && datai.category.includes('61f15f126b484350049ac7eb') || datai.category.includes('61f15f126b484350049ac7ed')))));
           setIsLoading(false)
+          console.log(data);
+
         }
       })
       .catch((error) => {
@@ -67,13 +71,13 @@ export default function CarouselComponent({cat}) {
         {data
           // .filter((data) => data.part === cat)
           .map((item) => {
-            const { id, name, url, price } = item;
+            const { _id, name, url, price } = item;
             return (
-              <div className="item" key={id}>
+              <div className="item" key={_id}>
                 <div className="image">
                   <img src={url} alt={name} />
                 </div>
-                  <Button className="select_button" onClick={() => setBottom({ id: id, price, url})} >Select</Button>
+                  <Button className="select_button" onClick={() => setBottom({ id: _id, price, url})} >Select</Button>
                 <div className="info">
                   <span className="price">{price}€</span>
                 </div>

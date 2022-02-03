@@ -164,3 +164,19 @@
     color: #e7bd44;
   }
 }
+
+.offcanvasHeader {
+  background-color: #ec5e54;
+  height: 70px;
+}
+.offcanvasTitle {
+  font-family: "Style Script";
+  text-align: center;
+  font-size: 40px;
+  padding-top: 10px;
+  color: #f0dcd7;
+}
+.offcanvasBody {
+  font-family: "Montserrat";
+  font-size: 16px;
+}

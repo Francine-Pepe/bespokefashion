@@ -31,6 +31,8 @@ export default function CarouselComponent() {
         console.error("Error:", error);
       });
   }, []);
+  console.log(data);
+
 
   const handleLeftClick = (e) => {
     e.preventDefault();
@@ -60,13 +62,13 @@ export default function CarouselComponent() {
         {data
           .filter((data) => data.part === 'top')
           .map((item) => {
-            const { id, name, url, price } = item;
+            const { _id, name, url, price } = item;
             return (
-              <div className="item" key={id}>
+              <div className="item" key={_id}>
                 <div className="image">
                   <img src={url} alt={name} />
                 </div>
-                <Button className="select_button" onClick={() => setTop({ id: id, price, url})}>Select</Button>
+                <Button className="select_button" onClick={() => setTop({ id: _id, price, url})}>Select</Button>
                 <div className="info">
                   <span className="price">{price}€</span>
                 </div>

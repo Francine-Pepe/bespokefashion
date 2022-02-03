@@ -29,7 +29,7 @@ export default function ColorsCarousel() {
   };
 
   if (!data || !data.length) return null;
-  console.log(order)
+  console.log('fabric color Carousel', order)
   return (
     <div className="container">
       <div className="carousel" ref={carousel}>

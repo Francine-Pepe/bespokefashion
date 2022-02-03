@@ -24,7 +24,7 @@ export default function PickUpDesign() {
         </div>
         <div className="right_container">
           <NavLink
-            to="/app/yourdesign"
+            to="/app/yourdesigns"
             className="pick_up_design_button"
             style={{ textDecoration: "none" }}
           >

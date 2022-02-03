@@ -41,7 +41,6 @@ ReactDOM.render(
                 <Route path="checkout" element={ <Checkout /> } />
                 <Route path="designClothes/jumpsuits" element={ <MakeYourDesignClothes cat='jumpsuits'/> } />
                 <Route path="designClothes/dresses" element={ <MakeYourDesignClothes cat='dresses'/> } />
-
               </Route>
           </Route>
         </Routes>
