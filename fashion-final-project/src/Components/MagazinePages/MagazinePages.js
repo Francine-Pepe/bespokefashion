@@ -7,8 +7,10 @@ import HTMLFlipBook from "react-pageflip"
 import animation from "../Images/loading.gif"
 import Paper from "@mui/material/Paper"
 import { OrderContext } from "../../orderContext"
-
+import { Button } from "react-bootstrap"
 import { NavLink } from "react-router-dom"
+import OverlayTrigger from "react-bootstrap/OverlayTrigger"
+import Tooltip from "react-bootstrap/Tooltip"
 
 export default function MagazinePages({ cat }) {
   const [data, setData] = useState([])
@@ -76,13 +78,31 @@ export default function MagazinePages({ cat }) {
                         className="pageImage"
                       />
                       <div className="pagePrice">price: {price} €</div>
-                      <button
-                        onClick={() => setOutfit({ id: _id, price, url })}
-                        id="#selectPrize"
-                        className="selectPrize-btn"
-                      >
-                        select
-                      </button>
+                      <>
+                        {["right"].map((placement) => (
+                          <OverlayTrigger
+                            trigger="click"
+                            key={placement}
+                            placement={placement}
+                            overlay={
+                              <Tooltip
+                                id={`tooltip-${placement}`}
+                                className="MP-prizeTooltip"
+                              >
+                                Item added.
+                              </Tooltip>
+                            }
+                          >
+                            <Button
+                              onClick={() => setOutfit({ id: _id, price, url })}
+                              id="#selectPrize"
+                              className="selectPrize-btn"
+                            >
+                              select
+                            </Button>
+                          </OverlayTrigger>
+                        ))}
+                      </>
                     </Paper>
                   ))}
               </HTMLFlipBook>
