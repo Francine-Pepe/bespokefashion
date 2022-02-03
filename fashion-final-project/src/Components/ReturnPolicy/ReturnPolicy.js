@@ -1,5 +1,4 @@
-import React from "react"
-import { useState } from "react"
+import React, { useState } from "react"
 import "./ReturnPolicy.css"
 import "bootstrap/dist/css/bootstrap.min.css"
 import Modal from "react-bootstrap/Modal"
