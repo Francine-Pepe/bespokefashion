@@ -168,8 +168,13 @@ function Measurements() {
         </Col>
         <Col md className="measurementHowTo ">
           <h3>How to take measurements </h3>
-          <img className="howToPic" src={measurementsImg} alt="measurements" />
-
+          <div className="M-imgBox">
+            <img
+              className="howToPic"
+              src={measurementsImg}
+              alt="measurements"
+            />
+          </div>
           <>
             <button className="attBtn" onClick={() => setModalShow(true)}>
               Show Video
