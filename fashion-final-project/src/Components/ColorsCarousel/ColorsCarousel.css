@@ -15,24 +15,24 @@
     font-family: "Montserrat";
   }
   
-  .container {
+  .colors_container {
     max-width: 75vw;
     border: dashed grey 2px;
     padding: 20px;
     border-radius: 5px;
   }
   
-  .container .carousel {
+  .colors_container .carousel {
     display: flex;
     scroll-behavior: smooth;
     overflow-x: auto;
   }
   
-  .container .carousel::-webkit-scrollbar {
+  .colors_container .carousel::-webkit-scrollbar {
     display: none;
   }
   
-  .container .carousel .item {
+  .colors_container .carousel .item {
     background-color: white;
     margin: 10px;
     padding: 10px;
@@ -46,6 +46,11 @@
     display: flex;
   }
   
+  .colors_price {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
   /* .container .carousel .item .image img {
     width: 100%;
     height: auto;

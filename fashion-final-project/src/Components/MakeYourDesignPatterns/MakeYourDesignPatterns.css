@@ -57,6 +57,23 @@ body {
     height: 80%;
 }
 
+.next_page {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10%;
+}
+.next_page a {
+    text-decoration: none;
+}
+
+.next_page {
+    font-family: 'Montserrat';
+    color: #2c6a67;
+}
+.next_page:hover {
+    cursor: pointer;
+    color: #2c6a67;
+}
 /* Media Queries */
 
 /* Medium to Large */
