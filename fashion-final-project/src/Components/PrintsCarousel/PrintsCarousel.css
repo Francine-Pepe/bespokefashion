@@ -14,23 +14,23 @@
     align-items: center;
   }
   
-  .container {
-    max-width: 55vw;
+  .prints_container {
+    max-width: 75vw;
     border: dashed #2C6A67 2px;
     padding: 10px;
   }
   
-  .container .carousel {
+  .prints_container .carousel {
     display: flex;
     scroll-behavior: smooth;
     overflow-x: auto;
   }
   
-  .container .carousel::-webkit-scrollbar {
+  .prints_container .carousel::-webkit-scrollbar {
     display: none;
   }
   
-  .container .carousel .item {
+  .prints_container .carousel .item {
     background-color: white;
     margin: 10px;
     padding: 10px;
@@ -43,6 +43,12 @@
     align-items: center;
     justify-content: center;
     display: flex;
+  }
+
+  .prints_price {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
   }
   
   /* .container .carousel .item .image img {
@@ -91,6 +97,8 @@
       display: flex;
       justify-content: center;
       border-radius: 5px;
+      width: 120px;
+      height: 110px;
   }
   
   

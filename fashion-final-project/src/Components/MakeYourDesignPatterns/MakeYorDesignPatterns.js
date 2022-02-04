@@ -6,6 +6,7 @@ import PrintsCarousel from '../PrintsCarousel/PrintsCarousel.js';
 import { NavLink } from "react-router-dom"
 
 
+
 export default function MakeYourDesignPatterns() {
     return (
         <>
@@ -26,13 +27,13 @@ export default function MakeYourDesignPatterns() {
                     <PrintsCarousel />
                 </div>
             </div>
+            
             </div>
 
 
         </div>
-        <NavLink to="/app/measurement" >
-              NEXT
-            </NavLink>
+        
+        <NavLink className="next_page" to="/app/measurement" >Next</NavLink>
         </>
 
     );

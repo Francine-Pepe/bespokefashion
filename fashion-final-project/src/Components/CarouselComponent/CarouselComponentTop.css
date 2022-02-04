@@ -14,23 +14,23 @@
     align-items: center;
   }
   
-  .container {
+  .carousel_container_top {
     max-width: 55vw;
     border: dashed #003D3A 2px;
     border-radius: 5px;
   }
   
-  .container .carousel {
+  .carousel_container_top .carousel {
     display: flex;
     scroll-behavior: smooth;
     overflow-x: auto;
   }
   
-  .container .carousel::-webkit-scrollbar {
+  .carousel_container_top .carousel::-webkit-scrollbar {
     display: none;
   }
   
-  .container .carousel .item {
+  .carousel_container_top .carousel .item {
     background-color: white;
     margin: 10px;
     padding: 10px;
@@ -45,7 +45,7 @@
     display: flex;
   }
   
-  .container .carousel .item .image img {
+  .carousel_container_top .carousel .item .image img {
     width: 100%;
     height: auto;
     border-radius: 5px;

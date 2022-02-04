@@ -34,18 +34,19 @@ export default function PrintsCarousel() {
   console.log('fabric Prints Carousel',order)
   
   return (
-    <div className="container">
+    <div className="prints_container">
        <div className="carousel" ref={carousel}>
         {data.map((item) => {
           const { id, name, url, price } = item;
           return (
             <div className="item" key={id}>
               <div className="prints_image">
-                <img src={url} alt={name} style={{ width: 170, height: 150 }} />
+                <img src={url} alt={name}  />
               </div>
-              <Button className="select_button" style={{ outline: 'none' }} onClick={() => setFabric({ id: id, price, url})}>Select</Button>
+              
               <div className="info">
-                <span className="price">€{price}</span>
+                <span className="prints_price">€{price}</span>
+                <Button className="select_button" style={{ outline: 'none' }} onClick={() => setFabric({ id: id, price, url})}>Select</Button>
               </div> 
             </div>
           );

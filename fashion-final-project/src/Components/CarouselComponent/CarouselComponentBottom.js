@@ -66,7 +66,7 @@ export default function CarouselComponent({cat}) {
 
   // console.log(order)
   return (
-    <div className="container">
+    <div className="carousel_container_Bottom">
       <div className="carousel" ref={carousel}>
         {data
           // .filter((data) => data.part === cat)

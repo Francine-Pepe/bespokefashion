@@ -8,6 +8,7 @@ import animation from "../Images/loading.gif"
 import Paper from "@mui/material/Paper"
 import { OrderContext } from "../../orderContext"
 import { NavLink } from "react-router-dom"
+import NextButton from "../NextButton/NextButton"
 
 export default function MagazinePages({ cat }) {
   const [data, setData] = useState([])
@@ -86,13 +87,14 @@ export default function MagazinePages({ cat }) {
                   ))}
               </HTMLFlipBook>
             )}
+            <NextButton />
           </div>
         </div>
         <div className="MP-img">
           <img src={models} alt="models" className="MP-models" />
         </div>
       </div>
-      <NavLink to="/app/fabrics">NEXT</NavLink>
+      
     </section>
   )
 }

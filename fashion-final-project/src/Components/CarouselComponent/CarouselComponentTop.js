@@ -57,7 +57,7 @@ export default function CarouselComponent() {
 
 
   return (
-    <div className="container">
+    <div className="carousel_container_top">
       <div className="carousel" ref={carousel}>
         {data
           .filter((data) => data.part === 'top')
