@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext } from "react"
+import React, { useEffect, useState, useContext, useRef } from "react"
 import "./Magazine.css"
 import breadcrumps from "../Images/breadcrumps.png"
 import models from "../Images/models.png"
@@ -7,14 +7,21 @@ import HTMLFlipBook from "react-pageflip"
 import animation from "../Images/loading.gif"
 import Paper from "@mui/material/Paper"
 import { OrderContext } from "../../orderContext"
+import { Button } from "react-bootstrap"
 import { NavLink } from "react-router-dom"
 import NextButton from "../NextButton/NextButton"
+//import Toast from "react-bootstrap/Toast"
+//import ToastHeader from "react-bootstrap/ToastHeader"
+//import ToastContainer from "react-bootstrap/ToastContainer"
+//import Overlay from "react-bootstrap/Overlay"
 
 export default function MagazinePages({ cat }) {
   const [data, setData] = useState([])
   const [isLoading, setIsLoading] = useState(true)
   const { order, setSimpleVals, setOutfit } = useContext(OrderContext)
 
+  //const [show, setShow] = useState(false)
+  //const target = useRef(null)
   // const cat = "skirts"
 
   useEffect(() => {
@@ -32,6 +39,7 @@ export default function MagazinePages({ cat }) {
   }, [])
 
   console.log(order)
+  console.log(order.outfit)
 
   return (
     <section className="MP-section">
@@ -76,13 +84,46 @@ export default function MagazinePages({ cat }) {
                         className="pageImage"
                       />
                       <div className="pagePrice">price: {price} €</div>
-                      <button
-                        onClick={() => setOutfit({ id: _id, price, url })} 
-                        id="#selectPrize"
-                        className="selectPrize-btn"
-                      >
-                        select
-                      </button>
+                      <>
+                        <Button
+                          onClick={(e) => {
+                            setOutfit({ id: _id, price, url })
+
+                            e.target.style.backgroundColor = "#5d86bc"
+                            e.target.innerText = "Selected!"
+                          }}
+                          id="#selectPrize"
+                          className="selectPrize-btn"
+                        >
+                          select
+                        </Button>
+                        {/* <Overlay
+                          className="MP-OverlayMain"
+                          target={target.current}
+                          show={show}
+                          placement="right"
+                        >
+                          {({
+                            placement,
+                            arrowProps,
+                            show: _show,
+                            ...props
+                          }) => (
+                            <Toast
+                              onClose={() => setShow(false)}
+                              show={show}
+                              delay={33331000}
+                              autohide
+                              className="MP-Toast"
+                              {...props}
+                            >
+                              <Toast.Header className="MP-toastHeader">
+                                <strong>Item added.</strong>
+                              </Toast.Header>
+                            </Toast>
+                          )}
+                        </Overlay> */}
+                      </>
                     </Paper>
                   ))}
               </HTMLFlipBook>
@@ -94,7 +135,6 @@ export default function MagazinePages({ cat }) {
           <img src={models} alt="models" className="MP-models" />
         </div>
       </div>
-      
     </section>
   )
 }

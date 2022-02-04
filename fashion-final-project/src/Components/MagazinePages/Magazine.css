@@ -249,35 +249,64 @@
   font-weight: bold;
 }
 .selectPrize-btn {
-  width: 30%;
-  margin-top: 1rem;
+  display: inline-block;
   text-align: center;
   background-color: #e7bd44;
   color: #fff;
   border: none;
   border-radius: 0.25rem;
   font-size: 0.75rem;
-  font-weight: bold;
   padding: 0.75em;
-  display: inline-block;
   text-decoration: none;
   font-family: "Montserrat";
+  font-weight: bold;
+  width: 30%;
+  margin-top: 1rem;
 }
+
 .selectPrize-btn:hover {
   cursor: pointer;
-  color: #2c6a67;
-}
-/*
-.MP-tooltip {
-}
-
-.MP-tooltip > .tooltip-inner {
-  font-family: "Montserrat";
   background-color: #2c6a67;
-  color: #fff;
 }
 
-.MP-tooltip > .tooltip-arrow {
+/*
+.selectPrize-btn:active {
+  cursor: pointer;
+  background-color: #0b5ed7;
+}
+
+
+.MP-toastHeader > .btn-close {
   display: none;
 }
+.MP-toastContainer {
+  width: 7rem;
+  margin-left: 20px;
+}
+
+.MP-Toast {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  width: 100%;
+   position: fixed !important;
+  margin-top: 20%; 
+}
+
+.MP-toastHeader {
+  font-family: "Montserrat";
+  font-size: 1.5rem;
+  background-color: #5d86bc;
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  padding: 2px 1rem; 
+}
+.MP-toastHeader > .btn-close {
+  display: none;
+}
+
 */
