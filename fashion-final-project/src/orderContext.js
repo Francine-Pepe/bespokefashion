@@ -15,17 +15,19 @@ export const OrderContext = createContext({});
 
 const emptyOrder = {
   cat: '',
-  outfit: null,
-  top: null,
-  bottom: null,
-  fabric: {},
+  outfit: {id: '', price: 0, url: ''},
+  top: {id: '', price: 0, url: ''},
+  bottom: {id: '', price: 0, url: ''},
+  fabric: {id: '', price: 0, url: ''},
   measurements: [],
   instructions: '',
-  price: 0
 }
 
 const OrderContextProvider = ({ children }) => {
   const [order, setOrder] = useState(emptyOrder);
+
+  // setState((prevState=>[...prevSta, order]))
+  // setOrder((prevState) => ({ ...prevState, [key]: val }));
 
   // setSimpleVals('cat', 'jumpsuits')
   // setInstructions('instructions', 'please package carefully!')
@@ -43,6 +45,18 @@ const OrderContextProvider = ({ children }) => {
       outfit: {
         ...order.outfit,
         ...options
+      }
+    })
+  }
+
+  const setOut = (key, options) => {
+    setOrder({
+      ...order,
+      outfit: {
+        [key]: {
+          ...order.outfit,
+          ...options
+        }
       }
     })
   }
@@ -71,6 +85,7 @@ const OrderContextProvider = ({ children }) => {
   
   // setFabric({{'id': joijoijio, price: 100} url : scs)
   const setFabric = (options) => {
+    console.log("options from set fabric",options)
     setOrder({
       ...order,
       fabric: {
@@ -81,7 +96,7 @@ const OrderContextProvider = ({ children }) => {
   }
   
      // setMeasurements({{'id': joijoijio, price: 100} url : scs)
-     const setMeasurements = (options) => {
+  const setMeasurements = (options) => {
       setOrder({
         ...order,
         measurements: [
@@ -91,8 +106,7 @@ const OrderContextProvider = ({ children }) => {
       })
     }
 
-  
-
+ 
   return (
     <OrderContext.Provider
       value={{
@@ -102,7 +116,8 @@ const OrderContextProvider = ({ children }) => {
         setFabric,
         setMeasurements,
         setTop,
-        setBottom
+        setBottom,
+        setOut
       }}
     >
       {children}

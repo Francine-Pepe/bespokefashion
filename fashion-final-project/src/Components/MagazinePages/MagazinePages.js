@@ -12,6 +12,7 @@ import { NavLink } from "react-router-dom"
 import ToastContainer from "react-bootstrap/ToastContainer"
 import Toast from "react-bootstrap/Toast"
 import ToastHeader from "react-bootstrap/ToastHeader"
+import NextButton from "../NextButton/NextButton"
 
 export default function MagazinePages({ cat }) {
   const [data, setData] = useState([])
@@ -109,13 +110,13 @@ export default function MagazinePages({ cat }) {
                   ))}
               </HTMLFlipBook>
             )}
+            <NextButton />
           </div>
         </div>
         <div className="MP-img">
           <img src={models} alt="models" className="MP-models" />
         </div>
       </div>
-      <NavLink to="/app/fabrics">NEXT</NavLink>
     </section>
   )
 }

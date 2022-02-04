@@ -29,9 +29,9 @@ export default function ColorsCarousel() {
   };
 
   if (!data || !data.length) return null;
-  console.log(order)
+  console.log('fabric color Carousel', order)
   return (
-    <div className="container">
+    <div className="colors_container">
       <div className="carousel" ref={carousel}>
         {data.map((item) => {
           const { id, name, url, price } = item;
@@ -40,9 +40,10 @@ export default function ColorsCarousel() {
               <div className="colors_image">
                 <img src={url} alt={name} style={{ width: 200, height: 150 }} />
               </div>
-              <Button className="select_button" onClick={() => setFabric({ id: id, price, url})}>Select</Button>
+              
               <div className="info">
-                <span className="price">€{price}</span>
+                <span className="colors_price">€{price}</span>
+                <Button className="select_button" onClick={() => setFabric({ id: id, price, url})}>Select</Button>
               </div> 
             </div>
           );

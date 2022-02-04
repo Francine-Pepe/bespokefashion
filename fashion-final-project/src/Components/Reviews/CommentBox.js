@@ -1,6 +1,7 @@
 import React from 'react';
 import {useState, useEffect} from 'react'
 import "./CommentBox.css"
+import MultiImageInput from 'react-multiple-image-input';
 
 // getting the values of local storage
 const getDatafromLS=()=>{
@@ -23,6 +24,8 @@ function CommentBox() {
     const id = '';
     const [author, setAuthor]=useState('');
     const [body, setBody]=useState('');
+    const [images, setImages] = useState({});
+
 
     // form submit event
     const handleAddCommentSubmit=(e)=>{
@@ -31,11 +34,14 @@ function CommentBox() {
         let comment={
             id: Math.floor(Math.random() * 10000),
             author,
-            body
+            body,
+            images
         }
         setComments([...comments,comment]);
         setAuthor('');
         setBody('');
+        setImages({});
+        console.log(images);
     }
 
     //   delete comment
@@ -64,6 +70,15 @@ function CommentBox() {
             setButtonText("Hide Comments");
         }
     }
+
+    // for the images
+    const crop = {
+        unit: '%',
+        aspect: 4 / 3,
+        width: '100'
+    };
+    
+    
     return (
         <div className="comment-box">
             <h2></h2>
@@ -82,9 +97,16 @@ function CommentBox() {
                     <textarea
                         type="text" 
                         required
+                        placeholder="Your Reviews"
                         onChange={(e)=>setBody(e.target.value)} value={body}>
                     </textarea>
                     <br></br>
+                    <MultiImageInput
+                        theme="light" 
+                        images={images}
+                        setImages={setImages}
+                        cropConfig={{ crop, ruleOfThirds: true }}
+                    />
                     <div className="comment-form-actions">
                         <button type="submit">Post Comment</button>
                     </div>
@@ -103,6 +125,7 @@ function CommentBox() {
                     <>
                         <p className="comment-header">{comment.author}</p>
                         <p className="comment-body">- {comment.body}</p>
+                        {/* <p>{comment.images}</p> */}
                         <div className="comment-footer">
                             <a
                             className="comment-footer-delete"
