@@ -127,11 +127,11 @@ function Measurements() {
     const newFormData = { ...val }
     newFormData[fieldName] = fieldValue
     setVal(newFormData)
-    setMeasurements({ type: fieldName, value: fieldValue })
   }
 
   const handleAddFormSubmit = (e) => {
     e.preventDefault()
+    setMeasurements(val)
     console.log("form submited")
     console.log("order :", order)
   }
@@ -141,7 +141,7 @@ function Measurements() {
       <Row className="measurementRow">
         <Col md className="measurementForm">
           <h3 className="mb-4">Enter your measurements</h3>
-          <Form onSubmit={handleAddFormSubmit}>
+          <Form onSubmit={handleAddFormSubmit} autoComplete="off" >
             {displayForm.map((labelTitle) => (
               <Form.Group as={Row} className="mb-3">
                 <Form.Label column className="w-45">

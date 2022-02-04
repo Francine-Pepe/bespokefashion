@@ -24,7 +24,7 @@ function CommentBox() {
     const id = '';
     const [author, setAuthor]=useState('');
     const [body, setBody]=useState('');
-    const [images, setImages] = useState({});
+    const [images, setImages] = useState([]);
 
 
     // form submit event
@@ -40,9 +40,9 @@ function CommentBox() {
         setComments([...comments,comment]);
         setAuthor('');
         setBody('');
-        setImages({});
-        console.log(images);
+        setImages([])
     }
+    console.log(comments)
 
     //   delete comment
     const deleteComment=(id)=>{
@@ -77,7 +77,6 @@ function CommentBox() {
         aspect: 4 / 3,
         width: '100'
     };
-    
     
     return (
         <div className="comment-box">
@@ -125,7 +124,9 @@ function CommentBox() {
                     <>
                         <p className="comment-header">{comment.author}</p>
                         <p className="comment-body">- {comment.body}</p>
-                        {/* <p>{comment.images}</p> */}
+                        {/* {comment.images.map( (image) => (
+                            <img src={image} alt="not found" />
+                        ))} */}
                         <div className="comment-footer">
                             <a
                             className="comment-footer-delete"
@@ -134,6 +135,7 @@ function CommentBox() {
                             Delete Comment
                             </a>
                         </div>
+                        
                     </>
                     ))}
                 </div>
