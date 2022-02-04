@@ -276,7 +276,6 @@
 }
 
 
-
 .MP-toastHeader > .btn-close {
   display: none;
 }
@@ -284,17 +283,17 @@
   width: 7rem;
   margin-left: 20px;
 }
-*/
+
 .MP-Toast {
-  /* position: fixed !important;*/
   display: flex;
   text-align: center;
   justify-content: center;
   background-color: transparent;
   border: none;
   box-shadow: none;
-  /*margin-top: 20%; */
   width: 100%;
+   position: fixed !important;
+  margin-top: 20%; 
 }
 
 .MP-toastHeader {
@@ -302,10 +301,12 @@
   font-size: 1.5rem;
   background-color: #5d86bc;
   color: #fff;
-  /*padding: 2px 1rem; */
   border: none;
   border-radius: 7px;
+  padding: 2px 1rem; 
 }
 .MP-toastHeader > .btn-close {
   display: none;
 }
+
+*/
