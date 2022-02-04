@@ -9,13 +9,15 @@ import Paper from "@mui/material/Paper"
 import { OrderContext } from "../../orderContext"
 import { Button } from "react-bootstrap"
 import { NavLink } from "react-router-dom"
-import OverlayTrigger from "react-bootstrap/OverlayTrigger"
-import Tooltip from "react-bootstrap/Tooltip"
+import ToastContainer from "react-bootstrap/ToastContainer"
+import Toast from "react-bootstrap/Toast"
+import ToastHeader from "react-bootstrap/ToastHeader"
 
 export default function MagazinePages({ cat }) {
   const [data, setData] = useState([])
   const [isLoading, setIsLoading] = useState(true)
   const { order, setSimpleVals, setOutfit } = useContext(OrderContext)
+  const [show, setShow] = useState(false)
 
   // const cat = "skirts"
 
@@ -79,29 +81,29 @@ export default function MagazinePages({ cat }) {
                       />
                       <div className="pagePrice">price: {price} €</div>
                       <>
-                        {["right"].map((placement) => (
-                          <OverlayTrigger
-                            trigger="click"
-                            key={placement}
-                            placement={placement}
-                            overlay={
-                              <Tooltip
-                                id={`tooltip-${placement}`}
-                                className="MP-prizeTooltip"
-                              >
-                                Item added.
-                              </Tooltip>
-                            }
+                        <ToastContainer
+                          position="bottom-end"
+                          className="MP-toastContainer"
+                        >
+                          <Toast
+                            onClose={() => setShow(false)}
+                            show={show}
+                            delay={1000}
+                            autohide
                           >
-                            <Button
-                              onClick={() => setOutfit({ id: _id, price, url })}
-                              id="#selectPrize"
-                              className="selectPrize-btn"
-                            >
-                              select
-                            </Button>
-                          </OverlayTrigger>
-                        ))}
+                            <Toast.Header className="MP-toastHeader">
+                              <strong className="me-auto">Item added.</strong>
+                            </Toast.Header>
+                          </Toast>
+                        </ToastContainer>
+                        <Button
+                          onClick={() => setOutfit({ id: _id, price, url })}
+                          onClick={() => setShow(true)}
+                          id="#selectPrize"
+                          className="selectPrize-btn"
+                        >
+                          select
+                        </Button>
                       </>
                     </Paper>
                   ))}

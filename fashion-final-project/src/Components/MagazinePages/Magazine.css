@@ -275,13 +275,17 @@
   background-color: #0b5ed7;
 }
 */
-.MP-prizeTooltip {
+.MP-toastContainer {
+  width: 30%;
+  margin-bottom: 25%;
+  display: flex;
+}
+.MP-toastHeader {
   font-family: "Montserrat";
   font-size: 0.75rem;
-}
-.MP-prizeTooltip > .tooltip-arrow {
-  display: none;
-}
-.MP-prizeTooltip > .tooltip-inner {
   background-color: #5d86bc;
+  color: #fff;
+  padding: 0.2rem 0.2rem;
+  text-align: center;
+  padding-left: 0.7rem;
 }
