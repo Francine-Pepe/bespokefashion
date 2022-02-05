@@ -60,6 +60,7 @@ body {
   display: flex;
   justify-content: center;
   margin-top: 20px;
+  
 }
 
 .select_button {
@@ -75,6 +76,7 @@ body {
   font-family: "Montserrat";
   margin: 15px;
   cursor: pointer;
+  
 }
 
 .select_button:hover {
@@ -83,11 +85,13 @@ body {
 
 .select_button:active {
   background-color: #2c6a67;
+  
 }
 
 .buttons_icon {
   background-color: transparent;
   border: none;
+  outline-color: transparent;
 }
 
 .buttons_icon:hover {
