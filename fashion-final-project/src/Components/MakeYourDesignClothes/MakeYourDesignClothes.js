@@ -1,41 +1,22 @@
-import React, {useContext, useEffect} from 'react';
+import React from 'react';
+import MakeYourDesignClothesBottom from './MakeYourDesignClothesBottom';
+import MakeYourDesignClothesTop from './MakeYourDesignClothesTop';
 import './MakeYourDesignClothes.css';
-import Manequin from './../Images/manequim_transparent_-Recovered.png'
-import CarouselComponentBottom from '../CarouselComponent/CarouselComponentBottom';
-import CarouselComponentTop from '../CarouselComponent/CarouselComponentTop';
-import { OrderContext } from "../../orderContext";
+import NextButton from '../NextButton/NextButton';
 
-
-export default function MakeYourDesignClothes({cat}) {
-
-    const { order, setSimpleVals} = useContext(OrderContext);
-    
-    useEffect(() => {
-        setSimpleVals('cat', cat);
-    },[]);
-    console.log(order);
-
+export default function MakeYourDesignClothes() {
     return (
         <>
-        <div className="make_your_design_clothes">
-            <h3>Make your own Design - choose the top and match the bottom!</h3>
-            <div className="main_container_clothes">
-                <div className="manequin_container">
-                    <img src={Manequin} alt="manequin" />
-                </div>
-                        
-                <div className='carousels'>
-                    <div className='carousel_container_top'>
-                        <CarouselComponentTop />
-                    </div> 
-
-                    <div className='carousel_container_bottom'>
-                    <CarouselComponentBottom cat = {cat}/>
-                    </div>
-                </div>
+        <div className="make_your_clothes_wrapper">
+            <div className="make_your_clothes_container">
+            
+                <MakeYourDesignClothesTop />
+                <MakeYourDesignClothesBottom />
+            
             </div>
         </div>
+        <NextButton />
+        
         </>
     );
-
 }

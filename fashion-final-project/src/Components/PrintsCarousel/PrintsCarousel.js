@@ -53,7 +53,7 @@ export default function PrintsCarousel() {
         })}
       </div>
       <div className="buttons" style={{ outline: 'none' }}>
-        <Button className="buttons_icon" onClick={handleLeftClick}>
+        <Button className="buttons_icon" variant="outline-*" onClick={handleLeftClick}>
           <Icon
             icon="carbon:previous-outline"
             color="#003d3a"
@@ -61,7 +61,7 @@ export default function PrintsCarousel() {
             height="45"
           />
         </Button>
-        <Button className="buttons_icon" onClick={handleRightClick}>
+        <Button className="buttons_icon" variant="outline-*" onClick={handleRightClick}>
           <Icon
             icon="carbon:next-outline"
             color="#003d3a"

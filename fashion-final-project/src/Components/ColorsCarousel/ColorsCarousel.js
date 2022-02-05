@@ -50,7 +50,7 @@ export default function ColorsCarousel() {
         })}
       </div>
       <div className="buttons">
-        <Button className="buttons_icon" onClick={handleLeftClick}>
+        <Button className="buttons_icon" variant="outline-*" onClick={handleLeftClick}>
           <Icon
             icon="carbon:previous-outline"
             color="#003d3a"
@@ -58,7 +58,7 @@ export default function ColorsCarousel() {
             height="45"
           />
         </Button>
-        <Button className="buttons_icon" onClick={handleRightClick} style={{ backgroundColor: 'transparent'}} >
+        <Button className="buttons_icon" variant="outline-*" onClick={handleRightClick} style={{ backgroundColor: 'transparent'}} >
           <Icon
             icon="carbon:next-outline"
             color="#003d3a"
