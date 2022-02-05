@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    width: 100%;
+    /* min-width: 100vh; */
+    background-color:white;
+    color: #2C6A67;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .principal_container_bottom_part {
+    max-width: 85%;
+    height:auto;
+    display: flex;
+    /* padding-bottom: 1%;
+    padding-right: 1%;
+    padding-left: 1%; */
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  .manequin_container_bottom {
+    width: 310px;
+    height: 450px;
+    border: none;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    background-color: blue;
+    position: relative;
+    
+  }
+  .container_clothes_bottom {
+    max-width: 55vw;
+    border: dashed #003D3A 2px;
+    border-radius: 5px;
+    padding: 1%;
+  }
+
+  .container_clothes_bottom {
+    max-width: 55vw;
+    border: dashed #003D3A 2px;
+    border-radius: 5px;
+  }
+  
+  .container_clothes_bottom .carousel {
+    display: flex;
+    scroll-behavior: smooth;
+    overflow-x: auto;
+  }
+  
+  .container_clothes_bottom .carousel::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .container_clothes_bottom .carousel .item {
+    background-color: white;
+    margin: 10px;
+    padding: 10px;
+    width: 150px;
+    height: auto;
+    border: solid 1px;
+    border-radius: 5px;
+    flex: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    display: flex;
+  }
+  
+  .container_carousel_bottom .carousel .item .image {
+    display: flex;
+    height: 200px;
+    align-items: center;
+    justify-content: center;
+  }
+  .container_clothes_bottom .carousel .item .image img {
+    width: 100%;
+    height: auto;
+    gap: 10px;
+    object-fit: cover;
+    border-radius: 5px;
+    border: #003d3a 2px;
+    
+  }
+  .buttons,
+  .select_button {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    
+  }
+  
+  .buttons_icon {
+    background-color: transparent;
+    border: none;
+  }
+  .info {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-end;
+    
+  }
+  .info .price {
+    margin-top: 5%;
+    text-align: center;
+  }
+  
+  /* .buttons_icon:hover {
+    background-color: #003d3a31;
+    border: 20x #003d3a31;
+    border-radius: 50%;
+    cursor: pointer;
+  } */
+  button:focus {
+    text-decoration: none;
+    outline: none;
+  }
+  
+  
+  
+  
