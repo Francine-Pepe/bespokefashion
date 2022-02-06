@@ -10,6 +10,8 @@ import { OrderContext } from "../../orderContext"
 import { Button } from "react-bootstrap"
 import { NavLink } from "react-router-dom"
 import NextButton from "../NextButton/NextButton"
+import { Icon } from '@iconify/react';
+
 //import Toast from "react-bootstrap/Toast"
 //import ToastHeader from "react-bootstrap/ToastHeader"
 //import ToastContainer from "react-bootstrap/ToastContainer"
@@ -129,12 +131,22 @@ export default function MagazinePages({ cat }) {
               </HTMLFlipBook>
             )}
             <NextButton />
+            
           </div>
         </div>
         <div className="MP-img">
           <img src={models} alt="models" className="MP-models" />
         </div>
+        
       </div>
+      <div  className="exclusive_contact">
+            <NavLink className="exclusive_contact_link" to="/app/contact">
+                <p>Have not find what you were looking for?</p>
+                <p>Please, contact directly our Fashion Designers!</p>
+                <Icon icon="wpf:message-outline" color="#003d3a" width="30" height="25" />
+                
+            </NavLink>
+        </div>
     </section>
   )
 }
