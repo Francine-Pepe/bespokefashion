@@ -1,14 +1,11 @@
 body {
     width: 100%;
     height: auto;
-    text-align: center;
 }
 
 .make_your_clothes_wrapper {
     display: flex;
     justify-content: center;
-    align-items: center;
-    align-content: center;
 }
 .make_your_clothes_container {
     min-width: 80vw ;
@@ -18,15 +15,75 @@ body {
     align-items: center;
     border: dashed 2px;
     border-radius: 5px;
-    
+    padding-left: 0;
+    padding-right: 0;
 }
 
 /* Media Queries */
 
 /* Medium to Large */
 
-/* @media (min-width: 768px) and (max-width: 1200px) {
-    .make_your_clothes_container {
+@media (min-width: 768px) and (max-width: 1200px) {
+    .make_your_clothes_wrapper {
+        display: flex;
+        justify-content: center;
         
     }
-} */
+    .make_your_clothes_container {
+        padding-right: 2%;
+        padding-left: 2%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+}
+
+/* Below medium */
+@media (max-width: 768px) {
+    .make_your_clothes_wrapper {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-left: 1%;
+        margin-right: 1%;
+        min-width: 100vw;
+    }
+    .make_your_clothes_container {
+        min-width: 100vw;
+        padding-right: 2%;
+        padding-left: 2%;
+        padding-top: 1%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* margin-left: 2%; 
+        margin-right: 2%;  */
+    }
+
+}
+
+/* Small to medium */
+
+@media (min-width: 300px) and (max-width: 768px) {
+    .make_your_clothes_wrapper {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-left: 1%;
+        margin-right: 1%;
+        min-width: 100vw;
+    }
+    .make_your_clothes_container {
+        min-width: 100vw;
+        /* padding-right: 2%;
+        padding-left: 2%; */
+        padding-top: 1%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* margin-left: 2%; 
+        margin-right: 2%;  */
+    }
+}

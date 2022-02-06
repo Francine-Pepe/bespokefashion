@@ -6,12 +6,7 @@
 
 body {
   width: 100%;
-  min-width: 100vh;
-  background-color: white;
-  color: #2c6a67;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: auto;
 }
 
 .carousel_container_Bottom {
