@@ -28,20 +28,28 @@ export default function MakeYourDesignClothesBottom() {
     fetch("https://bespoke-fashion.herokuapp.com/fixedDresses")
       .then((response) => response.json())
       .then((data) => {
-        if (cat === 'dresses')
-        {
+        if (cat === "dresses") {
           console.log(cat);
-          setData(data.filter((datai => (datai.part.includes('bottom') && datai.category.includes('61f15f126b484350049ac7ec') ))));
-          setIsLoading(false)
+          setData(
+            data.filter(
+              (datai) =>
+                datai.part.includes("bottom") &&
+                datai.category.includes("61f15f126b484350049ac7ec")
+            )
+          );
+          setIsLoading(false);
           console.log(data);
-
-        }
-        else
-        { 
-          setData(data.filter((datai => (datai.part.includes('bottom') && datai.category.includes('61f15f126b484350049ac7eb') || datai.category.includes('61f15f126b484350049ac7ed')))));
-          setIsLoading(false)
+        } else {
+          setData(
+            data.filter(
+              (datai) =>
+                (datai.part.includes("bottom") &&
+                  datai.category.includes("61f15f126b484350049ac7eb")) ||
+                datai.category.includes("61f15f126b484350049ac7ed")
+            )
+          );
+          setIsLoading(false);
           console.log(data);
-
         }
       })
       .catch((error) => {
@@ -72,29 +80,38 @@ export default function MakeYourDesignClothesBottom() {
   return (
     <div className="principal_container_bottom_part">
       <div className="manequin_container_bottom">
-      <img src={bottom2} alt="bottom" />
+        <img src={bottom2} alt="bottom" />
       </div>
       <div className="container_clothes_bottom">
-      <div className="carousel" ref={carousel}>
-        {data
-          .map((item) => {
+        <div className="carousel" ref={carousel}>
+          {data.map((item) => {
             const { _id, name, url, price } = item;
             return (
               <div className="item" key={_id}>
                 <div className="image">
                   <img src={url} alt={name} />
                 </div>
-                  
+
                 <div className="info">
                   <span className="price">{price}€</span>
-                  <Button className="select_button" onClick={() => setBottom({ id: _id, price, url})} >Select</Button>
+                  <Button
+                    variant="outline-*"
+                    className="select_button"
+                    onClick={() => setBottom({ id: _id, price, url })}
+                  >
+                    Select
+                  </Button>
                 </div>
               </div>
             );
           })}
-      </div>
+        </div>
         <div className="buttons">
-          <Button className="buttons_icon" variant="outline-*" onClick={handleLeftClick}>
+          <Button
+            className="buttons_icon"
+            variant="outline-*"
+            onClick={handleLeftClick}
+          >
             <Icon
               icon="carbon:previous-outline"
               color="#003d3a"
@@ -102,7 +119,11 @@ export default function MakeYourDesignClothesBottom() {
               height="45"
             />
           </Button>
-          <Button className="buttons_icon" variant="outline-*" onClick={handleRightClick}>
+          <Button
+            className="buttons_icon"
+            variant="outline-*"
+            onClick={handleRightClick}
+          >
             <Icon
               icon="carbon:next-outline"
               color="#003d3a"

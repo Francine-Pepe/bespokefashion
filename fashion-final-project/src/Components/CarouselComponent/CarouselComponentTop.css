@@ -6,12 +6,7 @@
   
   body {
     width: 100%;
-    min-width: 100vh;
-    background-color:white;
-    color: #2C6A67;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: auto;
   }
   
   .carousel_container_top {
@@ -32,7 +27,7 @@
   
   .carousel_container_top .carousel .item {
     background-color: white;
-    margin: 10px;
+    
     padding: 10px;
     width: 150px;
     height:auto;

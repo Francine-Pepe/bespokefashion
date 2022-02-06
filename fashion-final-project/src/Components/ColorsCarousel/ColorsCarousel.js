@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef, useContext} from "react";
+import React, { useEffect, useState, useRef, useContext } from "react";
 import { Button } from "react-bootstrap";
 import "./ColorsCarousel.css";
 import { Icon } from "@iconify/react";
@@ -29,28 +29,38 @@ export default function ColorsCarousel() {
   };
 
   if (!data || !data.length) return null;
-  console.log('fabric color Carousel', order)
+  console.log("fabric color Carousel", order);
   return (
     <div className="colors_container">
       <div className="carousel" ref={carousel}>
         {data.map((item) => {
           const { id, name, url, price } = item;
           return (
-            <div className="item" key={id} >
+            <div className="item" key={id}>
               <div className="colors_image">
                 <img src={url} alt={name} style={{ width: 200, height: 150 }} />
               </div>
-              
+
               <div className="info">
                 <span className="colors_price">€{price}</span>
-                <Button className="select_button" onClick={() => setFabric({ id: id, price, url})}>Select</Button>
-              </div> 
+                <Button
+                  variant="outline-*"
+                  className="select_button"
+                  onClick={() => setFabric({ id: id, price, url })}
+                >
+                  Select
+                </Button>
+              </div>
             </div>
           );
         })}
       </div>
       <div className="buttons">
-        <Button className="buttons_icon" variant="outline-*" onClick={handleLeftClick}>
+        <Button
+          className="buttons_icon"
+          variant="outline-*"
+          onClick={handleLeftClick}
+        >
           <Icon
             icon="carbon:previous-outline"
             color="#003d3a"
@@ -58,7 +68,12 @@ export default function ColorsCarousel() {
             height="45"
           />
         </Button>
-        <Button className="buttons_icon" variant="outline-*" onClick={handleRightClick} style={{ backgroundColor: 'transparent'}} >
+        <Button
+          className="buttons_icon"
+          variant="outline-*"
+          onClick={handleRightClick}
+          style={{ backgroundColor: "transparent" }}
+        >
           <Icon
             icon="carbon:next-outline"
             color="#003d3a"
