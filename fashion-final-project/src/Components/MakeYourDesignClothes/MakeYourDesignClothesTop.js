@@ -91,6 +91,7 @@ export default function MakeYourDesignClothesTop() {
                   <div className="info">
                     <span className="price">{price}€</span>
                     <Button
+                      variant="outline-*"
                       className="select_button"
                       onClick={() => setTop({ id: _id, price, url })}
                     >

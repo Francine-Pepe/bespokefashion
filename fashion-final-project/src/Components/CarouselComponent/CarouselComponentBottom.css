@@ -74,15 +74,6 @@ body {
   
 }
 
-.select_button:hover {
-  background-color: #2c6a67;
-}
-
-.select_button:active {
-  background-color: #2c6a67;
-  
-}
-
 .buttons_icon {
   background-color: transparent;
   border: none;
@@ -90,7 +81,7 @@ body {
 }
 
 .buttons_icon:hover {
-  background-color: #003d3a31;
+  
   border: none;
   border-radius: 50%;
   cursor: pointer;

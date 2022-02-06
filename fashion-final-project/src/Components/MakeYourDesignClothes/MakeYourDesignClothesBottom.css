@@ -43,11 +43,6 @@ body {
   margin-left: 4%;
 }
 
-.container_clothes_bottom {
-  max-width: 55vw;
-  border: dashed #003D3A 2px;
-  border-radius: 5px;
-}
 
 .container_clothes_bottom .carousel {
   display: flex;
@@ -125,22 +120,45 @@ button:focus {
 
 /* Media Queries */
 
-/* Below medium */
-@media (max-width: 767px) {
-.manequin_container_bottom {
-  width: 98%;
-  height: auto;
-  display: flex;
-  justify-content: center;
+@media (max-width: 1200px) {
+  .container_clothes_bottom {
+    max-width: 52vw;
+   
+  }
   
-}
-.manequin_container_bottom img {
-  width: 300px;
-  height: auto;
-}
-}
+  .manequin_container_bottom {
+    width: 98%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    
+  }
+  .manequin_container_bottom img {
+    width: 300px;
+    height: auto;
+  }
+  }
+  
+  @media (max-width: 992px) {
+    .manequin_container_bottom {
+    width: 98%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    
+  }
+  .manequin_container_bottom img {
+    width: 300px;
+    height: auto;
+  }
+  }
+  
 
-@media (min-width: 300px) and (max-width: 768px) {
+/* Below medium */
+
+
+@media (min-width: 649px) and (max-width: 768px) {
+ 
 .manequin_container_bottom {
   width: 98%;
   height: auto;
@@ -154,3 +172,24 @@ button:focus {
 }
 }
 
+@media (min-width: 576px) and (max-width: 649px) {
+  .manequin_container_bottom {
+    width: 98%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    
+  }
+  .manequin_container_bottom img {
+    width: 250px;
+    height: auto;
+  }
+
+}
+
+@media (max-width: 576px) {
+  .container_clothes_bottom {
+    max-width: 35vw;
+    padding: 1%;
+  }
+}

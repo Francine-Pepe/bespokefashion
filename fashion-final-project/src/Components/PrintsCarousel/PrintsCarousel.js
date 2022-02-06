@@ -5,13 +5,10 @@ import "./PrintsCarousel.css";
 import { Icon } from "@iconify/react";
 import { OrderContext } from "../../orderContext";
 
-
-
 export default function PrintsCarousel() {
   const [data, setData] = useState([]);
   const carousel = useRef(null);
   const { order, setFabric } = useContext(OrderContext);
-
 
   useEffect(() => {
     fetch("https://bespoke-fashion.herokuapp.com/patterns")
@@ -31,29 +28,40 @@ export default function PrintsCarousel() {
 
   if (!data || !data.length) return null;
 
-  console.log('fabric Prints Carousel',order)
-  
+  console.log("fabric Prints Carousel", order);
+
   return (
     <div className="prints_container">
-       <div className="carousel" ref={carousel}>
+      <div className="carousel" ref={carousel}>
         {data.map((item) => {
           const { id, name, url, price } = item;
           return (
             <div className="item" key={id}>
               <div className="prints_image">
-                <img src={url} alt={name}  />
+                <img src={url} alt={name} />
               </div>
-              
+
               <div className="info">
                 <span className="prints_price">€{price}</span>
-                <Button className="select_button" style={{ outline: 'none' }} onClick={() => setFabric({ id: id, price, url})}>Select</Button>
-              </div> 
+                <Button
+                  variant="outline-*"
+                  className="select_button"
+                  style={{ outline: "none" }}
+                  onClick={() => setFabric({ id: id, price, url })}
+                >
+                  Select
+                </Button>
+              </div>
             </div>
           );
         })}
       </div>
-      <div className="buttons" style={{ outline: 'none' }}>
-        <Button className="buttons_icon" variant="outline-*" onClick={handleLeftClick}>
+      <div className="buttons" style={{ outline: "none" }}>
+        <Button
+          className="buttons_icon"
+          variant="outline-*"
+          onClick={handleLeftClick}
+        >
           <Icon
             icon="carbon:previous-outline"
             color="#003d3a"
@@ -61,7 +69,11 @@ export default function PrintsCarousel() {
             height="45"
           />
         </Button>
-        <Button className="buttons_icon" variant="outline-*" onClick={handleRightClick}>
+        <Button
+          className="buttons_icon"
+          variant="outline-*"
+          onClick={handleRightClick}
+        >
           <Icon
             icon="carbon:next-outline"
             color="#003d3a"
@@ -69,8 +81,7 @@ export default function PrintsCarousel() {
             height="45"
           />
         </Button>
-      </div> 
-     
+      </div>
     </div>
   );
 }
