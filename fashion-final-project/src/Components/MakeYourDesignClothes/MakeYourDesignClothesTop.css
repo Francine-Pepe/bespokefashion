@@ -1,123 +1,164 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: auto;
   
-  body {
-    width: 100%;
-    min-width: 100vh;
-    background-color: white;
-    color: #2c6a67;
-    
-  }
+}
+
+.principal_container_top_part {
+  max-width: 85%;
+  height: auto;
+  display: flex;
+  border: none;
+  padding-top: 1%;
+  padding-right: 1%;
+  padding-left: 1%;
+  justify-content: center;
+  position: relative;
+}
+#manequin_container_top {
+  width: 310px;
+  height: 450px;
+  border: none;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  background-color: darkkhaki;
+  position: relative;
+}
+
+.container_carousel_top {
+  max-width: 55vw;
+  border: dashed #003d3a 2px;
+  border-radius: 5px;
+  padding: 1%;
+  margin-left: 4%;
+}
+
+.container_carousel_top .carousel {
+  display: flex;
+  scroll-behavior: smooth;
+  overflow-x: auto;
+}
+
+.container_carousel_top .carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.container_carousel_top .carousel .item {
+  background-color: white;
+  margin: 10px;
+  padding: 10px;
+  width: 150px;
+  height: auto;
+  border: solid 1px;
+  border-radius: 5px;
+  flex: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  display: flex;
+}
+
+.container_carousel_top .carousel .item .image {
+  display: flex;
+  height: 200px;
+  align-items: center;
+  justify-content: center;
+}
+.container_carousel_top .carousel .item .image img {
+  width: 100%;
+  height: auto;
+  gap: 10px;
+  object-fit: cover;
+  border-radius: 5px;
+  border: #003d3a 2px;
+}
+
+.buttons,
+.select_button {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.info .price {
+  margin-top: 5%;
+}
+
+.select_button {
+  font-weight: bold;
+  align-items: center;
+  background-color: #e7bd44;
+  color: #fff;
+  border: none;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  padding: 0.75em;
+  text-decoration: none;
+  font-family: "Montserrat";
+  margin: 10px;
+  cursor: pointer;
+}
+
+.container_select_button {
+  display: inline-block;
+  bottom: 1px;
+}
+
+.buttons_icon {
+  background-color: transparent;
+  border: none;
+}
+
+/* Media Queries */
+
+/* Below medium */
+@media (max-width: 767px) {
+#manequin_container_top {
+  width: 98%;
+  height: auto;
+  display: flex;
+  justify-content: center;
   
-  .principal_container_top_part {
-    max-width: 85%;
-    height: auto;
-    display: flex;
-    border: none;
-    padding-top: 1%;
-    padding-right: 1%;
-    padding-left: 1%;
-    justify-content: center;
-    position: relative;
-  }
-  #manequin_container_top {
-    width: 310px;
-    height: 450px;
-    border: none;
-    background-repeat: no-repeat;
-    background-position: bottom;
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    background-color: darkkhaki;
-    position: relative;
-  }
+}
+#manequin_container_top img {
+  width: 300px;
+  height: auto;
+}
+}
+
+@media (max-width: 768px) {
+.manequin_container_bottom {
+  width: 98%;
+  height: auto;
+  display: flex;
+  justify-content: center;
   
- .container_carousel_top {
-    max-width: 55vw;
-    border: dashed #003d3a 2px;
-    border-radius: 5px;
-    padding: 1%;
-    
-  }
+}
+.manequin_container_bottom img {
+  width: 300px;
+  height: auto;
+}
+}
+
+@media (min-width: 300px) and (max-width: 768px) {
+.manequin_container_bottom {
+  width: 98%;
+  height: auto;
+  display: flex;
+  justify-content: center;
   
-  .container_carousel_top .carousel {
-    display: flex;
-    scroll-behavior: smooth;
-    overflow-x: auto;
-  }
-  
-  .container_carousel_top .carousel::-webkit-scrollbar {
-    display: none;
-  }
-  
-  .container_carousel_top .carousel .item {
-    background-color: white;
-    margin: 10px;
-    padding: 10px;
-    width: 150px;
-    height: auto;
-    border: solid 1px;
-    border-radius: 5px;
-    flex: none;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    display: flex;
-  }
-  
-  .container_carousel_top .carousel .item .image {
-    display: flex;
-    height: 200px;
-    align-items: center;
-    justify-content: center;
-  }
-  .container_carousel_top .carousel .item .image img {
-    width: 100%;
-    height: auto;
-    gap: 10px;
-    object-fit: cover;
-    border-radius: 5px;
-    border: #003d3a 2px;
-  }
-  
-  .buttons,
-  .select_button {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-  }
-  
-  .info .price {
-    margin-top: 5%;
-  }
-  
-  .select_button {
-    font-weight: bold;
-    align-items: center;
-    background-color: #e7bd44;
-    color: #fff;
-    border: none;
-    border-radius: 0.25rem;
-    font-size: 0.75rem;
-    padding: 0.75em;
-    text-decoration: none;
-    font-family: "Montserrat";
-    margin: 10px;
-    cursor: pointer;
-  }
-  
-  .container_select_button {
-    display: inline-block;
-    bottom: 1px;
-  }
-  
-  .buttons_icon {
-    background-color: transparent;
-    border: none;
-  }
-  
-  
+}
+.manequin_container_bottom img {
+  width: 260px;
+  height: auto;
+}
+}
