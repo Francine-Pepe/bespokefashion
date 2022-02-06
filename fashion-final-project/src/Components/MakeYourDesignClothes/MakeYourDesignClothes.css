@@ -19,6 +19,29 @@ body {
     padding-right: 0;
 }
 
+.exclusive_contact {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: "Montserrat";
+    font-size: 15px;
+    background-color: whitesmoke;
+    margin-top: 0;
+    
+    opacity: 1;
+    border-radius: 5px;
+    
+}
+
+.exclusive_contact a{
+    color: #2C6A67;
+    text-decoration: none;
+}
+
+.exclusive_contact a:hover{
+    color: #2c6a67;
+}
+
 /* Media Queries */
 
 @media (min-width: 1200px) {
