@@ -19,9 +19,9 @@ const emptyOrder = {
   top: {id: '', price: 0, url: ''},
   bottom: {id: '', price: 0, url: ''},
   fabric: {id: '', price: 0, url: ''},
-  measurements: [],
+  measurements: {},
   instructions: '',
-  clientDetails:[]
+  clientDetails:{}
 }
 
 const OrderContextProvider = ({ children }) => {
@@ -46,18 +46,6 @@ const OrderContextProvider = ({ children }) => {
       outfit: {
         ...order.outfit,
         ...options
-      }
-    })
-  }
-
-  const setOut = (key, options) => {
-    setOrder({
-      ...order,
-      outfit: {
-        [key]: {
-          ...order.outfit,
-          ...options
-        }
       }
     })
   }
@@ -100,20 +88,14 @@ const OrderContextProvider = ({ children }) => {
   const setMeasurements = (options) => {
       setOrder({
         ...order,
-        measurements: [
-          ...order.measurements,
-          options
-        ]
+        measurements: options
       })
     }
 
     const setClientDetails= (options) => {
       setOrder({
         ...order,
-        clientDetails: [
-          ...order.clientDetails,
-          options
-        ]
+        clientDetails: options
       })
     }
 

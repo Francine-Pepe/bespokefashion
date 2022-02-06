@@ -68,7 +68,7 @@ export default function CarouselComponent() {
                 <div className="image">
                   <img src={url} alt={name} />
                 </div>
-                <Button className="select_button" onClick={() => setTop({ id: _id, price, url})}>Select</Button>
+                 <Button className="select_button" onClick={() => setTop({ id: _id, price, url})}>Select</Button>
                 <div className="info">
                   <span className="price">{price}€</span>
                 </div>

@@ -43,56 +43,55 @@ function Measurements() {
   const [modalShow, setModalShow] = React.useState(false)
 
   const DRESS_FORM = [
-    { title: "Shoulder" },
-    { title: "Sleeve Length" },
-    { title: "Arm hole" },
-    { title: "Sleeve-biceps" },
-    { title: "Bust" },
-    { title: "Wrist" },
-    { title: "Length (From Neck)" },
-    { title: "Length (From Shoulder)" },
-    { title: "Waist" },
-    { title: "Hip" },
+    { title: "Shoulder", name: "shoulder"},
+    { title: "Sleeve Length", name: "sleeveLength"},
+    { title: "Arm hole",name: "armHole"},
+    { title: "Sleeve-biceps",name: "biceps" },
+    { title: "Bust",name: "bust"},
+    { title: "Wrist", name: "wrist"},
+    { title: "Length (From Shoulder)", name: "length"},
+    { title: "Waist", name: "waist"},
+    { title: "Hip", name: "hip"},
   ]
 
   const BLOUSES_FORM = [
-    { title: "Shoulder" },
-    { title: "Sleeve Length" },
-    { title: "Arm hole" },
-    { title: "Sleeve-biceps" },
-    { title: "Bust" },
-    { title: "Wrist" },
-    { title: "Length (From Neck)" },
+    { title: "Shoulder", name: "shoulder"},
+    { title: "Sleeve Length", name:"sleeveLength"},
+    { title: "Arm hole", name: "armHole"},
+    { title: "Sleeve-biceps",name:"biceps" },
+    { title: "Bust", name: "bust"},
+    { title: "Wrist", name: "wrist"},
+    { title: "Length (From Neck)", name: "length"}
   ]
 
   const SKIRTS_FORM = [
-    { title: "Waist" },
-    { title: "Hip" },
-    { title: "Length" },
+    { title: "Waist", name: "waist"},
+    { title: "Hip", name: "hip"},
+    { title: "Length", name: "length"},
   ]
 
   const PANTS_FORM = [
-    { title: "Waist" },
-    { title: "Hip" },
-    { title: "Thigh (Thickest Part)" },
-    { title: "Waist to Crotch Length" },
-    { title: "Leg opening" },
-    { title: "Length" },
+    { title: "Waist", name: "waist"},
+    { title: "Hip", name: "hip"},
+    { title: "Thigh (Thickest Part)", name: "thigh"},
+    { title: "Waist to Crotch Length", name:"lengthToCrotch"},
+    { title: "Leg opening", name: "legOpening"},
+    { title: "Length" , name: "length"},
   ]
 
   const JUMPSUITS_FORM = [
-    { title: "Shoulder" },
-    { title: "Sleeve Length" },
-    { title: "Arm hole" },
-    { title: "Sleeve-biceps" },
-    { title: "Bust" },
-    { title: "Wrist" },
-    { title: "Length (From Shoulder)" },
-    { title: "Waist" },
-    { title: "Hip" },
-    { title: "Thigh (Thickest Part)" },
-    { title: "Waist to Crotch Length" },
-    { title: "Leg opening" },
+    { title: "Shoulder", name: "shoulder"},
+    { title: "Sleeve Length", name: "sleeveLength"},
+    { title: "Arm hole", name: "armHole"},
+    { title: "Sleeve-biceps" , name: "biceps"},
+    { title: "Bust", name: "bust"},
+    { title: "Wrist", name: "wrist"},
+    { title: "Length (From Shoulder)", name: "length"},
+    { title: "Waist", name: "waist"},
+    { title: "Hip", name: "hip"},
+    { title: "Thigh (Thickest Part)", name: "thigh"},
+    { title: "Waist to Crotch Length", name:"lengthToCrotch" },
+    { title: "Leg opening",name: "legOpening" },
   ]
 
   const [displayForm, setDisplayForm] = useState([])
@@ -117,23 +116,19 @@ function Measurements() {
     }
   }, [])
 
-  const [val, setVal] = useState({})
+  const [formData, setFormData] = useState({});
+
 
   const handleAddFormChange = (e) => {
-    e.preventDefault()
-    const fieldName = e.target.getAttribute("name")
-    const fieldValue = e.target.value
-    // console.log(fieldName, fieldValue);
-    const newFormData = { ...val }
-    newFormData[fieldName] = fieldValue
-    setVal(newFormData)
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+    setMeasurements(formData);
+
   }
 
   const handleAddFormSubmit = (e) => {
     e.preventDefault()
-    setMeasurements(val)
-    console.log("form submited")
-    console.log("order :", order)
+    // console.log('measurements ::: ', order.measurements)
+
   }
 
   return (
@@ -141,7 +136,7 @@ function Measurements() {
       <Row className="measurementRow">
         <Col md className="measurementForm">
           <h3 className="mb-4">Enter your measurements</h3>
-          <Form onSubmit={handleAddFormSubmit} autoComplete="off" >
+          <Form onSubmit={handleAddFormSubmit} autoComplete='off'>
             {displayForm.map((labelTitle) => (
               <Form.Group as={Row} className="mb-3">
                 <Form.Label column className="w-45">
@@ -151,7 +146,7 @@ function Measurements() {
                   <Form.Control
                     type="text"
                     className="w-40"
-                    name={labelTitle.title}
+                    name={labelTitle.name}
                     required
                     onChange={handleAddFormChange}
                   />
@@ -159,12 +154,13 @@ function Measurements() {
                 <Col>cms</Col>
               </Form.Group>
             ))}
-            <NavLink to="/app/outfitDetails" style={{ textDecoration: "none" }}>
+            
+              
               <button className="attBtn" type="submit">
-                Next Step
+                  Save 
               </button>
-            </NavLink>
           </Form>
+          <NavLink to="/app/outfitDetails" style={{ textDecoration: "none" }}> Next </NavLink>
         </Col>
         <Col md className="measurementHowTo ">
           <h3>How to take measurements </h3>

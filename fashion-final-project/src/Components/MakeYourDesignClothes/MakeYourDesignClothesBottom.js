@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef,useContext} from "react";
 import { Button } from "react-bootstrap";
 import "./MakeYourDesignClothesBottom.css";
 import { Icon } from "@iconify/react";
@@ -10,11 +10,14 @@ import bottom2 from "./../Images_test/skirt_03.png";
 // import bottom5 from "./../Images_test/short_03.png";
 // import bottom6 from "./../Images_test/short_04.png";
 // import bottom7 from "./../Images_test/short_02.png";
+import {OrderContext} from "../../orderContext";
 
 export default function MakeYourDesignClothesBottom() {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const carousel = useRef(null);
+  const { order, setBottom } = useContext(OrderContext);
+
   const cat = "bottom";
 
   // useEffect(() => {

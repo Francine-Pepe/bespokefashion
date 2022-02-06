@@ -60,11 +60,11 @@ function OutfitDetails() {
                     <h2>Outfit added to cart!</h2>
                 </Row>
                 <Row>
-                    <Col>
+                    {/* <Col>
                         <NavLink className="ofdBtn" to="/app/pickup">
                             <h5 onClick={() =>setModalShow(false)}>Shop More</h5>
                         </NavLink>
-                    </Col>
+                    </Col> */}
                     <Col>
                         <NavLink to="/app/checkout" style={{textDecoration: 'none'}}>
                             <button className="ofdBtn"  type="submit">

@@ -138,11 +138,11 @@ function OrderSummary() {
                             </Row> 
                         </Container>
                         }
-                        <NavLink to="/app/checkout" style={{textDecoration: 'none'}}>
+                        {/* <NavLink to="/app/checkout" style={{textDecoration: 'none'}}>
                             <button className="ofdBtn" style={{ marginTop: '20px'}} type="submit">
                                 <h5>Checkout</h5>
                             </button>
-                        </NavLink>
+                        </NavLink> */}
                 </div> }
             
         </div>

@@ -13,6 +13,7 @@ import emailjs from '@emailjs/browser';
 function Checkout() {
 
     const[yes,setYes] = useState(false)
+    const [formData, setFormData] = useState({});
   const { order, setClientDetails } = useContext(OrderContext)
 
     const handleBillAdd = (e) => {
@@ -22,25 +23,35 @@ function Checkout() {
             setYes(true);
         }
     }
-    const [val, setVal] = useState({})
 
     const handleDetailsFormChange = (e) => {
-        // e.preventDefault()
-        const fieldName = e.target.getAttribute("name")
-        const fieldValue = e.target.value
-        const newFormData = { ...val }
-        newFormData[fieldName] = fieldValue
-        setVal(newFormData) 
-    }
-    console.log(val)
-    
+        setFormData({ ...formData, [e.target.name]: e.target.value });
+    };
+    console.log('formdata ::',formData)
     const handleAddFormSubmit = (e) => {
-        e.preventDefault()
-        setClientDetails(val)
-        console.log("form submited")
-        console.log("order :", order)
-    }
-    console.log(order.clientDetails)
+        e.preventDefault();
+        setClientDetails(formData);
+        setTimeout(() => {
+            console.log("submi", templateParams);
+            return emailjs
+                .send(
+                "service_pjlm5d3",
+                "template_w9ehanw",
+                templateParams,
+                "user_pTHaxghVo04QcjVvacCa4"
+                )
+                .then(
+                function (response) {
+                    console.log("SUCCESS!", response.status, response.text);
+                },
+                function (error) {
+                    console.log("FAILED...", error);
+                }
+                );
+        }, 10000);
+      };
+
+    console.log('from checkout::',order.clientDetails)
     
     const templateParams = {
         clientName: order.clientDetails.name, 
@@ -60,24 +71,32 @@ function Checkout() {
         outfitId:order.outfit.id,
         outfitUrl:order.outfit.url,
         outfitPrice:order.outfit.price,
-        measurement:order.measurement,
+        shipAddStreet: order.clientDetails.street,
+        shipAddCity: order.clientDetails.city,
+        shipAddCountry: order.clientDetails.country,
+        billAddStreet: order.clientDetails.billAddstreet,
+        billAddCity: order.clientDetails.billAddCity,
+        billAddCountry: order.clientDetails.billAddcountry,
+        armHole: order.measurements.armHole,
+        biceps:order.measurements.biceps,
+        bust: order.measurements.bust,
+        hip: order.measurements.hip,
+        legOpening: order.measurements.legOpening,
+        length: order.measurements.length,
+        lengthToCrotch: order.measurements.lengthToCrotch,
+        shoulder: order.measurements.shoulder,
+        sleeveLength:order.measurements.sleeveLength,
+        thigh: order.measurements.thigh,
+        waist: order.measurements.waist,
+        wrist: order.measurements.wrist,
     }
 
-    function sendEmail(e) {
-        e.preventDefault();
-        emailjs.send('service_pjlm5d3', 'template_w9ehanw', templateParams,'user_pTHaxghVo04QcjVvacCa4')
-        .then(function(response) {
-        console.log('SUCCESS!', response.status, response.text);
-        }, function(error) {
-        console.log('FAILED...', error);
-    });
-    }
     return (
         <Container fluid className="checkoutContainer">
             <Row className="checkoutTitle">
                 <h2>Tell us more about you</h2> 
             </Row>
-            <Form  onSubmit= {handleAddFormSubmit} autoComplete="off" >
+            <Form autoComplete="off" >
                 <Row>
                     <Col md className="cO1">
                         <Form.Group as={Row} className="mb-3">
@@ -95,7 +114,7 @@ function Checkout() {
                         <Form.Group as={Row} className="mb-3">
                             <Form.Label column >Phone Number :</Form.Label>
                             <Col>
-                                <Form.Control type="text" required name="Phone No" onChange={handleDetailsFormChange}/>
+                                <Form.Control type="text" required name="phone" onChange={handleDetailsFormChange}/>
                             </Col>
                         </Form.Group>
                         <div onChange={(e) => handleBillAdd(e)}> 
@@ -171,7 +190,7 @@ function Checkout() {
                     </Col>
                 </Row>
                 <Row className="justify-content-center">
-                    <button type='submit' className="orderBtn" onClick= { sendEmail}>Order Now !</button>
+                    <button type='submit' className="orderBtn" onClick= {handleAddFormSubmit}>Order Now !</button>
                 </Row>
             </Form>
         </Container>
@@ -179,3 +198,7 @@ function Checkout() {
 }
 
 export default Checkout;
+
+
+
+
