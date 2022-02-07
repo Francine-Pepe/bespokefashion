@@ -39,18 +39,18 @@ export default function MakeYourDesignPatterns() {
           {/* <div className="manequin_container">
                 <img src={Manequin} alt="manequin" />
             </div> */}
-            <Manequin />
-            <div className='carousels'>
-                <div className='carousel_container_colors'>
-                    <ColorsCarousel />
-                </div>
-                
-                <div className='carousel_container_prints'>
-                    <PrintsCarousel />
-                </div>
+          <Manequin />
+          <div className="carousels">
+            <div className="carousel_container_colors">
+              <ColorsCarousel />
+            </div>
+
+            <div className="carousel_container_prints">
+              <PrintsCarousel />
             </div>
           </div>
         </div>
+      </div>
     </>
   )
 }

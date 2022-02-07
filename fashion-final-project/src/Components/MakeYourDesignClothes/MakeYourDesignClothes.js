@@ -6,7 +6,7 @@ import ReturnButton from "../ReturnButton/ReturnButton"
 import NextButton from "../NextButton/NextButton"
 import { NavLink } from "react-router-dom"
 import { Icon } from "@iconify/react"
-import Manequin from '../Manequim/Manequin';
+import Manequin from "../Manequim/Manequin"
 
 export default function MakeYourDesignClothes({ cat }) {
   return (
@@ -16,7 +16,7 @@ export default function MakeYourDesignClothes({ cat }) {
         <NextButton className="next_step" />
       </div>
       <div className="make_your_clothes_wrapper">
-      <Manequin />
+        <Manequin />
         <div className="make_your_clothes_container">
           <MakeYourDesignClothesTop />
           <MakeYourDesignClothesBottom cat={cat} />
