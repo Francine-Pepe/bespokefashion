@@ -9,6 +9,7 @@ import FloatingLabel from 'react-bootstrap/FloatingLabel'
 import { OrderContext } from "../../orderContext"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import emailjs from '@emailjs/browser';
+// import PickUpDesign from '../PickUpDesign/PickUpDesign'
 
 function Checkout() {
 
@@ -27,7 +28,9 @@ function Checkout() {
     const handleDetailsFormChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
-    console.log('formdata ::',formData)
+
+    // console.log('formdata ::',formData)
+
     const handleAddFormSubmit = (e) => {
         e.preventDefault();
         setClientDetails(formData);
@@ -49,6 +52,7 @@ function Checkout() {
                 }
                 );
         }, 10000);
+        // <PickUpDesign />
       };
 
     console.log('from checkout::',order.clientDetails)

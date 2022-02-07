@@ -27,8 +27,6 @@ const emptyOrder = {
 const OrderContextProvider = ({ children }) => {
   const [order, setOrder] = useState(emptyOrder);
 
-  // setState((prevState=>[...prevSta, order]))
-  // setOrder((prevState) => ({ ...prevState, [key]: val }));
 
   // setSimpleVals('cat', 'jumpsuits')
   // setInstructions('instructions', 'please package carefully!')
