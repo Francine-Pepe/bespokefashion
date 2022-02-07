@@ -30,7 +30,7 @@ body {
   display: flex;
   justify-content: center;
   margin: 0;
-  background-color: darkkhaki;
+  /* background-color: darkkhaki; */
   position: relative;
 }
 
@@ -40,6 +40,7 @@ body {
   border-radius: 5px;
   padding: 1%;
   margin-left: 4%;
+  margin-top: 1%;
 }
 
 .container_carousel_top .carousel {

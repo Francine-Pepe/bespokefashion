@@ -10,11 +10,36 @@ body {
   font-family: "Montserrat";
 }
 
+.principal_container_top {
+  max-width: 85%;
+  height:auto;
+  display: flex;
+  /* padding-bottom: 1%; */
+  padding-right: 1%;
+  padding-left: 1%;
+  position: relative;
+}
+
+/* .principal_container_top .colors_container {} */
+.manequin_container_top_colors {
+  width: 310px;
+  height: 450px;
+  border: none;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  background-color: blue;
+  position: relative;
+}
+
 .colors_container {
-  max-width: 75vw;
+  max-width: 55vw;
   border: dashed grey 2px;
   padding: 20px;
   border-radius: 5px;
+  margin-top: 2%;
 }
 
 .colors_container .carousel {
