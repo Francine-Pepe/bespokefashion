@@ -9,13 +9,17 @@ import FloatingLabel from 'react-bootstrap/FloatingLabel'
 import { OrderContext } from "../../orderContext"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import emailjs from '@emailjs/browser';
-// import PickUpDesign from '../PickUpDesign/PickUpDesign'
+import Modal from "react-bootstrap/Modal"
+import { NavLink } from 'react-router-dom';
+
 
 function Checkout() {
 
     const[yes,setYes] = useState(false)
     const [formData, setFormData] = useState({});
   const { order, setClientDetails } = useContext(OrderContext)
+  const [modalShow, setModalShow] = useState(false)
+  
 
     const handleBillAdd = (e) => {
         if(e.target.value === 'yes') {
@@ -51,11 +55,12 @@ function Checkout() {
                     console.log("FAILED...", error);
                 }
                 );
-        }, 10000);
-        // <PickUpDesign />
+        }, 120000);
+        setModalShow(true);
+
       };
 
-    console.log('from checkout::',order.clientDetails)
+    // console.log('from checkout::',order.clientDetails)
     
     const templateParams = {
         clientName: order.clientDetails.name, 
@@ -197,6 +202,33 @@ function Checkout() {
                     <button type='submit' className="orderBtn" onClick= {handleAddFormSubmit}>Order Now !</button>
                 </Row>
             </Form>
+            <Modal
+                show={modalShow}
+                onHide={() => setModalShow(false)}
+                dialogClassName="modal-90w"
+                aria-labelledby="example-custom-modal-styling-title"
+            >
+                <Modal.Header className="Rev-header" >
+                    <Modal.Title
+                    id="example-custom-modal-styling-title"
+                    className="atc-title"
+                    >
+                    <h2></h2>
+                    </Modal.Title>
+                </Modal.Header>
+                <Modal.Body className="atc-body">
+                    <Row className="mb-3">
+                        <h2>Thank you for shopping at Bespoke Fashion!</h2>
+                    </Row>
+                    <Row>
+                        <Col>
+                            <NavLink className="ofdBtn" to="/app/pickup">
+                                <h5 onClick={() =>setModalShow(false)}>Return</h5>
+                            </NavLink>
+                        </Col>
+                    </Row>
+                </Modal.Body>
+            </Modal>
         </Container>
     )
 }

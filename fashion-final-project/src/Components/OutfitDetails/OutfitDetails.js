@@ -46,6 +46,7 @@ function OutfitDetails() {
                 rows={8}
                 onChange={(e) => handleInstruction(e)}
                 name="message"
+                className="textareaContainer"
               />
             </Form.Group>
             <button className="ofdBtn" type="submit">

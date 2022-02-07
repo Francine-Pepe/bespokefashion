@@ -86,7 +86,7 @@ function CommentBox() {
                 <p className="comment-header">{comment.author}</p>
                 <div className="comment-images" > 
                 {Object.values(comment.images).map((image) => (
-                    <img alt="comment" src={image} width="350" />
+                    <img alt="comment" src={image} />
                 ))}
                 </div> 
                 <p className="comment-body">- {comment.body}</p>
@@ -120,6 +120,7 @@ function CommentBox() {
                     <br></br>
                     <textarea
                         type="text" 
+                        rows="6" 
                         required
                         placeholder="Your Reviews"
                         onChange={(e)=>setBody(e.target.value)} value={body}>

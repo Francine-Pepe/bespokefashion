@@ -86,7 +86,7 @@ function OrderSummary() {
                                 <Col>Total Amount :</Col>
                                 <Col>{getTotalOutfitCost(getOutfitPrice())}</Col>
                             </Row>  
-                            <Row className="jusitf-content-center">
+                            <Row >
                                 <NavLink  to="/app/pickup"  style={{ textDecoration: "none" }}>
                                     <button className="shpMoreBtn">Shop More</button>
                                 </NavLink>
