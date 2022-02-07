@@ -1,35 +1,35 @@
-import React, { useEffect, useState, useRef, useContext } from "react";
+import React, { useEffect, useState, useRef, useContext } from "react"
 // import CarouselComponent from "../CarouselComponent/CarouselComponent";
-import { Button } from "react-bootstrap";
-import "./PrintsCarousel.css";
-import { Icon } from "@iconify/react";
-import { OrderContext } from "../../orderContext";
-import ManequimBottom from "../Manequim/ManequimBottom";
+import { Button } from "react-bootstrap"
+import "./PrintsCarousel.css"
+import { Icon } from "@iconify/react"
+import { OrderContext } from "../../orderContext"
+import ManequimBottom from "../Manequim/ManequimBottom"
 
 export default function PrintsCarousel() {
-  const [data, setData] = useState([]);
-  const carousel = useRef(null);
-  const { order, setFabric } = useContext(OrderContext);
+  const [data, setData] = useState([])
+  const carousel = useRef(null)
+  const { order, setFabric } = useContext(OrderContext)
 
   useEffect(() => {
     fetch("https://bespoke-fashion.herokuapp.com/patterns")
       .then((response) => response.json())
-      .then(setData);
-  }, []);
+      .then(setData)
+  }, [])
 
   const handleLeftClick = (e) => {
-    e.preventDefault();
-    carousel.current.scrollLeft -= carousel.current.offsetWidth;
-  };
+    e.preventDefault()
+    carousel.current.scrollLeft -= carousel.current.offsetWidth
+  }
 
   const handleRightClick = (e) => {
-    e.preventDefault();
-    carousel.current.scrollLeft += carousel.current.offsetWidth;
-  };
+    e.preventDefault()
+    carousel.current.scrollLeft += carousel.current.offsetWidth
+  }
 
-  if (!data || !data.length) return null;
+  if (!data || !data.length) return null
 
-  console.log("fabric Prints Carousel", order);
+  console.log("fabric Prints Carousel", order)
 
   return (
     <div className="principal_container_bottom">
@@ -40,7 +40,7 @@ export default function PrintsCarousel() {
       <div className="prints_container">
         <div className="carousel" ref={carousel}>
           {data.map((item) => {
-            const { id, name, url, price } = item;
+            const { id, name, url, price } = item
             return (
               <div className="item" key={id}>
                 <div className="prints_image">
@@ -50,7 +50,6 @@ export default function PrintsCarousel() {
                 <div className="info">
                   <span className="prints_price">€{price}</span>
                   <Button
-                    variant="outline-*"
                     className="select_button"
                     style={{ outline: "none" }}
                     onClick={() => setFabric({ id: id, price, url })}
@@ -59,7 +58,7 @@ export default function PrintsCarousel() {
                   </Button>
                 </div>
               </div>
-            );
+            )
           })}
         </div>
         <div className="buttons" style={{ outline: "none" }}>
@@ -89,6 +88,6 @@ export default function PrintsCarousel() {
           </Button>
         </div>
       </div>
-  </div>
-  );
+    </div>
+  )
 }

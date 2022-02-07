@@ -1,7 +1,8 @@
 .contactContainer {
   background-color: #fcf4f1;
   width: 75%;
-  height: 550px;
+  height: 100%;
+  margin-bottom: 6rem;
   font-family: "Poiret One", "Trebuchet MS", "Lucida Sans Unicode",
     "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }

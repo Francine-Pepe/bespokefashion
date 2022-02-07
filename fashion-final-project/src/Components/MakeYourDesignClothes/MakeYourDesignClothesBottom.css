@@ -8,12 +8,11 @@ body {
   width: 100%;
   /* min-width: 100vh; */
   height: auto;
- 
 }
 
 .principal_container_bottom_part {
   max-width: 85%;
-  height:auto;
+  height: auto;
   display: flex;
   /* padding-bottom: 1%;
   padding-right: 1%;
@@ -33,16 +32,14 @@ body {
   margin: 0;
   background-color: blue;
   position: relative;
-  
 }
 .container_clothes_bottom {
   max-width: 55vw;
-  border: dashed #003D3A 2px;
+  border: dashed #003d3a 2px;
   border-radius: 5px;
   padding: 1%;
   margin-left: 4%;
 }
-
 
 .container_clothes_bottom .carousel {
   display: flex;
@@ -82,14 +79,12 @@ body {
   object-fit: cover;
   border-radius: 5px;
   border: #003d3a 2px;
-  
 }
 .buttons,
 .select_button {
   display: flex;
   justify-content: center;
   margin-top: 20px;
-  
 }
 
 .buttons_icon {
@@ -100,7 +95,6 @@ body {
   display: flex;
   flex-direction: column;
   align-content: flex-end;
-  
 }
 .info .price {
   margin-top: 5%;
@@ -123,53 +117,46 @@ button:focus {
 @media (max-width: 1200px) {
   .container_clothes_bottom {
     max-width: 52vw;
-   
   }
-  
+
   .manequin_container_bottom {
     width: 98%;
     height: auto;
     display: flex;
     justify-content: center;
-    
   }
   .manequin_container_bottom img {
     width: 300px;
     height: auto;
   }
-  }
-  
-  @media (max-width: 992px) {
-    .manequin_container_bottom {
+}
+
+@media (max-width: 992px) {
+  .manequin_container_bottom {
     width: 98%;
     height: auto;
     display: flex;
     justify-content: center;
-    
   }
   .manequin_container_bottom img {
     width: 300px;
     height: auto;
   }
-  }
-  
+}
 
 /* Below medium */
 
-
 @media (min-width: 649px) and (max-width: 768px) {
- 
-.manequin_container_bottom {
-  width: 98%;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  
-}
-.manequin_container_bottom img {
-  width: 260px;
-  height: auto;
-}
+  .manequin_container_bottom {
+    width: 98%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+  }
+  .manequin_container_bottom img {
+    width: 260px;
+    height: auto;
+  }
 }
 
 @media (min-width: 576px) and (max-width: 649px) {
@@ -178,13 +165,11 @@ button:focus {
     height: auto;
     display: flex;
     justify-content: center;
-    
   }
   .manequin_container_bottom img {
     width: 250px;
     height: auto;
   }
-
 }
 
 @media (max-width: 576px) {

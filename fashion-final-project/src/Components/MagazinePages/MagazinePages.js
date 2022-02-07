@@ -86,7 +86,7 @@ export default function MagazinePages({ cat }) {
                               e.target.innerText = "Selected!"
                             }}
                             id="#selectPrize"
-                            className="selectPrize-btn"
+                            className="MP-selectPrizeBtn"
                           >
                             select
                           </Button>
