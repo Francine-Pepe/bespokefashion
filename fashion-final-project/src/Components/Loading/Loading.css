@@ -1,0 +1,7 @@
+.imageDiv {
+  border: dashed 3px #281e1c8e;
+  height: 350px;
+  width: 350px;
+  padding: 20px;
+  border-radius: 50%;
+}

@@ -11,14 +11,14 @@ import bottom2 from "./../Images_test/skirt_03.png";
 // import bottom6 from "./../Images_test/short_04.png";
 // import bottom7 from "./../Images_test/short_02.png";
 import {OrderContext} from "../../orderContext";
+import ManequimBottom from "../Manequim/ManequimBottom";
 
-export default function MakeYourDesignClothesBottom() {
+export default function MakeYourDesignClothesBottom({cat}) {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const carousel = useRef(null);
   const { order, setBottom } = useContext(OrderContext);
 
-  const cat = "bottom";
 
   // useEffect(() => {
   //   fetch("https://bespoke-fashion.herokuapp.com/outfitParts")
@@ -83,7 +83,8 @@ export default function MakeYourDesignClothesBottom() {
   return (
     <div className="principal_container_bottom_part">
       <div className="manequin_container_bottom">
-        <img src={bottom2} alt="bottom" />
+        <ManequimBottom />
+        {/* <img src={order.bottom.url} alt="bottom" /> */}
       </div>
       <div className="container_clothes_bottom">
         <div className="carousel" ref={carousel}>

@@ -24,7 +24,7 @@ function CommentBox() {
     const id = '';
     const [author, setAuthor]=useState('');
     const [body, setBody]=useState('');
-    const [images, setImages] = useState([]);
+    const [images, setImages] = useState({});
 
 
     // form submit event
@@ -37,10 +37,12 @@ function CommentBox() {
             body,
             images
         }
+
+        console.log("comment",comment.images)
         setComments([...comments,comment]);
         setAuthor('');
         setBody('');
-        setImages([])
+        setImages({})
     }
     console.log(comments)
 
@@ -77,7 +79,8 @@ function CommentBox() {
         aspect: 4 / 3,
         width: '100'
     };
-    
+   
+
     return (
         <div className="comment-box">
             <h2></h2>
@@ -123,10 +126,13 @@ function CommentBox() {
                     {comments.map( comment => (
                     <>
                         <p className="comment-header">{comment.author}</p>
+                        <div className="comment-images" style = {{ visibility: [comment.images] ? "show" : "hidden" }} > 
+                       {/* {comment.images.map((img) => ( 
+                            <img src={img} />
+                        ))
+                        } */}
+                        </div> 
                         <p className="comment-body">- {comment.body}</p>
-                        {/* {comment.images.map( (image) => (
-                            <img src={image} alt="not found" />
-                        ))} */}
                         <div className="comment-footer">
                             <a
                             className="comment-footer-delete"

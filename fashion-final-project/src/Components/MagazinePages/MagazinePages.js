@@ -3,7 +3,6 @@ import "./Magazine.css"
 import breadcrumps from "../Images/breadcrumps.png"
 import models from "../Images/models.png"
 import HTMLFlipBook from "react-pageflip"
-import animation from "../Images/loading.gif"
 import Paper from "@mui/material/Paper"
 import { OrderContext } from "../../orderContext"
 import { Button } from "react-bootstrap"
@@ -11,6 +10,7 @@ import { NavLink } from "react-router-dom"
 import ReturnButton from "../ReturnButton/ReturnButton"
 import NextButton from "../NextButton/NextButton"
 import { Icon } from "@iconify/react"
+import Loading from "../Loading/Loading"
 
 export default function MagazinePages({ cat }) {
   const [data, setData] = useState([])
@@ -54,12 +54,7 @@ export default function MagazinePages({ cat }) {
         <div className="MP-magazine">
           <div className="MP-box">
             {isLoading ? (
-              <img
-                src={animation}
-                width="498"
-                height="373"
-                alt="loading animation"
-              />
+              <Loading />
             ) : (
               <HTMLFlipBook
                 showCover={false}
