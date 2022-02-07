@@ -10,6 +10,8 @@ import { OrderContext } from "../../orderContext"
 import { NavLink } from "react-router-dom"
 import measurementsImg from "../Images/body-measurements.png"
 import Modal from "react-bootstrap/Modal"
+import { Icon } from "@iconify/react"
+import ReturnButton from "../ReturnButton/ReturnButton"
 
 function MyVerticallyCenteredModal(props) {
   return (
@@ -43,55 +45,55 @@ function Measurements() {
   const [modalShow, setModalShow] = React.useState(false)
 
   const DRESS_FORM = [
-    { title: "Shoulder", name: "shoulder"},
-    { title: "Sleeve Length", name: "sleeveLength"},
-    { title: "Arm hole",name: "armHole"},
-    { title: "Sleeve-biceps",name: "biceps" },
-    { title: "Bust",name: "bust"},
-    { title: "Wrist", name: "wrist"},
-    { title: "Length (From Shoulder)", name: "length"},
-    { title: "Waist", name: "waist"},
-    { title: "Hip", name: "hip"},
+    { title: "Shoulder", name: "shoulder" },
+    { title: "Sleeve Length", name: "sleeveLength" },
+    { title: "Arm hole", name: "armHole" },
+    { title: "Sleeve-biceps", name: "biceps" },
+    { title: "Bust", name: "bust" },
+    { title: "Wrist", name: "wrist" },
+    { title: "Length (From Shoulder)", name: "length" },
+    { title: "Waist", name: "waist" },
+    { title: "Hip", name: "hip" },
   ]
 
   const BLOUSES_FORM = [
-    { title: "Shoulder", name: "shoulder"},
-    { title: "Sleeve Length", name:"sleeveLength"},
-    { title: "Arm hole", name: "armHole"},
-    { title: "Sleeve-biceps",name:"biceps" },
-    { title: "Bust", name: "bust"},
-    { title: "Wrist", name: "wrist"},
-    { title: "Length (From Neck)", name: "length"}
+    { title: "Shoulder", name: "shoulder" },
+    { title: "Sleeve Length", name: "sleeveLength" },
+    { title: "Arm hole", name: "armHole" },
+    { title: "Sleeve-biceps", name: "biceps" },
+    { title: "Bust", name: "bust" },
+    { title: "Wrist", name: "wrist" },
+    { title: "Length (From Neck)", name: "length" },
   ]
 
   const SKIRTS_FORM = [
-    { title: "Waist", name: "waist"},
-    { title: "Hip", name: "hip"},
-    { title: "Length", name: "length"},
+    { title: "Waist", name: "waist" },
+    { title: "Hip", name: "hip" },
+    { title: "Length", name: "length" },
   ]
 
   const PANTS_FORM = [
-    { title: "Waist", name: "waist"},
-    { title: "Hip", name: "hip"},
-    { title: "Thigh (Thickest Part)", name: "thigh"},
-    { title: "Waist to Crotch Length", name:"lengthToCrotch"},
-    { title: "Leg opening", name: "legOpening"},
-    { title: "Length" , name: "length"},
+    { title: "Waist", name: "waist" },
+    { title: "Hip", name: "hip" },
+    { title: "Thigh (Thickest Part)", name: "thigh" },
+    { title: "Waist to Crotch Length", name: "lengthToCrotch" },
+    { title: "Leg opening", name: "legOpening" },
+    { title: "Length", name: "length" },
   ]
 
   const JUMPSUITS_FORM = [
-    { title: "Shoulder", name: "shoulder"},
-    { title: "Sleeve Length", name: "sleeveLength"},
-    { title: "Arm hole", name: "armHole"},
-    { title: "Sleeve-biceps" , name: "biceps"},
-    { title: "Bust", name: "bust"},
-    { title: "Wrist", name: "wrist"},
-    { title: "Length (From Shoulder)", name: "length"},
-    { title: "Waist", name: "waist"},
-    { title: "Hip", name: "hip"},
-    { title: "Thigh (Thickest Part)", name: "thigh"},
-    { title: "Waist to Crotch Length", name:"lengthToCrotch" },
-    { title: "Leg opening",name: "legOpening" },
+    { title: "Shoulder", name: "shoulder" },
+    { title: "Sleeve Length", name: "sleeveLength" },
+    { title: "Arm hole", name: "armHole" },
+    { title: "Sleeve-biceps", name: "biceps" },
+    { title: "Bust", name: "bust" },
+    { title: "Wrist", name: "wrist" },
+    { title: "Length (From Shoulder)", name: "length" },
+    { title: "Waist", name: "waist" },
+    { title: "Hip", name: "hip" },
+    { title: "Thigh (Thickest Part)", name: "thigh" },
+    { title: "Waist to Crotch Length", name: "lengthToCrotch" },
+    { title: "Leg opening", name: "legOpening" },
   ]
 
   const [displayForm, setDisplayForm] = useState([])
@@ -116,74 +118,87 @@ function Measurements() {
     }
   }, [])
 
-  const [formData, setFormData] = useState({});
-
+  const [formData, setFormData] = useState({})
 
   const handleAddFormChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-    setMeasurements(formData);
-
+    setFormData({ ...formData, [e.target.name]: e.target.value })
+    setMeasurements(formData)
   }
 
   const handleAddFormSubmit = (e) => {
     e.preventDefault()
     // console.log('measurements ::: ', order.measurements)
-
   }
 
   return (
-    <Container className="measurementContainer">
-      <Row className="measurementRow">
-        <Col md className="measurementForm">
-          <h3 className="mb-4">Enter your measurements</h3>
-          <Form onSubmit={handleAddFormSubmit} autoComplete='off'>
-            {displayForm.map((labelTitle) => (
-              <Form.Group as={Row} className="mb-3">
-                <Form.Label column className="w-45">
-                  {labelTitle.title}
-                </Form.Label>
-                <Col>
-                  <Form.Control
-                    type="text"
-                    className="w-40"
-                    name={labelTitle.name}
-                    required
-                    onChange={handleAddFormChange}
-                  />
-                </Col>
-                <Col>cms</Col>
-              </Form.Group>
-            ))}
-            
-              
-              <button className="attBtn" type="submit">
-                  Save 
-              </button>
-          </Form>
-          <NavLink to="/app/outfitDetails" style={{ textDecoration: "none" }}> Next </NavLink>
-        </Col>
-        <Col md className="measurementHowTo ">
-          <h3>How to take measurements </h3>
-          <div className="M-imgBox">
-            <img
-              className="howToPic"
-              src={measurementsImg}
-              alt="measurements"
-            />
-          </div>
-          <>
-            <button className="attBtn" onClick={() => setModalShow(true)}>
-              Show Video
-            </button>
+    <>
+      <div className="measurements-returnNextBtn">
+        <ReturnButton />
+        <NavLink
+          to="/app/outfitDetails"
+          className="measurement-nextBtn"
+          style={{ textDecoration: "none" }}
+        >
+          Next step
+          <Icon
+            icon="grommet-icons:form-next"
+            color="#2c6a67"
+            width="50"
+            height="50"
+          />
+        </NavLink>
+      </div>
+      <Container className="measurementContainer">
+        <Row className="measurementRow">
+          <Col md className="measurementForm">
+            <h3 className="mb-4">Enter your measurements</h3>
+            <Form onSubmit={handleAddFormSubmit} autoComplete="off">
+              {displayForm.map((labelTitle) => (
+                <Form.Group as={Row} className="mb-3">
+                  <Form.Label column className="w-45">
+                    {labelTitle.title}
+                  </Form.Label>
+                  <Col>
+                    <Form.Control
+                      type="text"
+                      className="w-40"
+                      name={labelTitle.name}
+                      required
+                      onChange={handleAddFormChange}
+                    />
+                  </Col>
+                  <Col>cms</Col>
+                </Form.Group>
+              ))}
 
-            <MyVerticallyCenteredModal
-              show={modalShow}
-              onHide={() => setModalShow(false)}
-            />
-          </>
-        </Col>
-      </Row>
-    </Container>
+              <button className="attBtn" type="submit">
+                Save
+              </button>
+            </Form>
+          </Col>
+          <Col md className="measurementHowTo ">
+            <h3>How to take measurements </h3>
+            <div className="M-imgBox">
+              <img
+                className="howToPic"
+                src={measurementsImg}
+                alt="measurements"
+              />
+            </div>
+            <>
+              <button className="attBtn" onClick={() => setModalShow(true)}>
+                Show Video
+              </button>
+
+              <MyVerticallyCenteredModal
+                show={modalShow}
+                onHide={() => setModalShow(false)}
+              />
+            </>
+          </Col>
+        </Row>
+      </Container>
+    </>
   )
 }
 
