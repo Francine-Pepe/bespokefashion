@@ -44,9 +44,9 @@ function OrderSummary() {
         <div>
             { ( !order.outfit.id && !order.top.id && !order.bottom.id) ? 
                 <div> Your Cart is empty! <br/> <br/>Please browse through our collection and pick or design a lovely outfit.</div> : 
-                <div>
+                <div >
                     {order.outfit.id ? 
-                        <Container >
+                        <Container className="summaryContainer">
                             <Row >
                                 <Col>
                                     <img src={order.outfit.url} width="100" alt="image not found"  />
@@ -86,9 +86,14 @@ function OrderSummary() {
                                 <Col>Total Amount :</Col>
                                 <Col>{getTotalOutfitCost(getOutfitPrice())}</Col>
                             </Row>  
+                            <Row className="jusitf-content-center">
+                                <NavLink  to="/app/pickup"  style={{ textDecoration: "none" }}>
+                                    <button className="shpMoreBtn">Shop More</button>
+                                </NavLink>
+                            </Row>
                         </Container>
                         : 
-                        <Container>
+                        <Container className="summaryContainer">
                             <Row >
                                 <Col>
                                     <img src={order.top.url} width="100" alt="Select Top"  />
@@ -136,13 +141,13 @@ function OrderSummary() {
                                 <Col>Total Amount :</Col>
                                 <Col>{getTotalOutfitCost(getDesignPrice())}€</Col>
                             </Row> 
+                            <Row>
+                                <NavLink  to="/app/pickup"  style={{ textDecoration: "none" }}>
+                                    <button className="shpMoreBtn">Shop More</button>
+                                </NavLink>
+                            </Row>
                         </Container>
                         }
-                        {/* <NavLink to="/app/checkout" style={{textDecoration: 'none'}}>
-                            <button className="ofdBtn" style={{ marginTop: '20px'}} type="submit">
-                                <h5>Checkout</h5>
-                            </button>
-                        </NavLink> */}
                 </div> }
             
         </div>

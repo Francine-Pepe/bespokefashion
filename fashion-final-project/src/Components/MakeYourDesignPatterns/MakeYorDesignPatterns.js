@@ -5,8 +5,9 @@ import PrintsCarousel from "../PrintsCarousel/PrintsCarousel.js"
 import { NavLink } from "react-router-dom"
 import ReturnButton from "../ReturnButton/ReturnButton"
 import { Icon } from "@iconify/react"
-import ManequimTop from "../Manequim/ManequimTop"
-import ManequimBottom from "../Manequim/ManequimBottom"
+// import ManequimTop from "../Manequim/ManequimTop"
+// import ManequimBottom from "../Manequim/ManequimBottom"
+import Manequin from "../Manequim/Manequin"
 
 export default function MakeYourDesignPatterns() {
   return (
@@ -38,18 +39,18 @@ export default function MakeYourDesignPatterns() {
           {/* <div className="manequin_container">
                 <img src={Manequin} alt="manequin" />
             </div> */}
-
-          <div className="carousels">
-            <div className="carousel_container_colors">
-              <ColorsCarousel />
-            </div>
-
-            <div className="carousel_container_prints">
-              <PrintsCarousel />
+            <Manequin />
+            <div className='carousels'>
+                <div className='carousel_container_colors'>
+                    <ColorsCarousel />
+                </div>
+                
+                <div className='carousel_container_prints'>
+                    <PrintsCarousel />
+                </div>
             </div>
           </div>
         </div>
-      </div>
     </>
   )
 }

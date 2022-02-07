@@ -33,10 +33,10 @@ export default function ColorsCarousel() {
   console.log("fabric color Carousel", order);
   return (
     <div className="principal_container_top">
-      <div id="manequin_container_top_colors">
-        <ManequimTop />
+      {/* <div id="manequin_container_top_colors">
+        <ManequimTop /> */}
         {/* <img src={order.top.url} alt="top" /> */}
-      </div>
+      {/* </div> */}
       <div className="colors_container">
         <div className="carousel" ref={carousel}>
           {data.map((item) => {

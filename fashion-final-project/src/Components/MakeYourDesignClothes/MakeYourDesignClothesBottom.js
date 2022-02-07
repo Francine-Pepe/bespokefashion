@@ -82,10 +82,10 @@ export default function MakeYourDesignClothesBottom({cat}) {
   // );
   return (
     <div className="principal_container_bottom_part">
-      <div className="manequin_container_bottom">
-        <ManequimBottom />
+      {/* <div className="manequin_container_bottom">
+        <ManequimBottom /> */}
         {/* <img src={order.bottom.url} alt="bottom" /> */}
-      </div>
+      {/* </div> */}
       <div className="container_clothes_bottom">
         <div className="carousel" ref={carousel}>
           {data.map((item) => {
