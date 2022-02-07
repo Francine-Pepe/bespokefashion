@@ -10,10 +10,35 @@ body {
   height: auto;
 }
 
+.principal_container_bottom {
+  max-width: 85%;
+  height:auto;
+  display: flex;
+  padding-bottom: 1%;
+  padding-right: 1%;
+  padding-left: 1%;
+  position: relative;
+}
+
+.manequin_container_bottom_print {
+  width: 310px;
+  height: 450px;
+  border: none;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  background-color: blue;
+  position: relative;
+}
 .prints_container {
-  max-width: 75vw;
+  max-width: 55vw;
   border: dashed #2C6A67 2px;
   padding: 10px;
+  border-radius: 5px;
+  margin-top: 2%;
+  margin-bottom: 1%;
 }
 
 .prints_container .carousel {
@@ -48,18 +73,6 @@ body {
   font-family: "Montserrat";
 }
 
-/* .container .carousel .item .image img {
-  width: 100%;
-  height: auto;
-  border-radius: 5px;
-  border: #707070 2px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  object-fit: cover;
-  
-} */
 .buttons,
 .select_button {
   display: flex;

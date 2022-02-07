@@ -9,7 +9,7 @@ export default function ManequimBottom() {
     <>
       <div>
         {order.bottom.url ? (
-          <img src={order.bottom.url} alt="manequim_bottom" />
+          <img className="manequim_bottom_image"src={order.bottom.url} alt="manequim_bottom" />
         ) : (
           <img src={ManequimBottomImage} alt="manequim_bottom"/>
         )}
