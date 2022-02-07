@@ -16,7 +16,7 @@ function ReturnButton() {
           width="50"
           height="50"
         />
-        Previous step
+        Return
       </button>
     </div>
   )

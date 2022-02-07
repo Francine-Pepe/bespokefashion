@@ -71,31 +71,34 @@ export default function MagazinePages({ cat }) {
               >
                 {data
                   .filter((datai) => datai.cName.includes(cat))
-                  .map(({ _id, name, url, price, cName }) => (
-                    <Paper elevation={5} className="demoPage1">
-                      {/*<h3 className="pageHeader">{name}</h3> */}
-                      <img
-                        src={url}
-                        alt="our design cloths"
-                        className="pageImage"
-                      />
-                      <div className="pagePrice">price: {price} €</div>
-                      <>
-                        <Button
-                          onClick={(e) => {
-                            setOutfit({ id: _id, price, url })
+                  .map((item) => {
+                    const { _id, name, url, price, cName } = item
+                    return (
+                      <Paper elevation={5} key={_id} className="demoPage1">
+                        {/*<h3 className="pageHeader">{name}</h3> */}
+                        <img
+                          src={url}
+                          alt="our design cloths"
+                          className="pageImage"
+                        />
+                        <div className="pagePrice">price: {price} €</div>
+                        <>
+                          <Button
+                            onClick={(e) => {
+                              setOutfit({ id: _id, price, url })
 
-                            e.target.style.backgroundColor = "#5d86bc"
-                            e.target.innerText = "Selected!"
-                          }}
-                          id="#selectPrize"
-                          className="selectPrize-btn"
-                        >
-                          select
-                        </Button>
-                      </>
-                    </Paper>
-                  ))}
+                              e.target.style.backgroundColor = "#5d86bc"
+                              e.target.innerText = "Selected!"
+                            }}
+                            id="#selectPrize"
+                            className="selectPrize-btn"
+                          >
+                            select
+                          </Button>
+                        </>
+                      </Paper>
+                    )
+                  })}
               </HTMLFlipBook>
             )}
           </div>

@@ -59,6 +59,9 @@
   /* margin-right: 28px; */
 }
 
+.attBtn_next {
+  margin-top: 1rem;
+}
 
 @media only screen and (max-width: 1000px) {
   .measurementHowTo {
@@ -67,7 +70,8 @@
     border-bottom: 0;
     border-left: 0;
   }
-  .attBtn {
+  .attBtn,
+  .attBtn_next {
     height: 50px;
     width: 40%;
   }
