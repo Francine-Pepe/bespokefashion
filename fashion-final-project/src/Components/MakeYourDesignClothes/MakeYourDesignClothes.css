@@ -10,21 +10,29 @@ body {
   height: auto;
 }
 
-.make_your_clothes_wrapper {
+.make_your_clothes_container_parent {
   display: flex;
   justify-content: center;
+  
 }
-.make_your_clothes_container {
-  min-width: 80vw;
-  height: auto;
+
+
+.make_your_clothes_wrapper {
   display: flex;
   flex-direction: column;
+  
+}
+.make_your_clothes_container {
+  width: 80vw;
+  height: auto;
+  display: flex;
+  justify-content: center;
   align-items: center;
   border: dashed 2px;
   border-radius: 5px;
-  padding-left: 0;
-  padding-right: 0;
 }
+
+
 
 .exclusive_contact {
   display: flex;
