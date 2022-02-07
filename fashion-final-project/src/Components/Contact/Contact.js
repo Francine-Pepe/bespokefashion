@@ -30,8 +30,9 @@ function Contact() {
                     <Col md className='contactText text-center'>
                         <h1>Contact Us</h1><br/>
                         <h4>
+                        Have an dream outfit idea but dont see it on our website? Contact us and lets design it together.<br/><br/>
+                        Have suggestions about our website ? Feel free to reach out to us.<br/><br/>                 
                         We are here to answer your questions about Bespoke Fashion.<br/><br/>
-                        Have suggestions about our website ? Feel free to reach out to us.<br/><br/>
                         If you have any problems or experience technical difficulties, 
                         please do not hesitate to contact us. <br/><br/>
                         We will get back to you as soon as possible.<br/><br/>

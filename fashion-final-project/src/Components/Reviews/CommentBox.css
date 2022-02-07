@@ -96,3 +96,7 @@ button:focus {
   color: #00bdfc;
   font-weight: bold;
 }
+
+.comment-images {
+  margin: 20px;
+}

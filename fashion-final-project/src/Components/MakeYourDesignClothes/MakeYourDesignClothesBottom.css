@@ -30,7 +30,7 @@ body {
   display: flex;
   justify-content: center;
   margin: 0;
-  background-color: blue;
+  /* background-color: blue; */
   position: relative;
 }
 .container_clothes_bottom {

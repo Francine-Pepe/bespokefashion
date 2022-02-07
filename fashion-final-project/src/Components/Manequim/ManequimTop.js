@@ -11,10 +11,7 @@ export default function ManequimTop() {
       <div>
         {order.top.url ? (
           <div className="wrapper_top_manequim"
-            style={{
-              backgroundImage: `url(${order.fabric.url})`,
-              backgroundRepeat: "repeat-x",
-            }}
+          
           >
             <img
               className="manequim_top_image"

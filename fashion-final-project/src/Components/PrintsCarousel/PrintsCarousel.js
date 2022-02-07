@@ -33,10 +33,10 @@ export default function PrintsCarousel() {
 
   return (
     <div className="principal_container_bottom">
-      <div className="manequin_container_bottom_print">
-        <ManequimBottom />
+      {/* <div className="manequin_container_bottom_print">
+        <ManequimBottom /> */}
         {/* <img src={order.top.url} alt="top" /> */}
-      </div>
+      {/* </div> */}
       <div className="prints_container">
         <div className="carousel" ref={carousel}>
           {data.map((item) => {

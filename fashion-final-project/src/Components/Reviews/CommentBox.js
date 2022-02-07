@@ -79,7 +79,29 @@ function CommentBox() {
         aspect: 4 / 3,
         width: '100'
     };
-   
+
+    const showComments = () => {
+        return  comments.map( comment => (
+            <>
+                <p className="comment-header">{comment.author}</p>
+                <div className="comment-images" > 
+                {Object.values(comment.images).map((image) => (
+                    <img alt="comment" src={image} />
+                ))}
+                </div> 
+                <p className="comment-body">- {comment.body}</p>
+                <div className="comment-footer">
+                    <a
+                    className="comment-footer-delete"
+                    onClick={() => deleteComment(comment.id)}
+                    >
+                    Delete Comment
+                    </a>
+                </div>
+                
+            </>
+            ))
+    }
 
     return (
         <div className="comment-box">
@@ -98,6 +120,7 @@ function CommentBox() {
                     <br></br>
                     <textarea
                         type="text" 
+                        rows="6" 
                         required
                         placeholder="Your Reviews"
                         onChange={(e)=>setBody(e.target.value)} value={body}>
@@ -122,28 +145,7 @@ function CommentBox() {
             <h3>Comments</h3>
             <h4 className="comment-count">{comments.length} Comments</h4> 
             <div className="comment-list" style =  {{ display: show ? "block" : "none" }}> 
-                <div className="comment">
-                    {comments.map( comment => (
-                    <>
-                        <p className="comment-header">{comment.author}</p>
-                        <div className="comment-images" style = {{ visibility: [comment.images] ? "show" : "hidden" }} > 
-                       {/* {comment.images.map((img) => ( 
-                            <img src={img} />
-                        ))
-                        } */}
-                        </div> 
-                        <p className="comment-body">- {comment.body}</p>
-                        <div className="comment-footer">
-                            <a
-                            className="comment-footer-delete"
-                            onClick={() => deleteComment(comment.id)}
-                            >
-                            Delete Comment
-                            </a>
-                        </div>
-                        
-                    </>
-                    ))}
+                <div className="comment"> {showComments()}
                 </div>
             </div>
         </div>
