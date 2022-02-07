@@ -10,6 +10,7 @@ import top2 from "./../Images_test/dress_03_top.png";
 // import top5 from "./../Images_test/dress_20_top.png";
 // import top6 from "./../Images_test/dress_22_top.png";
 import { OrderContext } from "../../orderContext";
+import ManequimTop from "../Manequim/ManequimTop";
 
 export default function MakeYourDesignClothesTop() {
   const [data, setData] = useState([]);
@@ -74,7 +75,8 @@ export default function MakeYourDesignClothesTop() {
   return (
     <div className="principal_container_top_part">
       <div id="manequin_container_top">
-        <img src={top2} alt="top" />
+        <ManequimTop />
+        {/* <img src={order.top.url} alt="top" /> */}
       </div>
       <div className="container_carousel_top">
         <div className="carousel" ref={carousel}>
