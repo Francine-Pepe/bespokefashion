@@ -24,7 +24,7 @@ function CommentBox() {
     const id = '';
     const [author, setAuthor]=useState('');
     const [body, setBody]=useState('');
-    const [images, setImages] = useState([]);
+    const [images, setImages] = useState({});
 
 
     // form submit event
@@ -37,10 +37,12 @@ function CommentBox() {
             body,
             images
         }
+
+        console.log("comment",comment.images)
         setComments([...comments,comment]);
         setAuthor('');
         setBody('');
-        setImages([])
+        setImages({})
     }
     console.log(comments)
 

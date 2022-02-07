@@ -13,13 +13,12 @@ import bottom2 from "./../Images_test/skirt_03.png";
 import {OrderContext} from "../../orderContext";
 import ManequimBottom from "../Manequim/ManequimBottom";
 
-export default function MakeYourDesignClothesBottom() {
+export default function MakeYourDesignClothesBottom({cat}) {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const carousel = useRef(null);
   const { order, setBottom } = useContext(OrderContext);
 
-  const cat = "bottom";
 
   // useEffect(() => {
   //   fetch("https://bespoke-fashion.herokuapp.com/outfitParts")

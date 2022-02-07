@@ -7,14 +7,14 @@ import { NavLink } from "react-router-dom"
 import { Icon } from '@iconify/react';
 
 
-export default function MakeYourDesignClothes() {
+export default function MakeYourDesignClothes({cat}) {
     return (
         <>
         <div className="make_your_clothes_wrapper">
             <div className="make_your_clothes_container">
             
                 <MakeYourDesignClothesTop />
-                <MakeYourDesignClothesBottom />
+                <MakeYourDesignClothesBottom cat={cat}/>
             
             </div>
         </div>
