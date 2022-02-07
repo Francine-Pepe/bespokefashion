@@ -70,8 +70,8 @@ export default function MagazinePages({ cat }) {
                 className="MP-flipBook"
               >
                 {data
-                  .filter((datai) => datai.cName.includes(cat))
-                  .map((item) => {
+                  .filter((datai, index) => datai.cName.includes(cat))
+                  .map((item, index) => {
                     const { _id, name, url, price, cName } = item
                     return (
                       <Paper elevation={5} key={_id} className="demoPage1">

@@ -68,7 +68,7 @@ body {
 
 .next_page {
   font-family: "Montserrat";
-  color: #2c6a67;
+  color: black;
 }
 .next_page:hover {
   cursor: pointer;
