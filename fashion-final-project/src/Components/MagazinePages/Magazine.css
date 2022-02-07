@@ -1,5 +1,8 @@
 /* WHOLE OUR DESIGN CATALOGUE PAGE CSS */
-
+.MP-navSmall > .returnPosition,
+.MP-navSmall > .nextPosition {
+  display: none;
+}
 .MP-section {
   width: 100%;
   height: 90%;
@@ -9,28 +12,23 @@
 
 .MP-header {
   display: flex;
-}
-.MP-header > .returnPosition {
-  position: static;
-  margin-left: 5%;
-  width: 5%;
-}
-.MP-info1 {
   width: 100%;
-  display: flex;
+  justify-content: space-between;
   align-items: center;
-  color: #2c6a67;
-  font-family: "Style Script";
-  letter-spacing: 3px;
-  padding-left: 4rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
 }
+
+.MP-header > h4 {
+  font-family: "Style Script";
+  letter-spacing: 1px;
+  color: #2c6a67;
+}
+
 .MP-arrowIcon {
   margin-left: 1rem;
 }
 .MP-info2 {
-  display: none;
-}
-.MP-info3 {
   display: none;
 }
 
@@ -39,7 +37,6 @@
   color: #2c6a67;
   display: flex;
   align-items: center;
-  width: 100%;
 }
 .MP-main {
   display: flex;
@@ -74,16 +71,17 @@
   align-items: end;
   justify-content: start;
 }
+
 /* Media queries bellow */
 
 @media (max-width: 1301px) {
   .MP-title {
-    margin-left: 2rem;
     font-family: "Style Script";
     color: #2c6a67;
     display: flex;
     align-items: center;
   }
+
   .MP-category {
     width: 15%;
     display: flex;
@@ -117,7 +115,12 @@
     width: 100%;
   }
 }
-
+@media (max-width: 1301px) {
+  .MP-main {
+    display: flex;
+    margin-bottom: 3rem;
+  }
+}
 @media (max-width: 1097px) {
   .MP-category {
     width: 20%;
@@ -142,29 +145,34 @@
   .MP-models {
     width: 90%;
   }
-  .MP-info1 {
-    display: none;
-  }
   .MP-arrowIcon {
     margin-right: 1rem;
   }
+
   .MP-info2 {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    color: #2c6a67;
-    font-family: "Style Script";
-    letter-spacing: 3px;
-    padding-left: 2rem;
-  }
-  .MP-info3 {
     display: none;
   }
 }
 
-@media (max-width: 870px) {
+@media (max-width: 830px) {
+  .MP-navSmall {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .MP-navSmall > .returnPosition,
+  .MP-navSmall > .nextPosition {
+    display: inline-flex;
+  }
+  .MP-header > .returnPosition,
+  .MP-header > .nextPosition {
+    display: none;
+  }
+  .MP-header {
+    display: flex;
+    justify-content: space-evenly;
+  }
   .MP-title {
-    margin-left: 3rem;
     font-family: "Style Script";
     color: #2c6a67;
     display: flex;
@@ -172,7 +180,10 @@
   }
 }
 
-@media (max-width: 659px) {
+@media (max-width: 767px) {
+  .MP-header > h4 {
+    display: none;
+  }
   .MP-main {
     display: flex;
     flex-direction: column;
@@ -208,19 +219,14 @@
     display: flex;
     justify-content: center;
   }
-  .MP-info1 {
-    display: none;
-  }
+
   .MP-info2 {
-    display: none;
-  }
-  .MP-info3 {
     display: flex;
     align-items: center;
     justify-content: center;
     color: #2c6a67;
     font-family: "Style Script";
-    letter-spacing: 3px;
+    letter-spacing: 1px;
     margin-left: 20%;
   }
   .MP-arrowIcon {
@@ -268,45 +274,3 @@
   cursor: pointer;
   background-color: #2c6a67;
 }
-
-/*
-.selectPrize-btn:active {
-  cursor: pointer;
-  background-color: #0b5ed7;
-}
-
-
-.MP-toastHeader > .btn-close {
-  display: none;
-}
-.MP-toastContainer {
-  width: 7rem;
-  margin-left: 20px;
-}
-
-.MP-Toast {
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  background-color: transparent;
-  border: none;
-  box-shadow: none;
-  width: 100%;
-   position: fixed !important;
-  margin-top: 20%; 
-}
-
-.MP-toastHeader {
-  font-family: "Montserrat";
-  font-size: 1.5rem;
-  background-color: #5d86bc;
-  color: #fff;
-  border: none;
-  border-radius: 7px;
-  padding: 2px 1rem; 
-}
-.MP-toastHeader > .btn-close {
-  display: none;
-}
-
-*/

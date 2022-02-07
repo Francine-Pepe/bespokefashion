@@ -1,24 +1,25 @@
 .nextBtn {
-    background-color: transparent;
-    border: none;
-  }
-  .nextPosition {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 3%;
-    margin-right: 7%;
-  }
-
-  .nextPosition a {
-      text-decoration: none;
-  }
-
-  .nextPosition a:hover {
-    color: #2c6a67;
+  background-color: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+}
+.nextPosition {
+  display: flex;
+  justify-content: flex-end;
+  /*margin-top: 3%;*/
+  margin-right: 7%;
 }
 
-  .nextBtn {
-      font-family: 'Montserrat';
-      color: #2c6a67;
-  }
+.nextPosition a {
+  text-decoration: none;
+}
 
+.nextPosition a:hover {
+  color: #2c6a67;
+}
+
+.nextBtn {
+  font-family: "Montserrat";
+  color: #2c6a67;
+}
