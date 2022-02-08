@@ -6,7 +6,7 @@ import ReturnButton from "../ReturnButton/ReturnButton"
 import NextButton from "../NextButton/NextButton"
 import { NavLink } from "react-router-dom"
 import { Icon } from "@iconify/react"
-import Manequin from '../Manequim/Manequin';
+import Manequin from "../Manequim/Manequin"
 
 export default function MakeYourDesignClothes({ cat }) {
   return (
@@ -15,16 +15,16 @@ export default function MakeYourDesignClothes({ cat }) {
         <ReturnButton />
         <NextButton className="next_step" />
       </div>
-      
+
       <div className="make_your_clothes_container_parent">
         <div className="make_your_clothes_container">
           <Manequin />
-            <div className="make_your_clothes_wrapper">
-              <MakeYourDesignClothesTop />
-              <MakeYourDesignClothesBottom cat={cat} />
-            </div>
+          <div className="make_your_clothes_wrapper">
+            <MakeYourDesignClothesTop />
+            <MakeYourDesignClothesBottom cat={cat} />
+          </div>
         </div>
-      </div> 
+      </div>
 
       <div className="exclusive_contact">
         <NavLink className="exclusive_contact_link" to="/app/contact">

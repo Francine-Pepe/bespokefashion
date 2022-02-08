@@ -33,13 +33,11 @@ function Checkout() {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    // console.log('formdata ::',formData)
-
     const handleAddFormSubmit = (e) => {
         e.preventDefault();
         setClientDetails(formData);
         setTimeout(() => {
-            console.log("submi", templateParams);
+            // console.log("submi", templateParams);
             return emailjs
                 .send(
                 "service_pjlm5d3",
@@ -60,7 +58,6 @@ function Checkout() {
 
       };
 
-    // console.log('from checkout::',order.clientDetails)
     
     const templateParams = {
         clientName: order.clientDetails.name, 
@@ -135,7 +132,6 @@ function Checkout() {
                                 type='radio'
                                 value='yes'
                                 required
-                                // className="radioBtn"
                                 id={`inline-radio-1`}
                             />
                             <Form.Check

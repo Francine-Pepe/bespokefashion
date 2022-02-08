@@ -32,7 +32,7 @@ export default function MagazinePages({ cat }) {
   }, [])
 
   console.log(order)
-  console.log(order.outfit)
+  console.log("order outfit", order.outfit)
 
   return (
     <section className="MP-section">
@@ -68,6 +68,7 @@ export default function MagazinePages({ cat }) {
                   .filter((datai, index) => datai.cName.includes(cat))
                   .map((item, index) => {
                     const { _id, name, url, price, cName } = item
+                    const isSelected = order.outfit?.id === _id
                     return (
                       <Paper elevation={5} key={_id} className="demoPage1">
                         {/*<h3 className="pageHeader">{name}</h3> */}
@@ -79,16 +80,15 @@ export default function MagazinePages({ cat }) {
                         <div className="pagePrice">price: {price} €</div>
                         <>
                           <Button
-                            onClick={(e) => {
+                            onClick={() => {
                               setOutfit({ id: _id, price, url })
-
-                              e.target.style.backgroundColor = "#5d86bc"
-                              e.target.innerText = "Selected!"
                             }}
                             id="#selectPrize"
-                            className="selectPrize-btn"
+                            className={`MP-selectPrizeBtn ${
+                              isSelected ? "MP-selectPrizeBtn--active" : ""
+                            }`}
                           >
-                            select
+                            {isSelected ? "selected!" : "select"}
                           </Button>
                         </>
                       </Paper>

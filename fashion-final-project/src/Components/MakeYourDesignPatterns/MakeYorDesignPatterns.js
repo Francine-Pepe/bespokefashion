@@ -42,6 +42,7 @@ export default function MakeYourDesignPatterns() {
             </div>
           </div>
         </div>
+      </div>
     </>
   )
 }

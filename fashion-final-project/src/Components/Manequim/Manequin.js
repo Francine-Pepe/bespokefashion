@@ -8,13 +8,15 @@ function Manequin() {
   const { order } = useContext(OrderContext);
 
   return (
-<>
-<div>
-{(order.outfit.url)? <div  style={{
+    <>
+    <div>
+    {(order.outfit.url)? 
+    <div  style={{
         backgroundImage: `url(${order.fabric.url})`,
         backgroundPosition: 'center',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat'}}> 
+
         <ManequimOutfit/>
       </div> : 
       <div  style={{
