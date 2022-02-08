@@ -1,0 +1,15 @@
+.imageDiv {
+  border: dashed 3px #281e1c8e;
+  height: 350px;
+  width: 350px;
+  padding: 20px;
+  border-radius: 50%;
+}
+.loadingContainer {
+  font-family: "Style Script", cursive;
+  letter-spacing: 2px;
+  margin-top: 10px;
+  font-size: 30px;
+  color: #2c6a67;
+  /* padding-left: 40%; */
+}

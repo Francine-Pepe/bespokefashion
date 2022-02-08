@@ -1,0 +1,13 @@
+.manequim_bottom_image {
+    width: 310px;
+    height: 510px;
+}
+
+/* Media Querie */
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .manequim_bottom_image {
+        width: 250px;
+        height: 500px;
+    }
+}

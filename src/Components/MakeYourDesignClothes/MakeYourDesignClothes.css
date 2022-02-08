@@ -1,0 +1,168 @@
+.MYC-returnNextBtn {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 2rem;
+}
+
+body {
+  width: 100%;
+  height: auto;
+}
+
+.make_your_clothes_container_parent {
+  display: flex;
+  justify-content: center;
+  
+}
+
+
+.make_your_clothes_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  
+}
+
+.make_your_clothes_container {
+  min-width: 80vw;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: dashed 2px;
+  border-radius: 5px;
+  
+}
+
+.exclusive_contact {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-family: "Montserrat";
+  font-size: 15px;
+  background-color: whitesmoke;
+  margin-top: 2rem;
+  opacity: 1;
+  border-radius: 5px;
+  padding-bottom: 1rem;
+}
+
+.exclusive_contact a {
+  color: #2c6a67;
+  text-decoration: none;
+}
+
+.exclusive_contact a:hover {
+  color: #2c6a67;
+}
+
+/* Media Queries */
+
+@media (min-width: 1200px) {
+  .make_your_clothes_wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  .make_your_clothes_container {
+    min-width: 80vw;
+    padding-right: 2%;
+    padding-left: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+}
+
+/* Medium to Large */
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .make_your_clothes_wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  .make_your_clothes_container {
+    min-width: 90vw;
+    padding-right: 2%;
+    padding-left: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .make_your_clothes_wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  .make_your_clothes_container {
+    min-width: 90vw;
+    padding-right: 2%;
+    padding-left: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+}
+
+
+/* Below medium */
+@media (min-width: 649px) and (max-width: 768px) {
+  .make_your_clothes_wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  .make_your_clothes_container {
+    min-width: 90vw;
+    padding-right: 2%;
+    padding-left: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+}
+
+/* Small to medium */
+
+@media (min-width: 576px) and (max-width: 649px) {
+  .make_your_clothes_wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  .make_your_clothes_container {
+    min-width: 90vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+  }
+  .make_your_clothes_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+}
+
+@media (max-width: 576px) {
+  .make_your_clothes_wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  .make_your_clothes_container {
+    min-width: 90vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+  }
+  
+}

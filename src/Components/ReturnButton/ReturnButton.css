@@ -1,0 +1,14 @@
+.returnBtn {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+}
+.returnPosition {
+  display: flex;
+  margin-left: 7%;
+}
+
+.returnBtn:hover {
+  color: #2c6a67;
+}

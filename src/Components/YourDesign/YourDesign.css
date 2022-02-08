@@ -1,0 +1,292 @@
+body {
+    width: 100%;
+    height: auto;
+}
+
+.your_design_catalogue {
+    display: flex;
+    justify-content: center;
+    font-family: "Style Script";
+    letter-spacing: 1px;
+    color: #003D3A;
+    margin-bottom: 1%;
+}
+
+
+.your_designs_container {
+    width: 85%;
+    height: 45vh;
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    align-items: center;
+    margin-bottom: 2%;
+}
+
+.jumpsuits_box_your_design,
+.dresses_box_your_design {
+    width: 70%;
+    height: 55vh;
+    display: flex;
+    border-radius: 5px;
+    border: 2px dashed ;
+    /* border-color: #707070; */
+    background-position: center;
+    margin-bottom: 2%;
+}
+
+.jumpsuits_box_your_design:hover,
+.dresses_box_your_design:hover {
+    -moz-box-shadow: 0 0 15px #707070;
+    -webkit-box-shadow: 0 0 15px #707070;
+    box-shadow: 0 0 10px #707070;
+}
+
+.design_button_your_design {
+    width: 85%;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 5px;
+    border: none;
+    background-color: #e7bd44;
+    color: #fcf4f1;
+    align-self: center;
+    text-align: center;
+    font-family: "Montserrat";
+    font-size: 18px;
+}
+
+.design_button_your_design:hover {
+    -moz-box-shadow: 0 0 15px #707070;
+    -webkit-box-shadow: 0 0 15px #707070;
+    box-shadow: 0 0 10px #707070;
+}
+
+.design_button_your_design a {
+    color: #fcf4f1
+}
+
+.clothes_types_container_your_design {
+    width: 38%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.jumpsuits_box_your_design img,
+.dresses_box_your_design img {
+    width: 100%;
+    height: auto;
+}
+
+
+/* Media Queries */
+
+/* Extra Large */
+@media (min-width: 1401px) {
+    .your_designs_container {
+        width: 85%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 5px;
+     
+        }
+        .jumpsuits_box_your_design,
+        .dresses_box_your_design {
+            width: 85%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 5px;
+         }
+         .design_button_your_design {
+            width: 85%;
+            height: 5vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            border-radius: 5px;
+            border: none;
+            background-color: #e7bd44;
+            color: #fcf4f1;
+            align-self: center;
+            text-align: center;
+            font-family: "Montserrat";
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .jumpsuits_box_your_design img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+/* Large */
+
+@media (min-width: 1201px) and (max-width: 1400px) {
+    .your_designs_container {
+    width: 85%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+ 
+    }
+    .jumpsuits_box_your_design,
+    .dresses_box_your_design {
+        width: 85%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 5px;
+     }
+     .design_button_your_design {
+        width: 85%;
+        height: 5vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        border-radius: 5px;
+        border: none;
+        background-color: #e7bd44;
+        color: #fcf4f1;
+        align-self: center;
+        text-align: center;
+        font-family: "Montserrat";
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+    .jumpsuits_box_your_design img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Medium to Large */
+
+@media (min-width: 768px) and (max-width: 1200px) {
+    .your_designs_container {
+    width: 95%;
+    height: auto;
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+ 
+    }
+    .jumpsuits_box_your_design,
+    .dresses_box_your_design {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 5px;
+     }
+     .design_button_your_design {
+        width: 100%;
+        height: 5vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        border-radius: 5px;
+        border: none;
+        background-color: #e7bd44;
+        color: #fcf4f1;
+        align-self: center;
+        text-align: center;
+        font-family: "Montserrat";
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+    .jumpsuits_box_your_design img {
+        width: 100%;
+        height: auto;
+    }
+    
+    /* .jumpsuits_box {
+    
+    } */
+}
+/* Below medium */
+@media (max-width: 767px) {
+    .your_designs_container {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 5px;
+     
+        }
+        .jumpsuits_box_your_design,
+        .dresses_box_your_design{
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 5px;
+         }
+         .design_button_your_design {
+            width: 100%;
+            height: 5vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            border-radius: 5px;
+            border: none;
+            background-color: #e7bd44;
+            color: #fcf4f1;
+            align-self: center;
+            text-align: center;
+            font-family: "Montserrat";
+            font-size: 18px;
+            margin-bottom: 20px;
+            
+         }
+
+        .jumpsuits_box_your_design img {
+            width: 100%;
+            height: auto;
+        }
+        .your_design_catalogue {
+            display: flex;
+            justify-content: center;
+            margin: 5%;
+            
+        }
+        .your_design_catalogue h2 {
+            font-size: 25px;
+            margin-left: 0;
+        }
+        /* .jumpsuits_box {
+        
+        } */
+    }

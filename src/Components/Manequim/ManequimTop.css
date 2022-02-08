@@ -1,0 +1,15 @@
+.manequim_top_image {
+  width: 310px;
+  height: 510px;
+}
+
+.wrapper_top_manequim {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 300px;
+  width: 300px;
+  border: 1px solid black;
+  
+}

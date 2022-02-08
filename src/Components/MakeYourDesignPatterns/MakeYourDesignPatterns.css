@@ -1,0 +1,141 @@
+body {
+  width: 100%;
+  height: auto;
+}
+
+.make_your_design_color_and_pattern {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Style Script";
+  letter-spacing: 1px;
+  color: #003d3a;
+  font-weight: 100;
+}
+
+.main_container_color_and_pattern {
+  width: 80vw;
+  height: auto;
+  border: dashed 2px;
+  display: flex;
+  background-color: white;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3%;
+}
+
+.carousels {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+}
+.carousel_container_colors,
+.carousel_container_prints {
+    display: flex;
+    align-items: center;
+    height: auto;
+    margin: 3%;
+}
+
+.next_page {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 10%;
+  text-decoration: none;
+}
+.next_page a {
+  text-decoration: none;
+}
+
+.next_page {
+  font-family: "Montserrat";
+  color: black;
+}
+.next_page:hover {
+  cursor: pointer;
+  color: #2c6a67;
+}
+/* Media Queries */
+
+@media (min-width: 1200px) {
+  .main_container_color_and_pattern {
+    max-width: 80vw;
+    height: auto;
+    border: dashed 2px;
+    display: flex;
+    justify-content: center;
+  }
+  
+}
+
+/* Medium to Large */
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .main_container_color_and_pattern {
+    min-width: 90vw;
+    display: flex;
+    justify-content: center;
+  }
+  .manequin_container img {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .main_container_color_and_pattern {
+    min-width: 90vw;
+    display: flex;
+    justify-content: center;
+
+  }
+  .carousels {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    align-items: flex-start;
+    
+  }
+  
+}
+
+
+/* Medium */
+
+@media (max-width: 767px) {
+  .main_container_color_and_pattern {
+    min-width: 92%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+  }
+  .make_your_design_color_and_pattern h3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 22px;
+    font-weight: normal;
+  }
+}
+
+/* Extra Small */
+
+@media (max-width: 576px) {
+  .main_container_color_and_pattern {
+    width: 92%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+  }
+  .make_your_design_color_and_pattern h3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 22px;
+    font-weight: normal;
+  }
+}
