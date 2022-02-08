@@ -137,11 +137,29 @@ body {
     min-width: 45vw;
     
   }
+  .principal_container_bottom {
+    max-width: 95%;
+    height: auto;
+    display: flex;
+    padding-bottom: 1%;
+    padding-right: 1%;
+    padding-left: 1%;
+    
+  }
 }
 
 @media (min-width: 649px) and (max-width: 768px) {
   .prints_container {
     min-width: 45vw;
+    
+  }
+  .principal_container_bottom {
+    max-width: 95%;
+    height: auto;
+    display: flex;
+    padding-bottom: 1%;
+    padding-right: 1%;
+    padding-left: 1%;
     
   }
 }
