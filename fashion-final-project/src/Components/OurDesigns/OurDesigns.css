@@ -22,7 +22,7 @@ body {
 
 .our_designs_container {
   width: 85%;
-  height: 75vh;
+  /*height: 75vh;*/
   display: flex;
   text-align: center;
   justify-content: space-evenly;
@@ -30,6 +30,7 @@ body {
   margin-right: auto;
   border-radius: 5px;
   align-items: center;
+  margin-bottom: 5%;
 }
 
 .jumpsuits_box,

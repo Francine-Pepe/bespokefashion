@@ -71,6 +71,9 @@
   align-items: end;
   justify-content: start;
 }
+.MP-img > .MP-models {
+  height: 80%;
+}
 
 /* Media queries bellow */
 
@@ -111,9 +114,6 @@
     align-items: end;
     justify-content: start;
   }
-  .MP-models {
-    width: 100%;
-  }
 }
 @media (max-width: 1301px) {
   .MP-main {
@@ -141,9 +141,7 @@
     align-items: end;
     justify-content: start;
   }
-  .MP-models {
-    width: 90%;
-  }
+
   .MP-arrowIcon {
     margin-right: 1rem;
   }
@@ -253,7 +251,7 @@
     "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   font-weight: bold;
 }
-.selectPrize-btn {
+.MP-selectPrizeBtn {
   display: inline-block;
   text-align: center;
   background-color: #e7bd44;
@@ -269,7 +267,11 @@
   margin-top: 1rem;
 }
 
-.selectPrize-btn:hover {
+.MP-selectPrizeBtn--active {
+  background-color: #5d86bc;
+}
+
+.MP-selectPrizeBtn:hover {
   cursor: pointer;
   background-color: #2c6a67;
 }

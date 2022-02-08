@@ -1,24 +1,23 @@
-import React, { useEffect, useState, useRef,useContext} from "react";
-import { Button } from "react-bootstrap";
-import "./MakeYourDesignClothesBottom.css";
-import { Icon } from "@iconify/react";
+import React, { useEffect, useState, useRef, useContext } from "react"
+import { Button } from "react-bootstrap"
+import "./MakeYourDesignClothesBottom.css"
+import { Icon } from "@iconify/react"
 // import ManequimBottom from "../Manequim/ManequimBottom";
 // import bottom1 from "../Images_test/skirt_01.png";
-import bottom2 from "./../Images_test/skirt_03.png";
+import bottom2 from "./../Images_test/skirt_03.png"
 // import bottom3 from "./../Images_test/skirt_08.png";
 // import bottom4 from "../Images_test/skirt_19.png";
 // import bottom5 from "./../Images_test/short_03.png";
 // import bottom6 from "./../Images_test/short_04.png";
 // import bottom7 from "./../Images_test/short_02.png";
-import {OrderContext} from "../../orderContext";
-import ManequimBottom from "../Manequim/ManequimBottom";
+import { OrderContext } from "../../orderContext"
+import ManequimBottom from "../Manequim/ManequimBottom"
 
-export default function MakeYourDesignClothesBottom({cat}) {
-  const [data, setData] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const carousel = useRef(null);
-  const { order, setBottom } = useContext(OrderContext);
-
+export default function MakeYourDesignClothesBottom({ cat }) {
+  const [data, setData] = useState([])
+  const [isLoading, setIsLoading] = useState(true)
+  const carousel = useRef(null)
+  const { order, setBottom } = useContext(OrderContext)
 
   // useEffect(() => {
   //   fetch("https://bespoke-fashion.herokuapp.com/outfitParts")
@@ -27,21 +26,21 @@ export default function MakeYourDesignClothesBottom({cat}) {
   // }, []);
 
   useEffect(() => {
-    console.log("The Component is Ready!");
+    console.log("The Component is Ready!")
     fetch("https://bespoke-fashion.herokuapp.com/fixedDresses")
       .then((response) => response.json())
       .then((data) => {
         if (cat === "dresses") {
-          console.log(cat);
+          console.log(cat)
           setData(
             data.filter(
               (datai) =>
                 datai.part.includes("bottom") &&
                 datai.category.includes("61f15f126b484350049ac7ec")
             )
-          );
-          setIsLoading(false);
-          console.log(data);
+          )
+          setIsLoading(false)
+          console.log(data)
         } else {
           setData(
             data.filter(
@@ -50,27 +49,27 @@ export default function MakeYourDesignClothesBottom({cat}) {
                   datai.category.includes("61f15f126b484350049ac7eb")) ||
                 datai.category.includes("61f15f126b484350049ac7ed")
             )
-          );
-          setIsLoading(false);
-          console.log(data);
+          )
+          setIsLoading(false)
+          console.log(data)
         }
       })
       .catch((error) => {
-        console.error("Error:", error);
-      });
-  }, []);
+        console.error("Error:", error)
+      })
+  }, [])
 
   const handleLeftClick = (e) => {
-    e.preventDefault();
-    carousel.current.scrollLeft -= carousel.current.offsetWidth;
-  };
+    e.preventDefault()
+    carousel.current.scrollLeft -= carousel.current.offsetWidth
+  }
 
   const handleRightClick = (e) => {
-    e.preventDefault();
-    carousel.current.scrollLeft += carousel.current.offsetWidth;
-  };
+    e.preventDefault()
+    carousel.current.scrollLeft += carousel.current.offsetWidth
+  }
 
-  if (!data || !data.length) return null;
+  if (!data || !data.length) return null
 
   // console.log(
   //   "includes",
@@ -84,12 +83,13 @@ export default function MakeYourDesignClothesBottom({cat}) {
     <div className="principal_container_bottom_part">
       {/* <div className="manequin_container_bottom">
         <ManequimBottom /> */}
-        {/* <img src={order.bottom.url} alt="bottom" /> */}
+      {/* <img src={order.bottom.url} alt="bottom" /> */}
       {/* </div> */}
       <div className="container_clothes_bottom">
         <div className="carousel" ref={carousel}>
           {data.map((item) => {
-            const { _id, name, url, price } = item;
+            const { _id, name, url, price } = item
+            const isSelected = order.bottom?.id === _id
             return (
               <div className="item" key={_id}>
                 <div className="image">
@@ -99,15 +99,18 @@ export default function MakeYourDesignClothesBottom({cat}) {
                 <div className="info">
                   <span className="price">{price}€</span>
                   <Button
-                    variant="outline-*"
-                    className="select_button"
-                    onClick={() => setBottom({ id: _id, price, url })}
+                    onClick={() => {
+                      setBottom({ id: _id, price, url })
+                    }}
+                    className={`select_button ${
+                      isSelected ? "select_button--active" : ""
+                    }`}
                   >
-                    Select
+                    {isSelected ? "selected!" : "select"}
                   </Button>
                 </div>
               </div>
-            );
+            )
           })}
         </div>
         <div className="buttons">
@@ -138,5 +141,5 @@ export default function MakeYourDesignClothesBottom({cat}) {
         </div>
       </div>
     </div>
-  );
+  )
 }

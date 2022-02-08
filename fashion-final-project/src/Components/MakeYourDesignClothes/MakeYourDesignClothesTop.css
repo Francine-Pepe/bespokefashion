@@ -7,7 +7,6 @@
 body {
   width: 100%;
   height: auto;
-  
 }
 
 .principal_container_top_part {
@@ -92,6 +91,25 @@ body {
   margin-top: 20px;
 }
 
+.select_button {
+  text-align: center;
+  background-color: #e7bd44;
+  color: #fff;
+  border: none;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  font-family: "Montserrat";
+}
+
+.select_button--active {
+  background-color: #5d86bc;
+}
+
+.select_button:hover {
+  cursor: pointer;
+  background-color: #2c6a67;
+}
+
 .info .price {
   margin-top: 5%;
 }
@@ -125,50 +143,45 @@ body {
 
 /* Below medium */
 @media (max-width: 1200px) {
-
   .container_carousel_top {
     max-width: 52vw;
-   
   }
-#manequin_container_top {
-  width: 98%;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  
-}
-#manequin_container_top img {
-  width: 300px;
-  height: auto;
-}
+  #manequin_container_top {
+    width: 98%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+  }
+  #manequin_container_top img {
+    width: 300px;
+    height: auto;
+  }
 }
 
 @media (max-width: 992px) {
-#manequin_container_top {
-  width: 98%;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  
-}
-#manequin_container_top img {
-  width: 300px;
-  height: auto;
-}
+  #manequin_container_top {
+    width: 98%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+  }
+  #manequin_container_top img {
+    width: 300px;
+    height: auto;
+  }
 }
 
 @media (min-width: 649px) and (max-width: 768px) {
-#manequin_container_top {
-  width: 98%;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  
-}
-#manequin_container_top img {
-  width: 260px;
-  height: auto;
-}
+  #manequin_container_top {
+    width: 98%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+  }
+  #manequin_container_top img {
+    width: 260px;
+    height: auto;
+  }
 }
 
 @media (min-width: 576px) and (max-width: 649px) {
@@ -177,13 +190,11 @@ body {
     height: auto;
     display: flex;
     justify-content: center;
-    
   }
   #manequin_container_top img {
     width: 250px;
     height: auto;
   }
-
 }
 
 @media (max-width: 576px) {

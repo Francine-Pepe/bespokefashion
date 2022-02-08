@@ -1,23 +1,23 @@
-import React, { useEffect, useState, useRef, useContext } from "react";
-import { Button } from "react-bootstrap";
-import "./MakeYourDesignClothesTop.css";
-import { Icon } from "@iconify/react";
+import React, { useEffect, useState, useRef, useContext } from "react"
+import { Button } from "react-bootstrap"
+import "./MakeYourDesignClothesTop.css"
+import { Icon } from "@iconify/react"
 // import { OrderContext } from "./../OrderContext";
 // import top1 from "../Images_test/dress_02_top.png";
-import top2 from "./../Images_test/dress_03_top.png";
+import top2 from "./../Images_test/dress_03_top.png"
 // import top3 from "./../Images_test/dress_04_top.png";
 // import top4 from "../Images_test/dress_19_top.png";
 // import top5 from "./../Images_test/dress_20_top.png";
 // import top6 from "./../Images_test/dress_22_top.png";
-import { OrderContext } from "../../orderContext";
-import ManequimTop from "../Manequim/ManequimTop";
+import { OrderContext } from "../../orderContext"
+import ManequimTop from "../Manequim/ManequimTop"
 
 export default function MakeYourDesignClothesTop() {
-  const [data, setData] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const carousel = useRef(null);
-  const cat = "top";
-  const { order, setTop } = useContext(OrderContext);
+  const [data, setData] = useState([])
+  const [isLoading, setIsLoading] = useState(true)
+  const carousel = useRef(null)
+  const cat = "top"
+  const { order, setTop } = useContext(OrderContext)
 
   // const selectData = document.getElementById('manequin_container_top').value = document.getElementById('select_button').value;
 
@@ -28,41 +28,41 @@ export default function MakeYourDesignClothesTop() {
   // }, []);
 
   useEffect(() => {
-    console.log("The Component is Ready!");
+    console.log("The Component is Ready!")
 
     fetch("https://bespoke-fashion.herokuapp.com/fixedDresses")
       .then((response) => response.json())
       .then((data) => {
-        setData(data);
-        setIsLoading(false);
+        setData(data)
+        setIsLoading(false)
       })
       .catch((error) => {
-        console.error("Error:", error);
-      });
-  }, []);
-  console.log(data);
+        console.error("Error:", error)
+      })
+  }, [])
+  console.log(data)
 
   const handleLeftClick = (e) => {
-    e.preventDefault();
-    carousel.current.scrollLeft -= carousel.current.offsetWidth;
-  };
+    e.preventDefault()
+    carousel.current.scrollLeft -= carousel.current.offsetWidth
+  }
 
   const handleRightClick = (e) => {
-    e.preventDefault();
-    carousel.current.scrollLeft += carousel.current.offsetWidth;
-  };
+    e.preventDefault()
+    carousel.current.scrollLeft += carousel.current.offsetWidth
+  }
 
-  if (!data || !data.length) return null;
+  if (!data || !data.length) return null
 
   const clothes_carousel = () => {
-    document.getElementById("select_button");
-    document.getElementById("message");
-  };
+    document.getElementById("select_button")
+    document.getElementById("message")
+  }
 
   const clothes_manequim = () => {
-    document.getElementById("manequin_container_top");
-    document.getElementById("message");
-  };
+    document.getElementById("manequin_container_top")
+    document.getElementById("message")
+  }
 
   // console.log(
   //   "includes",
@@ -76,14 +76,15 @@ export default function MakeYourDesignClothesTop() {
     <div className="principal_container_top_part">
       {/* <div id="manequin_container_top">
         <ManequimTop /> */}
-        {/* <img src={order.top.url} alt="top" /> */}
+      {/* <img src={order.top.url} alt="top" /> */}
       {/* </div> */}
       <div className="container_carousel_top">
         <div className="carousel" ref={carousel}>
           {data
             .filter((data) => data.part === "top")
             .map((item) => {
-              const { _id, name, url, price } = item;
+              const { _id, name, url, price } = item
+              const isSelected = order.top?.id === _id
               return (
                 <div className="item" key={_id}>
                   <div className="image">
@@ -93,15 +94,18 @@ export default function MakeYourDesignClothesTop() {
                   <div className="info">
                     <span className="price">{price}€</span>
                     <Button
-                      variant="outline-*"
-                      className="select_button"
-                      onClick={() => setTop({ id: _id, price, url })}
+                      onClick={() => {
+                        setTop({ id: _id, price, url })
+                      }}
+                      className={`select_button ${
+                        isSelected ? "select_button--active" : ""
+                      }`}
                     >
-                      Select
+                      {isSelected ? "selected!" : "select"}
                     </Button>
                   </div>
                 </div>
-              );
+              )
             })}
         </div>
 
@@ -125,7 +129,7 @@ export default function MakeYourDesignClothesTop() {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
 // import React, {useContext, useEffect} from 'react';
