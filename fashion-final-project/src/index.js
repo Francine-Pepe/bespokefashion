@@ -1,6 +1,6 @@
 import React from "react"
 import ReactDOM from "react-dom"
-import { HashRouter as Router, Routes, Route} from 'react-router-dom';
+import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import About from './Components/About/About'
 import Contact from './Components/Contact/Contact'
 import PickUpDesign from './Components/PickUpDesign/PickUpDesign'
@@ -19,8 +19,8 @@ import MakeYourDesignClothes from "./Components/MakeYourDesignClothes/MakeYourDe
 ReactDOM.render(
   <React.StrictMode>
     <OrderContextProvider>
-      <Router>
-      <Routes>
+      <BrowserRouter>
+        <Routes>
           <Route path="/">
               <Route path="/" element={ <LandingPage /> } />
               <Route path="app" element={ <App /> }>
@@ -44,7 +44,7 @@ ReactDOM.render(
               </Route>
           </Route>
         </Routes>
-      </Router>
+      </BrowserRouter>
     </OrderContextProvider>
   </React.StrictMode>,
   document.getElementById("root")
