@@ -10,17 +10,6 @@ body {
   height: auto;
 }
 
-.principal_container_bottom_part {
-  max-width: 85%;
-  height: auto;
-  display: flex;
-  padding-bottom: 1%;
-  padding-right: 1%;
-  padding-left: 1%;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
 .manequin_container_bottom {
   width: 310px;
   height: 450px;
@@ -37,8 +26,10 @@ body {
   border: dashed #003d3a 2px;
   border-radius: 5px;
   padding: 2% 2%;
+  margin-bottom: 4%;
+  margin-top: 4%;
   margin-left: 4%;
-  margin-bottom: 1%;
+  
 }
 
 .container_clothes_bottom .carousel {
@@ -119,12 +110,7 @@ body {
   text-align: center;
 }
 
-/* .buttons_icon:hover {
-  background-color: #003d3a31;
-  border: 20x #003d3a31;
-  border-radius: 50%;
-  cursor: pointer;
-} */
+
 button:focus {
   text-decoration: none;
   outline: none;
@@ -188,11 +174,27 @@ button:focus {
     width: 250px;
     height: auto;
   }
+  .container_clothes_bottom {
+    max-width:45vw;
+    margin-right: 4%;
+    
+  }
 }
 
 @media (max-width: 576px) {
+  .manequin_container_bottom {
+    width: 98%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+  }
+  .manequin_container_bottom img {
+    width: 200px;
+    height: auto;
+  }
   .container_clothes_bottom {
-    max-width: 35vw;
-    padding: 1%;
+    max-width:35vw;
+    /* margin-right: 4%; */
+    
   }
 }

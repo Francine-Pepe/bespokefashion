@@ -18,26 +18,26 @@ body {
   height: auto;
   border: dashed 2px;
   display: flex;
-  /* margin: 20px;
-    padding: 20px; */
   background-color: white;
   border-radius: 5px;
   justify-content: center;
+  align-items: center;
 }
 
 .carousels {
   display: flex;
   flex-direction: column;
   height: auto;
-
-  /* align-items: flex-end; */
+  align-items: center;
+  justify-content: center;
 }
-/* .carousel_container_colors,
+.carousel_container_colors,
 .carousel_container_prints {
     display: flex;
-    justify-content: flex-start;
-    height: 80%;
-} */
+    align-items: center;
+    height: auto;
+    margin: 3%;
+}
 
 .next_page {
   display: flex;
@@ -60,24 +60,41 @@ body {
 }
 /* Media Queries */
 
+@media (min-width: 1200px) {
+  .main_container_color_and_pattern {
+    max-width: 80vw;
+    height: auto;
+    border: dashed 2px;
+    display: flex;
+    justify-content: center;
+  }
+  
+}
+
 /* Medium to Large */
 
-@media (min-width: 768px) and (max-width: 1200px) {
+@media (min-width: 992px) and (max-width: 1200px) {
   .main_container_color_and_pattern {
-    width: 85vw;
-    height: 70%;
-    border: dashed 2px;
+    min-width: 90vw;
     display: flex;
     justify-content: center;
   }
   .manequin_container img {
     display: flex;
     justify-content: center;
-    width: 65%;
-    height: 95%;
-    margin-left: 50px;
   }
 }
+
+/* @media (min-width: 768px) and (max-width: 992px) {
+  .main_container_color_and_pattern {
+    min-width: 90vw;
+    display: flex;
+    justify-content: center;
+    padding-right: 4%;
+    margin-right: 4%;
+  }
+} */
+
 
 /* Medium */
 

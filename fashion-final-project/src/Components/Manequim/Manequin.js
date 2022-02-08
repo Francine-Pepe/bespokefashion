@@ -15,8 +15,8 @@ function Manequin() {
         backgroundImage: `url(${order.fabric.url})`,
         backgroundPosition: 'center',
         backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat'}}
-        > 
+        backgroundRepeat: 'no-repeat'}}> 
+
         <ManequimOutfit/>
       </div> : 
       <div  style={{

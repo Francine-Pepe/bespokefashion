@@ -1,0 +1,15 @@
+.wrapper_top_manequim {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 310px;
+    height: auto;
+    
+}
+
+.manequim_top_image img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}

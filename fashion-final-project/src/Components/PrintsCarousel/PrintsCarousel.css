@@ -28,16 +28,17 @@ body {
   display: flex;
   justify-content: center;
   margin: 0;
-  background-color: blue;
   position: relative;
 }
 .prints_container {
   max-width: 55vw;
-  border: dashed #2c6a67 2px;
-  padding: 10px;
+  border: dashed #2C6A67 2px;
+  padding: 20px;
+
   border-radius: 5px;
   margin-top: 2%;
   margin-bottom: 1%;
+  
 }
 
 .prints_container .carousel {
@@ -54,9 +55,10 @@ body {
   background-color: white;
   margin: 10px;
   padding: 10px;
-  width: 200px;
-  height: auto;
-  border: solid 1px;
+
+  width: 145px;
+  height:auto;
+  border:solid 1px;
   border-radius: 5px;
   flex: none;
   flex-direction: column;
@@ -119,3 +121,41 @@ body {
   width: 120px;
   height: 110px;
 }
+
+
+/* Media Queries */
+
+@media (min-width: 1200px) {
+  .prints_container {
+    max-width: 52vw;
+    
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .prints_container {
+    min-width: 45vw;
+    
+  }
+}
+
+@media (min-width: 649px) and (max-width: 768px) {
+  .prints_container {
+    min-width: 45vw;
+    
+  }
+}
+@media (min-width: 576px) and (max-width: 649px) {
+  .prints_container {
+    min-width: 40vw;
+    
+  }
+}
+
+@media (max-width: 576px) {
+  .prints_container {
+    max-width: 32vw;
+    
+  }
+}
+

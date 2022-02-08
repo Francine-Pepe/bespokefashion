@@ -74,10 +74,7 @@ export default function MakeYourDesignClothesTop() {
   // );
   return (
     <div className="principal_container_top_part">
-      {/* <div id="manequin_container_top">
-        <ManequimTop /> */}
-      {/* <img src={order.top.url} alt="top" /> */}
-      {/* </div> */}
+
       <div className="container_carousel_top">
         <div className="carousel" ref={carousel}>
           {data
