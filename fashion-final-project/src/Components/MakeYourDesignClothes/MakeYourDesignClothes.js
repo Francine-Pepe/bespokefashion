@@ -15,11 +15,14 @@ export default function MakeYourDesignClothes({ cat }) {
         <ReturnButton />
         <NextButton className="next_step" />
       </div>
-      <div className="make_your_clothes_wrapper">
-        <Manequin />
+
+      <div className="make_your_clothes_container_parent">
         <div className="make_your_clothes_container">
-          <MakeYourDesignClothesTop />
-          <MakeYourDesignClothesBottom cat={cat} />
+          <Manequin />
+          <div className="make_your_clothes_wrapper">
+            <MakeYourDesignClothesTop />
+            <MakeYourDesignClothesBottom cat={cat} />
+          </div>
         </div>
       </div>
 

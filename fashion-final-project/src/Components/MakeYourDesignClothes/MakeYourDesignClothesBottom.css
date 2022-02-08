@@ -14,9 +14,9 @@ body {
   max-width: 85%;
   height: auto;
   display: flex;
-  /* padding-bottom: 1%;
+  padding-bottom: 1%;
   padding-right: 1%;
-  padding-left: 1%; */
+  padding-left: 1%;
   justify-content: center;
   align-items: center;
   position: relative;
@@ -29,7 +29,6 @@ body {
   background-position: bottom;
   display: flex;
   justify-content: center;
-  margin: 0;
   /* background-color: blue; */
   position: relative;
 }
@@ -37,8 +36,9 @@ body {
   max-width: 55vw;
   border: dashed #003d3a 2px;
   border-radius: 5px;
-  padding: 1%;
+  padding: 2% 2%;
   margin-left: 4%;
+  margin-bottom: 1%;
 }
 
 .container_clothes_bottom .carousel {

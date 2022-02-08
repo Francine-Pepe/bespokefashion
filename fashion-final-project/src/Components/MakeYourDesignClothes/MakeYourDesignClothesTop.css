@@ -19,8 +19,9 @@ body {
   padding-left: 1%;
   justify-content: center;
   position: relative;
+  align-items: center;
 }
-#manequin_container_top {
+/* #manequin_container_top {
   width: 310px;
   height: 450px;
   border: none;
@@ -29,15 +30,16 @@ body {
   display: flex;
   justify-content: center;
   margin: 0;
-  /* background-color: darkkhaki; */
+  background-color: darkkhaki;
   position: relative;
-}
+} */
 
 .container_carousel_top {
   max-width: 55vw;
   border: dashed #003d3a 2px;
   border-radius: 5px;
-  padding: 1%;
+  padding: 2% 2%;
+  margin-bottom: 2%;
   margin-left: 4%;
   margin-top: 1%;
 }
