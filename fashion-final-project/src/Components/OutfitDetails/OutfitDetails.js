@@ -22,7 +22,7 @@ function OutfitDetails() {
 
   function handleSubmit(e) {
     e.preventDefault()
-    console.log("order :", order)
+    // console.log("order :", order)
   }
 
   return (

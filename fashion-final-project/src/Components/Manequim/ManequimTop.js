@@ -10,9 +10,7 @@ export default function ManequimTop() {
     <>
       <div>
         {order.top.url ? (
-          <div className="wrapper_top_manequim"
-          
-          >
+          <div className="wrapper_top_manequim">
             <img
               className="manequim_top_image"
               src={order.top.url}
