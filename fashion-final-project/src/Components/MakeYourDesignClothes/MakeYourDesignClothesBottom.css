@@ -87,6 +87,24 @@ body {
   margin-top: 20px;
 }
 
+.select_button {
+  text-align: center;
+  background-color: #e7bd44;
+  color: #fff;
+  border: none;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  font-family: "Montserrat";
+}
+
+.select_button--active {
+  background-color: #5d86bc;
+}
+
+.select_button:hover {
+  cursor: pointer;
+  background-color: #2c6a67;
+}
 .buttons_icon {
   background-color: transparent;
   border: none;

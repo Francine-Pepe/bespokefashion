@@ -12,7 +12,7 @@ body {
 
 .principal_container_top {
   max-width: 85%;
-  height:auto;
+  height: auto;
   display: flex;
   /* padding-bottom: 1%; */
   padding-right: 1%;
@@ -57,8 +57,8 @@ body {
   margin: 10px;
   padding: 10px;
   width: 200px;
-  height:auto;
-  border:solid 1px;
+  height: auto;
+  border: solid 1px;
   border-radius: 5px;
   /* flex: none; */
   flex-direction: column;
@@ -100,8 +100,17 @@ body {
   cursor: pointer;
 }
 
+.select_button--active {
+  background-color: #5d86bc;
+}
+
+.select_button:hover {
+  cursor: pointer;
+  background-color: #2c6a67;
+}
+
 .buttons .buttons_icon {
-  background-color: transparent; 
+  background-color: transparent;
   border: none;
 }
 
@@ -110,9 +119,9 @@ body {
   outline: none;
 }
 .colors_image img {
-    display: flex;
-    justify-content: center;
-    border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
 }
 
 /* Media Queries */
@@ -124,5 +133,4 @@ body {
       display: flex;
       
     } */
-    
-  }
+}

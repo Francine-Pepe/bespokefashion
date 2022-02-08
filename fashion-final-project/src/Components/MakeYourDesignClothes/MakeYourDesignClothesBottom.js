@@ -83,12 +83,13 @@ export default function MakeYourDesignClothesBottom({ cat }) {
     <div className="principal_container_bottom_part">
       {/* <div className="manequin_container_bottom">
         <ManequimBottom /> */}
-        {/* <img src={order.bottom.url} alt="bottom" /> */}
+      {/* <img src={order.bottom.url} alt="bottom" /> */}
       {/* </div> */}
       <div className="container_clothes_bottom">
         <div className="carousel" ref={carousel}>
           {data.map((item) => {
             const { _id, name, url, price } = item
+            const isSelected = order.bottom?.id === _id
             return (
               <div className="item" key={_id}>
                 <div className="image">
@@ -98,10 +99,14 @@ export default function MakeYourDesignClothesBottom({ cat }) {
                 <div className="info">
                   <span className="price">{price}€</span>
                   <Button
-                    className="select_button"
-                    onClick={() => setBottom({ id: _id, price, url })}
+                    onClick={() => {
+                      setBottom({ id: _id, price, url })
+                    }}
+                    className={`select_button ${
+                      isSelected ? "select_button--active" : ""
+                    }`}
                   >
-                    Select
+                    {isSelected ? "selected!" : "select"}
                   </Button>
                 </div>
               </div>

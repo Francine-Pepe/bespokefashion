@@ -76,7 +76,7 @@ export default function MakeYourDesignClothesTop() {
     <div className="principal_container_top_part">
       {/* <div id="manequin_container_top">
         <ManequimTop /> */}
-        {/* <img src={order.top.url} alt="top" /> */}
+      {/* <img src={order.top.url} alt="top" /> */}
       {/* </div> */}
       <div className="container_carousel_top">
         <div className="carousel" ref={carousel}>
@@ -84,6 +84,7 @@ export default function MakeYourDesignClothesTop() {
             .filter((data) => data.part === "top")
             .map((item) => {
               const { _id, name, url, price } = item
+              const isSelected = order.top?.id === _id
               return (
                 <div className="item" key={_id}>
                   <div className="image">
@@ -93,10 +94,14 @@ export default function MakeYourDesignClothesTop() {
                   <div className="info">
                     <span className="price">{price}€</span>
                     <Button
-                      className="select_button"
-                      onClick={() => setTop({ id: _id, price, url })}
+                      onClick={() => {
+                        setTop({ id: _id, price, url })
+                      }}
+                      className={`select_button ${
+                        isSelected ? "select_button--active" : ""
+                      }`}
                     >
-                      Select
+                      {isSelected ? "selected!" : "select"}
                     </Button>
                   </div>
                 </div>
