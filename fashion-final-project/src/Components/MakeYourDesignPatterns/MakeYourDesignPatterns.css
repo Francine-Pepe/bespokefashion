@@ -22,6 +22,7 @@ body {
   border-radius: 5px;
   justify-content: center;
   align-items: center;
+  margin-bottom: 3%;
 }
 
 .carousels {
@@ -85,22 +86,29 @@ body {
   }
 }
 
-/* @media (min-width: 768px) and (max-width: 992px) {
+@media (min-width: 768px) and (max-width: 992px) {
   .main_container_color_and_pattern {
     min-width: 90vw;
     display: flex;
     justify-content: center;
-    padding-right: 4%;
-    margin-right: 4%;
+
   }
-} */
+  .carousels {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    align-items: flex-start;
+    
+  }
+  
+}
 
 
 /* Medium */
 
 @media (max-width: 767px) {
   .main_container_color_and_pattern {
-    width: 92%;
+    min-width: 92%;
     height: 70%;
     display: flex;
     justify-content: center;

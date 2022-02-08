@@ -22,7 +22,6 @@ body {
 
 .our_designs_container {
   width: 85%;
-  /*height: 75vh;*/
   display: flex;
   text-align: center;
   justify-content: space-evenly;

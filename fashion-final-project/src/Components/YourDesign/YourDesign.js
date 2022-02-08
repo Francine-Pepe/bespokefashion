@@ -12,7 +12,7 @@ export default function YourDesign() {
         {/* <ReturnButton /> */}
         <div className="your_design_catalogue">
         
-            <h2>Your Design - what would you like to create?</h2>
+            <h2>What would you like to create?</h2>
         </div>
         <div className="your_designs_container">
           <div className="clothes_types_container_your_design">
@@ -21,13 +21,13 @@ export default function YourDesign() {
                 <img src={Jumpsuits} alt="jumpsuit" />
               </div>
               
-            <NavLink to="/app/designClothes/jumpsuits" className="design_button_your_design" style={{textDecoration: 'none'}}>Jumpsuits</NavLink>
+            <NavLink to="/app/designClothes/jumpsuits" className="design_button_your_design" style={{textDecoration: 'none', color: '#fcf4f1'}}>Jumpsuits</NavLink>
           </div> 
           <div className="clothes_types_container_your_design">
             <div className="dresses_box_your_design">
               <img src={Dresses} alt="Dresses" />
             </div>
-            <NavLink to="/app/designClothes/dresses" className="design_button_your_design" style={{textDecoration: 'none'}}>Dresses</NavLink>
+            <NavLink to="/app/designClothes/dresses" className="design_button_your_design" style={{textDecoration: 'none', color: '#fcf4f1'}}>Dresses</NavLink>
           </div>
           
           
