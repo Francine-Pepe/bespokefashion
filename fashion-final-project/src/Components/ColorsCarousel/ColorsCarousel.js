@@ -44,7 +44,7 @@ export default function ColorsCarousel() {
             return (
               <div className="item" key={id}>
                 <div className="colors_image">
-                  <img src={url} alt={name} style={{ width: 200, height: 150 }} />
+                  <img src={url} alt={name} style={{ width: 120, height: 110 }} />
                 </div>
 
                 <div className="info">

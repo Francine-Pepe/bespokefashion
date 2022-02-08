@@ -10,30 +10,6 @@ body {
   
 }
 
-.principal_container_top_part {
-  max-width: 85%;
-  height: auto;
-  display: flex;
-  border: none;
-  padding-top: 1%;
-  padding-right: 1%;
-  padding-left: 1%;
-  justify-content: center;
-  position: relative;
-  align-items: center;
-}
-/* #manequin_container_top {
-  width: 310px;
-  height: 450px;
-  border: none;
-  background-repeat: no-repeat;
-  background-position: bottom;
-  display: flex;
-  justify-content: center;
-  margin: 0;
-  background-color: darkkhaki;
-  position: relative;
-} */
 
 .container_carousel_top {
   max-width: 55vw;
@@ -41,8 +17,8 @@ body {
   border-radius: 5px;
   padding: 2% 2%;
   margin-bottom: 2%;
+  margin-top: 4%;
   margin-left: 4%;
-  margin-top: 1%;
 }
 
 .container_carousel_top .carousel {
@@ -183,13 +159,27 @@ body {
     width: 250px;
     height: auto;
   }
+  .container_carousel_top {
+    max-width: 45vw;
+    margin-right: 4%;
+  }
 
 }
 
 @media (max-width: 576px) {
+  #manequin_container_top {
+    width: 98%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    
+  }
+  #manequin_container_top img {
+    width: 200px;
+    height: auto;
+  }
   .container_carousel_top {
     max-width: 35vw;
-    padding: 1%;
-    margin-left: 4%;
+    
   }
 }

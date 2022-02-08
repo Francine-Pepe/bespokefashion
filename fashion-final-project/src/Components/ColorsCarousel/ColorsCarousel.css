@@ -30,13 +30,12 @@ body {
   display: flex;
   justify-content: center;
   margin: 0;
-  background-color: blue;
   position: relative;
 }
 
 .colors_container {
   max-width: 55vw;
-  border: dashed grey 2px;
+  border: dashed #2C6A67 2px;
   padding: 20px;
   border-radius: 5px;
   margin-top: 2%;
@@ -72,18 +71,6 @@ body {
   margin-top: 10px;
   font-family: "Montserrat";
 }
-/* .container .carousel .item .image img {
-  width: 100%;
-  height: auto;
-  border-radius: 5px;
-  border: #707070 2px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  object-fit: cover;
-  
-} */
 
 .select_button {
   display: flex;
@@ -113,16 +100,41 @@ body {
     display: flex;
     justify-content: center;
     border-radius: 5px;
+    width: 100px;
 }
 
 /* Media Queries */
 
-/* Medium to Large */
-
-@media (min-width: 768px) and (max-width: 1200px) {
-  /* .container .carousel {
-      display: flex;
-      
-    } */
+@media (min-width: 1200px) {
+  .colors_container {
+    max-width: 52vw;
     
   }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .colors_container {
+    min-width: 45vw;
+    
+  }
+}
+
+@media (min-width: 649px) and (max-width: 768px) {
+  .colors_container {
+    min-width: 45vw;
+    
+  }
+}
+@media (min-width: 576px) and (max-width: 649px) {
+  .colors_container {
+    min-width: 40vw;
+    
+  }
+}
+
+@media (max-width: 576px) {
+  .colors_container {
+    max-width: 32vw;
+    
+  }
+}

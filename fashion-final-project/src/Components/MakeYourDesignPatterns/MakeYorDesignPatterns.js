@@ -30,15 +30,6 @@ export default function MakeYourDesignPatterns() {
           Make your own Design - here you can choose the desired color or print
         </h3>
         <div className="main_container_color_and_pattern">
-          {/* <div className="manequim_container">
-                <ManequimTop />
-                <ManequimBottom />
-
-            </div> */}
-
-          {/* <div className="manequin_container">
-                <img src={Manequin} alt="manequin" />
-            </div> */}
             <Manequin />
             <div className='carousels'>
                 <div className='carousel_container_colors'>
