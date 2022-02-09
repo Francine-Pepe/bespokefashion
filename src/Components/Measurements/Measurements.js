@@ -148,7 +148,7 @@ function Measurements() {
           />
         </NavLink>
       </div>
-      <Container className="measurementContainer">
+      <Container className="measurementContainer mb-5 ">
         <Row className="measurementRow">
           <Col md className="measurementForm">
             <h3 className="mb-4">Enter your measurements</h3>

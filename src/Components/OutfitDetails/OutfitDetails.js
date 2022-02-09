@@ -28,7 +28,7 @@ function OutfitDetails() {
   return (
     <>
       <ReturnButton />
-      <Container fluid className="ofdContainer  mt-5">
+      <Container fluid className="ofdContainer  mb-5  mt-5">
         <Row className="ofdTitle text-center mb-3">
           <h2>“Any more additions to your dream outfit ?“ </h2>
         </Row>
@@ -73,11 +73,11 @@ function OutfitDetails() {
               <h2>Outfit added to cart!</h2>
             </Row>
             <Row>
-              <Col>
-                        <NavLink className="ofdBtn" to="/app/pickup">
-                            <h5 onClick={() =>setModalShow(false)}>Shop More</h5>
-                        </NavLink>
-                    </Col>
+              {/* <Col>
+                  <NavLink className="ofdBtn" to="/app/pickup">
+                      <h5 onClick={() =>setModalShow(false)}>Shop More</h5>
+                  </NavLink>
+              </Col> */}
               <Col>
                 <NavLink to="/app/checkout" style={{ textDecoration: "none" }}>
                   <button className="ofdBtn" type="submit">

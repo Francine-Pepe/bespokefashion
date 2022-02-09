@@ -98,7 +98,7 @@ function Checkout() {
     }
 
     return (
-        <Container fluid className="checkoutContainer">
+        <Container fluid className="checkoutContainer mb-5 mt-2">
             <Row className="checkoutTitle">
                 <h2>Tell us more about you</h2> 
             </Row>

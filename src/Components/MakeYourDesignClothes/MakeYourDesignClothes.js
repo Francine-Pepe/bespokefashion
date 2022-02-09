@@ -1,4 +1,4 @@
-import React from "react"
+import React , {useEffect, useContext} from "react"
 import MakeYourDesignClothesBottom from "./MakeYourDesignClothesBottom"
 import MakeYourDesignClothesTop from "./MakeYourDesignClothesTop"
 import "./MakeYourDesignClothes.css"
@@ -7,8 +7,13 @@ import NextButton from "../NextButton/NextButton"
 import { NavLink } from "react-router-dom"
 import { Icon } from "@iconify/react"
 import Manequin from "../Manequim/Manequin"
+import {OrderContext} from "../../orderContext"
 
 export default function MakeYourDesignClothes({ cat }) {
+
+  const { order, resetOutfit} = useContext(OrderContext)
+
+  useEffect(resetOutfit, [])
   return (
     <>
       <div className="MYC-returnNextBtn">

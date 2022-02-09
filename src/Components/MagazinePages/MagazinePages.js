@@ -15,11 +15,10 @@ import Loading from "../Loading/Loading"
 export default function MagazinePages({ cat }) {
   const [data, setData] = useState([])
   const [isLoading, setIsLoading] = useState(true)
-  const { order, setSimpleVals, setOutfit } = useContext(OrderContext)
+  const { order, setSimpleVals, setOutfit,resetYourDesign } = useContext(OrderContext)
 
   useEffect(() => {
     setSimpleVals("cat", cat)
-
     fetch("https://bespoke-fashion.herokuapp.com/designs")
       .then((response) => response.json())
       .then((data) => {

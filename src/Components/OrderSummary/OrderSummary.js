@@ -141,11 +141,11 @@ function OrderSummary() {
                                 <Col>Total Amount :</Col>
                                 <Col>{getTotalOutfitCost(getDesignPrice())}€</Col>
                             </Row> 
-                            <Row>
+                            {/* <Row>
                                 <NavLink  to="/app/pickup"  style={{ textDecoration: "none" }}>
                                     <button className="shpMoreBtn">Shop More</button>
                                 </NavLink>
-                            </Row>
+                            </Row> */}
                         </Container>
                         }
                 </div> }

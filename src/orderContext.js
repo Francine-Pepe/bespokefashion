@@ -21,7 +21,9 @@ const emptyOrder = {
   fabric: {id: '', price: 0, url: ''},
   measurements: {},
   instructions: '',
-  clientDetails:{}
+  clientDetails:{},
+  resetOutfit: {},
+  resetYourDesign:{},
 }
 
 const OrderContextProvider = ({ children }) => {
@@ -97,7 +99,17 @@ const OrderContextProvider = ({ children }) => {
       })
     }
 
- 
+    const resetOutfit = () => {
+      setOrder({
+        ...order,
+        outfit: {id: '', price: 0, url: ''},
+        fabric: {id: '', price: 0, url: ''},
+        top: {id: '', price: 0, url: ''},
+        bottom: {id: '', price: 0, url: ''},
+      })
+    }
+    
+    
   return (
     <OrderContext.Provider
       value={{
@@ -108,7 +120,8 @@ const OrderContextProvider = ({ children }) => {
         setMeasurements,
         setTop,
         setBottom,
-        setClientDetails
+        setClientDetails,
+        resetOutfit,
       }}
     >
       {children}
