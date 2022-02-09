@@ -11,7 +11,8 @@ function Manequin() {
     <>
     <div>
     {(order.outfit.url)? 
-    <div  style={{
+    <div  className="manequim_image"
+        style={{
         backgroundImage: `url(${order.fabric.url})`,
         backgroundPosition: 'center',
         backgroundSize: 'cover',

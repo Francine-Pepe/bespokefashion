@@ -13,3 +13,17 @@
   border: 1px solid black;
   
 }
+
+@media (min-width: 576px) and (max-width: 649px) {
+  .wrapper_top_manequim {
+    width: 100px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 576px) {
+  .wrapper_top_manequim {
+    width: 50px;
+    height: 100px;
+  }
+}

@@ -4,3 +4,10 @@
     align-items: center;
    
 }
+
+@media (min-width: 576px) and (max-width: 649px) {
+    .manequim_image {
+        width: 100px;
+        height: 300px;
+    }
+}

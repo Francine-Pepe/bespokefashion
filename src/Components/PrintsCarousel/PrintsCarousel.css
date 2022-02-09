@@ -135,10 +135,10 @@ body {
 @media (min-width: 768px) and (max-width: 992px) {
   .prints_container {
     min-width: 45vw;
-    
+    margin-right: 4%;
   }
   .principal_container_bottom {
-    max-width: 95%;
+    min-width: 95%;
     height: auto;
     display: flex;
     padding-bottom: 1%;
@@ -151,7 +151,7 @@ body {
 @media (min-width: 649px) and (max-width: 768px) {
   .prints_container {
     min-width: 45vw;
-    
+    margin-right: 4%;
   }
   .principal_container_bottom {
     max-width: 95%;
