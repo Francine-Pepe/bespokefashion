@@ -11,6 +11,7 @@ body {
   letter-spacing: 1px;
   color: #003d3a;
   font-weight: 100;
+  ;
 }
 
 .main_container_color_and_pattern {
@@ -23,6 +24,7 @@ body {
   justify-content: center;
   align-items: center;
   margin-bottom: 3%;
+  margin-top: 3%;
 }
 
 .carousels {
@@ -88,10 +90,11 @@ body {
 
 @media (min-width: 768px) and (max-width: 992px) {
   .main_container_color_and_pattern {
-    min-width: 90vw;
+    min-width: 95vw;
     display: flex;
     justify-content: center;
-
+    padding-left: 4%;
+    
   }
   .carousels {
     display: flex;
@@ -108,17 +111,18 @@ body {
 
 @media (max-width: 767px) {
   .main_container_color_and_pattern {
-    min-width: 92%;
-    height: 70%;
+    min-width: 95vw;
     display: flex;
     justify-content: center;
+    padding-left: 4%;
+    
   }
-  .make_your_design_color_and_pattern h3 {
+  .carousels {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    font-size: 22px;
-    font-weight: normal;
+    height: auto;
+    align-items: flex-start;
+    
   }
 }
 
@@ -127,7 +131,7 @@ body {
 @media (max-width: 576px) {
   .main_container_color_and_pattern {
     width: 92%;
-    height: 70%;
+    height: auto;
     display: flex;
     justify-content: center;
   }
