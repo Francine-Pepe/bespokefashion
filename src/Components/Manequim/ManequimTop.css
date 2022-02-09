@@ -14,7 +14,7 @@
   
 }
 
-@media (min-width: 576px) and (max-width: 649px) {
+@media (max-width: 767px) {
   .wrapper_top_manequim {
     width: 100px;
     height: 300px;
